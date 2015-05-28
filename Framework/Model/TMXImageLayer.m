@@ -69,7 +69,7 @@
     ONOXMLElement *imageEle = [element firstChildWithTag:@"image"];
     if (imageEle) {
         self.imageSource = imageEle[@"source"];
-        self.transparentColor = [SKColor tmxColorWithHex:element[@"trans"]];
+        self.transparentColor = [SKColor tmxColorWithHex:imageEle[@"trans"]];
     }
     
     ONOXMLElement *properties = [element firstChildWithTag:@"properties"];

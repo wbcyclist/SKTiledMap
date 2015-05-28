@@ -75,21 +75,21 @@
   <properties>
    <property name="showShape" value="0"/>
   </properties>
-  <object id="37" gid="46" x="160" y="864"/>
-  <object id="38" gid="1073741871" x="128" y="768" rotation="78.1248"/>
-  <object id="39" gid="3221225520" x="160" y="768" rotation="288.111"/>
-  <object id="40" gid="39" x="256" y="736" rotation="38.0115"/>
-  <object id="41" gid="2147483687" x="224" y="704" rotation="38.0115"/>
-  <object id="42" gid="46" x="192" y="896"/>
-  <object id="43" gid="46" x="192" y="864"/>
-  <object id="44" gid="46" x="224" y="864"/>
-  <object id="45" gid="46" x="192" y="832"/>
-  <object id="46" gid="2147483694" x="288" y="896"/>
-  <object id="47" gid="1073741870" x="288" y="864"/>
-  <object id="48" gid="3221225518" x="288" y="832"/>
-  <object id="50" gid="3221225518" x="316.471" y="908.124" rotation="45.0274"/>
-  <object id="52" gid="46" x="160" y="160"/>
-  <object id="53" gid="46" x="0" y="0"/>
+  <object id="37" gid="46" x="160" y="864" width="32" height="32"/>
+  <object id="38" gid="1073741871" x="128" y="768" width="32" height="32" rotation="78.1248"/>
+  <object id="39" gid="3221225520" x="160" y="768" width="32" height="32" rotation="288.111"/>
+  <object id="40" gid="39" x="256" y="736" width="32" height="32" rotation="38.0115"/>
+  <object id="41" gid="2147483687" x="224" y="704" width="32" height="32" rotation="38.0115"/>
+  <object id="42" gid="46" x="192" y="896" width="32" height="32"/>
+  <object id="43" gid="46" x="192" y="864" width="32" height="32"/>
+  <object id="44" gid="46" x="224" y="864" width="32" height="32"/>
+  <object id="45" gid="46" x="192" y="832" width="32" height="32"/>
+  <object id="46" gid="2147483694" x="288" y="896" width="32" height="32"/>
+  <object id="47" gid="1073741870" x="288" y="864" width="32" height="32"/>
+  <object id="48" gid="3221225518" x="288" y="832" width="32" height="32"/>
+  <object id="50" gid="3221225518" x="316.471" y="908.124" width="32" height="32" rotation="45.0274"/>
+  <object id="52" gid="46" x="160" y="160" width="32" height="32"/>
+  <object id="53" gid="46" x="0" y="0" width="32" height="32"/>
   <object id="54" x="32" y="512" width="128" height="96" rotation="-15.5001"/>
   <object id="56" x="160" y="640"/>
   <object id="57" x="224" y="512" width="32" height="128">
@@ -108,7 +108,7 @@
    <polyline points="0,0 -32,-64 -96,-64 -96,64 -32,96 32,32 0,0"/>
   </object>
  </objectgroup>
- <imagelayer name="图像图层 1" x="-64" y="992" opacity="0.8">
+ <imagelayer name="图像图层 1" x="-64" y="992">
   <image source="bcry.png" trans="ffffff"/>
  </imagelayer>
 </map>
