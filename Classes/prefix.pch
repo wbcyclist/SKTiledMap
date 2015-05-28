@@ -1,0 +1,35 @@
+
+#import <Availability.h>
+//#import <SpriteKit/SpriteKit.h>
+//debug下显示log，在release下自动屏蔽log输出
+#ifndef __OPTIMIZE__
+    #define NSLog(...) NSLog(__VA_ARGS__)
+    #define DLog(...) NSLog(__VA_ARGS__)
+    #define debugMethod() NSLog(@"%s", __func__)
+#else
+    #define NSLog(...) {}
+    #define DLog(...) /* */
+    #define debugMethod() /* */
+#endif
+
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
+    #ifndef __IPHONE_8_0
+        #warning "This project uses features only available in iOS SDK 8.0 and later."
+    #endif
+
+    #ifdef __OBJC__
+        #import <UIKit/UIKit.h>
+        #import <Foundation/Foundation.h>
+    #endif
+
+#else
+    #ifdef __OBJC__
+        #import <Cocoa/Cocoa.h>
+
+        #define NSStringFromCGPoint(x) NSStringFromPoint(NSPointFromCGPoint(x))
+        #define NSStringFromCGSize(x) NSStringFromSize(NSSizeFromCGSize(x))
+        #define NSStringFromCGRect(x) NSStringFromRect(NSRectFromCGRect(x))
+
+    #endif
+#endif

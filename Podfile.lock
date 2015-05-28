@@ -1,0 +1,10 @@
+PODS:
+  - Ono (1.2.2)
+
+DEPENDENCIES:
+  - Ono
+
+SPEC CHECKSUMS:
+  Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
+
+COCOAPODS: 0.37.1

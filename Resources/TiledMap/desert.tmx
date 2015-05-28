@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="32" tileheight="32" nextobjectid="63">
+ <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="1" margin="1">
+  <image source="tmw_desert_spacing.png" width="265" height="199"/>
+  <terraintypes>
+   <terrain name="Desert" tile="29"/>
+   <terrain name="Brick" tile="9"/>
+   <terrain name="Cobblestone" tile="33"/>
+   <terrain name="Dirt" tile="14"/>
+  </terraintypes>
+  <tile id="0" terrain="0,0,0,1"/>
+  <tile id="1" terrain="0,0,1,1"/>
+  <tile id="2" terrain="0,0,1,0"/>
+  <tile id="3" terrain="3,3,3,0"/>
+  <tile id="4" terrain="3,3,0,3"/>
+  <tile id="5" terrain="0,0,0,3"/>
+  <tile id="6" terrain="0,0,3,3"/>
+  <tile id="7" terrain="0,0,3,0"/>
+  <tile id="8" terrain="0,1,0,1"/>
+  <tile id="9" terrain="1,1,1,1"/>
+  <tile id="10" terrain="1,0,1,0"/>
+  <tile id="11" terrain="3,0,3,3"/>
+  <tile id="12" terrain="0,3,3,3"/>
+  <tile id="13" terrain="0,3,0,3"/>
+  <tile id="14" terrain="3,3,3,3"/>
+  <tile id="15" terrain="3,0,3,0"/>
+  <tile id="16" terrain="0,1,0,0"/>
+  <tile id="17" terrain="1,1,0,0"/>
+  <tile id="18" terrain="1,0,0,0"/>
+  <tile id="19" terrain="1,1,1,0"/>
+  <tile id="20" terrain="1,1,0,1"/>
+  <tile id="21" terrain="0,3,0,0"/>
+  <tile id="22" terrain="3,3,0,0"/>
+  <tile id="23" terrain="3,0,0,0"/>
+  <tile id="24" terrain="0,0,0,2"/>
+  <tile id="25" terrain="0,0,2,2"/>
+  <tile id="26" terrain="0,0,2,0"/>
+  <tile id="27" terrain="1,0,1,1"/>
+  <tile id="28" terrain="0,1,1,1"/>
+  <tile id="29" terrain="0,0,0,0"/>
+  <tile id="30" terrain="0,0,0,0" probability="0.5"/>
+  <tile id="31" terrain="0,0,0,0" probability="0.5"/>
+  <tile id="32" terrain="0,2,0,2"/>
+  <tile id="33" terrain="2,2,2,2"/>
+  <tile id="34" terrain="2,0,2,0"/>
+  <tile id="35" terrain="2,2,2,0"/>
+  <tile id="36" terrain="2,2,0,2"/>
+  <tile id="37" terrain="0,0,0,0" probability="0.5"/>
+  <tile id="38" terrain="0,0,0,0" probability="0.5"/>
+  <tile id="39" terrain="0,0,0,0" probability="0.5"/>
+  <tile id="40" terrain="0,2,0,0"/>
+  <tile id="41" terrain="2,2,0,0"/>
+  <tile id="42" terrain="2,0,0,0"/>
+  <tile id="43" terrain="2,0,2,2"/>
+  <tile id="44" terrain="0,2,2,2"/>
+  <tile id="45" terrain="0,0,0,0" probability="0"/>
+  <tile id="46" terrain="0,0,0,0" probability="0.5"/>
+  <tile id="47" terrain="0,0,0,0" probability="0.5"/>
+ </tileset>
+ <tileset firstgid="49" source="Collect.tsx"/>
+ <tileset firstgid="53" name="V_Headimg" tilewidth="32" tileheight="32" spacing="1" margin="1">
+  <image source="V_Headimg.png" trans="000000" width="796" height="796"/>
+ </tileset>
+ <layer name="块层 1" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA8VZbVLbMBQUNE2gJA4UCukXScsM0K/AEXqUHqVH6VF6lB6lTzPeYbO8J9uxCT92sGzHWu3qvSeJy5TSJeFe2mPDAV1PgvaY/k4IBy3fm8i32+LcsKDrl4Zjp52vK8PMMCdM6V7pvTm9w9pUjk4ex0qe6/tj6XNEPEY0Dn1PMSUtZzKeacAR39TxD6kbxqD3oc+FjJHnA55X1I706KOb95y90jHm7y/kOc/Fp9QNYO90jBwHVXocX6z70LoBGoPoT2Pp3LmPeTBL3XQbST8lePqwj5wTNY55XnbRDTFa0o35aS6Lcs01cec820W3Nprp/ON+0Afr15Rv2HcvnuFl01yL9Lt3PPY4sa/efPA87eJlyV/1CfeXxGlReNfTrauXET98GzmiTR2Db5wPL3p6GeUXrVc8/706zLVQ1yNcX/pyQ3ywV3eOn8pR8zHHCXhrLu2jH9feiJvGOfzjGohxIiaY57ZcvflVWieyxx43L3b7+M41Adcaw6zfMj3O5W3iYNs8w7mW43CRHtauel89HiIOSvo11bUoPz81t7nTH9dQXUvhXltPh+LnrQ/Yc90rVQP2v018eHUu2gftyl/dQ0b8dqmd+qs6erHyXPw8Hb0asktvlR+wcu5hLz9U3W+LdUp/PP0ybh1th6r7Hfj9i9bxJfSt+x34/Yo47Bn2CS9qXhHXiCfWstuMxfitIm4fDa8IH2qOJV25f15j79W/7Rr/6/q7Nw3cgKOC35i70Irn8onhNG3OizZ6qr95L3dYczkzvDa8EQ33A2R9lvStt4Z3hvd0jXZ+b5Wa14TG769qAX5H9XfQBs6EM8ZxKj58Mnw2fDf8qK/RzhxzfmjKW5xf2Av0x14zj0Np47d36eE8BPw8XKXNfB/tR7N+hp+ch3lNDq7K40TaHr4Yvgb4lvxYUZ7G7TdiRLWOzlN5HE3n2d6al8+9wIfPlpg3c+P1qReDXq3Ts7YSZz7n5O9XxEv3DOsaVdo8vyidw/DvoTGP2dtb8Tmh/n+itJf5D7/LLZoAGQAA
+  </data>
+ </layer>
+ <layer name="块层 2" width="40" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3IsQ2AMBAEQbdhHAERuP/+uAacPJKjGWmTbQ0AAABY6elIo/B2ONOV7sLb4UlvmoUHAPDHB0E/r44AGQAA
+  </data>
+ </layer>
+ <objectgroup color="#ff8000" name="对象层 1">
+  <properties>
+   <property name="showShape" value="0"/>
+  </properties>
+  <object id="37" gid="46" x="160" y="864"/>
+  <object id="38" gid="1073741871" x="128" y="768" rotation="78.1248"/>
+  <object id="39" gid="3221225520" x="160" y="768" rotation="288.111"/>
+  <object id="40" gid="39" x="256" y="736" rotation="38.0115"/>
+  <object id="41" gid="2147483687" x="224" y="704" rotation="38.0115"/>
+  <object id="42" gid="46" x="192" y="896"/>
+  <object id="43" gid="46" x="192" y="864"/>
+  <object id="44" gid="46" x="224" y="864"/>
+  <object id="45" gid="46" x="192" y="832"/>
+  <object id="46" gid="2147483694" x="288" y="896"/>
+  <object id="47" gid="1073741870" x="288" y="864"/>
+  <object id="48" gid="3221225518" x="288" y="832"/>
+  <object id="50" gid="3221225518" x="316.471" y="908.124" rotation="45.0274"/>
+  <object id="52" gid="46" x="160" y="160"/>
+  <object id="53" gid="46" x="0" y="0"/>
+  <object id="54" x="32" y="512" width="128" height="96" rotation="-15.5001"/>
+  <object id="56" x="160" y="640"/>
+  <object id="57" x="224" y="512" width="32" height="128">
+   <ellipse/>
+  </object>
+  <object id="58" x="224" y="480">
+   <polygon points="0,0 64,0 32,32"/>
+  </object>
+  <object id="59" x="256" y="480">
+   <polygon points="0,0 -64,-32 0,-64"/>
+  </object>
+  <object id="60" x="256" y="416">
+   <polygon points="0,0 64,32 0,64"/>
+  </object>
+  <object id="61" x="288" y="576">
+   <polyline points="0,0 -32,-64 -96,-64 -96,64 -32,96 32,32 0,0"/>
+  </object>
+ </objectgroup>
+ <imagelayer name="图像图层 1" x="-64" y="992" opacity="0.8">
+  <image source="bcry.png" trans="ffffff"/>
+ </imagelayer>
+</map>

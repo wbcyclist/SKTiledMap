@@ -1,0 +1,883 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8399841ACA2243140B49E5A5 /* libPods-SKTiledMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB75BE51A01C830D5123472 /* libPods-SKTiledMap.a */; };
+		A56AC7011B09E04900D1EBAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7001B09E04900D1EBAE /* main.m */; };
+		A56AC7041B09E04900D1EBAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7031B09E04900D1EBAE /* AppDelegate.m */; };
+		A56AC70C1B09E04900D1EBAE /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC70B1B09E04900D1EBAE /* GameViewController.m */; };
+		A56AC70F1B09E04900D1EBAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56AC70D1B09E04900D1EBAE /* Main.storyboard */; };
+		A56AC7141B09E04900D1EBAE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56AC7121B09E04900D1EBAE /* LaunchScreen.xib */; };
+		A56AC7331B09E17100D1EBAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7321B09E17100D1EBAE /* AppDelegate.m */; };
+		A56AC7351B09E17100D1EBAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7341B09E17100D1EBAE /* main.m */; };
+		A56AC73F1B09E17100D1EBAE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56AC73D1B09E17100D1EBAE /* MainMenu.xib */; };
+		A56AC7571B09E2FD00D1EBAE /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7561B09E2FD00D1EBAE /* GameScene.m */; };
+		A56AC7581B09E2FD00D1EBAE /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7561B09E2FD00D1EBAE /* GameScene.m */; };
+		A56AC75B1B09E33300D1EBAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56AC75A1B09E33300D1EBAE /* Images.xcassets */; };
+		A56AC75C1B09E33300D1EBAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56AC75A1B09E33300D1EBAE /* Images.xcassets */; };
+		A56AC7631B09E3AE00D1EBAE /* SKZipUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7601B09E3AE00D1EBAE /* SKZipUtils.m */; };
+		A56AC7641B09E3AE00D1EBAE /* SKZipUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7601B09E3AE00D1EBAE /* SKZipUtils.m */; };
+		A56AC7681B09E4FD00D1EBAE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A56AC7671B09E4FD00D1EBAE /* libz.dylib */; };
+		A56AC76A1B09E54B00D1EBAE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A56AC7671B09E4FD00D1EBAE /* libz.dylib */; };
+		A56AC76C1B09EC5400D1EBAE /* TiledMap in Resources */ = {isa = PBXBuildFile; fileRef = A56AC76B1B09EC5400D1EBAE /* TiledMap */; };
+		A56AC76D1B09EC5400D1EBAE /* TiledMap in Resources */ = {isa = PBXBuildFile; fileRef = A56AC76B1B09EC5400D1EBAE /* TiledMap */; };
+		A56AC7721B0A5A8200D1EBAE /* TMXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7711B0A5A8200D1EBAE /* TMXObject.m */; };
+		A56AC7731B0A5A8200D1EBAE /* TMXObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7711B0A5A8200D1EBAE /* TMXObject.m */; };
+		A56AC7771B0A7F3C00D1EBAE /* TMXTile.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7761B0A7F3C00D1EBAE /* TMXTile.m */; };
+		A56AC7781B0A7F3C00D1EBAE /* TMXTile.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7761B0A7F3C00D1EBAE /* TMXTile.m */; };
+		A56AC77B1B0A8E6800D1EBAE /* TMXTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC77A1B0A8E6800D1EBAE /* TMXTileset.m */; };
+		A56AC77C1B0A8E6800D1EBAE /* TMXTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC77A1B0A8E6800D1EBAE /* TMXTileset.m */; };
+		A5BED1591B0BB2EF00DC851E /* TMXMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1581B0BB2EF00DC851E /* TMXMap.m */; };
+		A5BED15A1B0BB2EF00DC851E /* TMXMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1581B0BB2EF00DC851E /* TMXMap.m */; };
+		A5BED15D1B0C925500DC851E /* SKColor+TMXColorWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED15C1B0C925500DC851E /* SKColor+TMXColorWithHex.m */; };
+		A5BED15E1B0C925500DC851E /* SKColor+TMXColorWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED15C1B0C925500DC851E /* SKColor+TMXColorWithHex.m */; };
+		A5BED1661B0D301700DC851E /* WBImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1651B0D301700DC851E /* WBImage+Utils.m */; };
+		A5BED1671B0D301700DC851E /* WBImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1651B0D301700DC851E /* WBImage+Utils.m */; };
+		A5BED16A1B0E1DE700DC851E /* WBMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1691B0E1DE700DC851E /* WBMatrix.m */; };
+		A5BED16B1B0E1DE700DC851E /* WBMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1691B0E1DE700DC851E /* WBMatrix.m */; };
+		A5BED16E1B0F249700DC851E /* SKTexture+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED16D1B0F249700DC851E /* SKTexture+Utils.m */; };
+		A5BED16F1B0F249700DC851E /* SKTexture+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED16D1B0F249700DC851E /* SKTexture+Utils.m */; };
+		A5BED1721B0FB1DE00DC851E /* TMXTerrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1711B0FB1DE00DC851E /* TMXTerrain.m */; };
+		A5BED1731B0FB1DE00DC851E /* TMXTerrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1711B0FB1DE00DC851E /* TMXTerrain.m */; };
+		A5BED17E1B111E8E00DC851E /* TMXObjectGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED17D1B111E8E00DC851E /* TMXObjectGroup.m */; };
+		A5BED17F1B111E8E00DC851E /* TMXObjectGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED17D1B111E8E00DC851E /* TMXObjectGroup.m */; };
+		A5BED1821B1218E100DC851E /* TMXObjectGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1811B1218E100DC851E /* TMXObjectGroupNode.m */; };
+		A5BED1831B1218E100DC851E /* TMXObjectGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1811B1218E100DC851E /* TMXObjectGroupNode.m */; };
+		A5BED1861B126F4000DC851E /* TMXImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1851B126F4000DC851E /* TMXImageLayer.m */; };
+		A5BED1871B126F4000DC851E /* TMXImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1851B126F4000DC851E /* TMXImageLayer.m */; };
+		A5BED19A1B13A36000DC851E /* SKMapRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1991B13A36000DC851E /* SKMapRenderer.m */; };
+		A5BED19B1B13A36000DC851E /* SKMapRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1991B13A36000DC851E /* SKMapRenderer.m */; };
+		A5BED19E1B13AA7800DC851E /* TMXTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED19D1B13AA7800DC851E /* TMXTileLayer.m */; };
+		A5BED19F1B13AA7800DC851E /* TMXTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED19D1B13AA7800DC851E /* TMXTileLayer.m */; };
+		A5BED1A21B14A37000DC851E /* OrthogonalRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1A11B14A37000DC851E /* OrthogonalRenderer.m */; };
+		A5BED1A31B14A37000DC851E /* OrthogonalRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1A11B14A37000DC851E /* OrthogonalRenderer.m */; };
+		A5BED1AC1B1610B600DC851E /* SKTMNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1AB1B1610B600DC851E /* SKTMNode.m */; };
+		A5BED1AD1B1610B600DC851E /* SKTMNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1AB1B1610B600DC851E /* SKTMNode.m */; };
+		A5BED1B81B16165500DC851E /* SKTMLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1B71B16165500DC851E /* SKTMLayer.m */; };
+		A5BED1B91B16165500DC851E /* SKTMLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1B71B16165500DC851E /* SKTMLayer.m */; };
+		A5BED1BC1B16290E00DC851E /* SKTMMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1BB1B16290E00DC851E /* SKTMMapLayer.m */; };
+		A5BED1BD1B16290E00DC851E /* SKTMMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1BB1B16290E00DC851E /* SKTMMapLayer.m */; };
+		A5BED1C01B16383100DC851E /* SKTMObjectGroupLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1BF1B16383100DC851E /* SKTMObjectGroupLayer.m */; };
+		A5BED1C11B16383100DC851E /* SKTMObjectGroupLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1BF1B16383100DC851E /* SKTMObjectGroupLayer.m */; };
+		A5BED1C41B16384B00DC851E /* SKTMImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1C31B16384B00DC851E /* SKTMImageLayer.m */; };
+		A5BED1C51B16384B00DC851E /* SKTMImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1C31B16384B00DC851E /* SKTMImageLayer.m */; };
+		A5BED1C81B1639FE00DC851E /* SKTMTileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1C71B1639FE00DC851E /* SKTMTileNode.m */; };
+		A5BED1C91B1639FE00DC851E /* SKTMTileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1C71B1639FE00DC851E /* SKTMTileNode.m */; };
+		A5BED1D11B163D5400DC851E /* SKTMTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D01B163D5400DC851E /* SKTMTileLayer.m */; };
+		A5BED1D21B163D5400DC851E /* SKTMTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D01B163D5400DC851E /* SKTMTileLayer.m */; };
+		A5BED1DE1B16884500DC851E /* SKImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D51B16884500DC851E /* SKImageLayer.m */; };
+		A5BED1DF1B16884500DC851E /* SKImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D51B16884500DC851E /* SKImageLayer.m */; };
+		A5BED1E01B16884500DC851E /* SKMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D71B16884500DC851E /* SKMapLayer.m */; };
+		A5BED1E11B16884500DC851E /* SKMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D71B16884500DC851E /* SKMapLayer.m */; };
+		A5BED1E21B16884500DC851E /* SKObjectGroupLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D91B16884500DC851E /* SKObjectGroupLayer.m */; };
+		A5BED1E31B16884500DC851E /* SKObjectGroupLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D91B16884500DC851E /* SKObjectGroupLayer.m */; };
+		A5BED1E41B16884500DC851E /* SKTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1DB1B16884500DC851E /* SKTileLayer.m */; };
+		A5BED1E51B16884500DC851E /* SKTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1DB1B16884500DC851E /* SKTileLayer.m */; };
+		A5BED1E61B16884500DC851E /* SKTileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1DD1B16884500DC851E /* SKTileNode.m */; };
+		A5BED1E71B16884500DC851E /* SKTileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1DD1B16884500DC851E /* SKTileNode.m */; };
+		A5BED1EA1B177ADA00DC851E /* SKTMObjectGroupTile.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1E91B177ADA00DC851E /* SKTMObjectGroupTile.m */; };
+		A5BED1EB1B177ADA00DC851E /* SKTMObjectGroupTile.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1E91B177ADA00DC851E /* SKTMObjectGroupTile.m */; };
+		A5BED1EE1B179CB800DC851E /* SKTMObjectGroupShape.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1ED1B179CB800DC851E /* SKTMObjectGroupShape.m */; };
+		A5BED1EF1B179CB800DC851E /* SKTMObjectGroupShape.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1ED1B179CB800DC851E /* SKTMObjectGroupShape.m */; };
+		A81F8EC029873656FDBC70F4 /* libPods-SKTiledMap-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A417FC5FC14AD8810AA9BA16 /* libPods-SKTiledMap-Mac.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2BB75BE51A01C830D5123472 /* libPods-SKTiledMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A417FC5FC14AD8810AA9BA16 /* libPods-SKTiledMap-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A56AC6FB1B09E04900D1EBAE /* SKTiledMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKTiledMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A56AC6FF1B09E04900D1EBAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A56AC7001B09E04900D1EBAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A56AC7021B09E04900D1EBAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A56AC7031B09E04900D1EBAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A56AC70A1B09E04900D1EBAE /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		A56AC70B1B09E04900D1EBAE /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		A56AC70E1B09E04900D1EBAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A56AC7131B09E04900D1EBAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A56AC72D1B09E17100D1EBAE /* SKTiledMap-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SKTiledMap-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A56AC7301B09E17100D1EBAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A56AC7311B09E17100D1EBAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A56AC7321B09E17100D1EBAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A56AC7341B09E17100D1EBAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A56AC73E1B09E17100D1EBAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		A56AC7531B09E2FD00D1EBAE /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
+		A56AC7551B09E2FD00D1EBAE /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		A56AC7561B09E2FD00D1EBAE /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		A56AC75A1B09E33300D1EBAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A56AC75F1B09E3AE00D1EBAE /* SKZipUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKZipUtils.h; sourceTree = "<group>"; };
+		A56AC7601B09E3AE00D1EBAE /* SKZipUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKZipUtils.m; sourceTree = "<group>"; };
+		A56AC7621B09E3AE00D1EBAE /* SKTiledMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTiledMap.h; sourceTree = "<group>"; };
+		A56AC7671B09E4FD00D1EBAE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A56AC76B1B09EC5400D1EBAE /* TiledMap */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TiledMap; sourceTree = "<group>"; };
+		A56AC76F1B09F56900D1EBAE /* TMXTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXTypes.h; sourceTree = "<group>"; };
+		A56AC7701B0A5A8200D1EBAE /* TMXObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXObject.h; sourceTree = "<group>"; };
+		A56AC7711B0A5A8200D1EBAE /* TMXObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXObject.m; sourceTree = "<group>"; };
+		A56AC7751B0A7F3C00D1EBAE /* TMXTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXTile.h; sourceTree = "<group>"; };
+		A56AC7761B0A7F3C00D1EBAE /* TMXTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXTile.m; sourceTree = "<group>"; };
+		A56AC7791B0A8E6800D1EBAE /* TMXTileset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXTileset.h; sourceTree = "<group>"; };
+		A56AC77A1B0A8E6800D1EBAE /* TMXTileset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXTileset.m; sourceTree = "<group>"; };
+		A5BED1571B0BB2EF00DC851E /* TMXMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXMap.h; sourceTree = "<group>"; };
+		A5BED1581B0BB2EF00DC851E /* TMXMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXMap.m; sourceTree = "<group>"; };
+		A5BED15B1B0C925500DC851E /* SKColor+TMXColorWithHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKColor+TMXColorWithHex.h"; sourceTree = "<group>"; };
+		A5BED15C1B0C925500DC851E /* SKColor+TMXColorWithHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKColor+TMXColorWithHex.m"; sourceTree = "<group>"; };
+		A5BED1641B0D301700DC851E /* WBImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBImage+Utils.h"; sourceTree = "<group>"; };
+		A5BED1651B0D301700DC851E /* WBImage+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WBImage+Utils.m"; sourceTree = "<group>"; };
+		A5BED1681B0E1DE700DC851E /* WBMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMatrix.h; sourceTree = "<group>"; };
+		A5BED1691B0E1DE700DC851E /* WBMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMatrix.m; sourceTree = "<group>"; };
+		A5BED16C1B0F249700DC851E /* SKTexture+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKTexture+Utils.h"; sourceTree = "<group>"; };
+		A5BED16D1B0F249700DC851E /* SKTexture+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTexture+Utils.m"; sourceTree = "<group>"; };
+		A5BED1701B0FB1DE00DC851E /* TMXTerrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXTerrain.h; sourceTree = "<group>"; };
+		A5BED1711B0FB1DE00DC851E /* TMXTerrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXTerrain.m; sourceTree = "<group>"; };
+		A5BED17C1B111E8E00DC851E /* TMXObjectGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXObjectGroup.h; sourceTree = "<group>"; };
+		A5BED17D1B111E8E00DC851E /* TMXObjectGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXObjectGroup.m; sourceTree = "<group>"; };
+		A5BED1801B1218E100DC851E /* TMXObjectGroupNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXObjectGroupNode.h; sourceTree = "<group>"; };
+		A5BED1811B1218E100DC851E /* TMXObjectGroupNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXObjectGroupNode.m; sourceTree = "<group>"; };
+		A5BED1841B126F4000DC851E /* TMXImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXImageLayer.h; sourceTree = "<group>"; };
+		A5BED1851B126F4000DC851E /* TMXImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXImageLayer.m; sourceTree = "<group>"; };
+		A5BED1981B13A36000DC851E /* SKMapRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKMapRenderer.h; sourceTree = "<group>"; };
+		A5BED1991B13A36000DC851E /* SKMapRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMapRenderer.m; sourceTree = "<group>"; };
+		A5BED19C1B13AA7800DC851E /* TMXTileLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXTileLayer.h; sourceTree = "<group>"; };
+		A5BED19D1B13AA7800DC851E /* TMXTileLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXTileLayer.m; sourceTree = "<group>"; };
+		A5BED1A01B14A37000DC851E /* OrthogonalRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrthogonalRenderer.h; sourceTree = "<group>"; };
+		A5BED1A11B14A37000DC851E /* OrthogonalRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrthogonalRenderer.m; sourceTree = "<group>"; };
+		A5BED1A41B14ECDE00DC851E /* TMXBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXBase.h; sourceTree = "<group>"; };
+		A5BED1AA1B1610B600DC851E /* SKTMNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMNode.h; sourceTree = "<group>"; };
+		A5BED1AB1B1610B600DC851E /* SKTMNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMNode.m; sourceTree = "<group>"; };
+		A5BED1B61B16165500DC851E /* SKTMLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMLayer.h; sourceTree = "<group>"; };
+		A5BED1B71B16165500DC851E /* SKTMLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMLayer.m; sourceTree = "<group>"; };
+		A5BED1BA1B16290E00DC851E /* SKTMMapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMMapLayer.h; sourceTree = "<group>"; };
+		A5BED1BB1B16290E00DC851E /* SKTMMapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMMapLayer.m; sourceTree = "<group>"; };
+		A5BED1BE1B16383100DC851E /* SKTMObjectGroupLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMObjectGroupLayer.h; sourceTree = "<group>"; };
+		A5BED1BF1B16383100DC851E /* SKTMObjectGroupLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMObjectGroupLayer.m; sourceTree = "<group>"; };
+		A5BED1C21B16384B00DC851E /* SKTMImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMImageLayer.h; sourceTree = "<group>"; };
+		A5BED1C31B16384B00DC851E /* SKTMImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMImageLayer.m; sourceTree = "<group>"; };
+		A5BED1C61B1639FE00DC851E /* SKTMTileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMTileNode.h; sourceTree = "<group>"; };
+		A5BED1C71B1639FE00DC851E /* SKTMTileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMTileNode.m; sourceTree = "<group>"; };
+		A5BED1CE1B163CC200DC851E /* SKTMBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMBase.h; sourceTree = "<group>"; };
+		A5BED1CF1B163D5400DC851E /* SKTMTileLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMTileLayer.h; sourceTree = "<group>"; };
+		A5BED1D01B163D5400DC851E /* SKTMTileLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMTileLayer.m; sourceTree = "<group>"; };
+		A5BED1D41B16884500DC851E /* SKImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKImageLayer.h; sourceTree = "<group>"; };
+		A5BED1D51B16884500DC851E /* SKImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKImageLayer.m; sourceTree = "<group>"; };
+		A5BED1D61B16884500DC851E /* SKMapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKMapLayer.h; sourceTree = "<group>"; };
+		A5BED1D71B16884500DC851E /* SKMapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMapLayer.m; sourceTree = "<group>"; };
+		A5BED1D81B16884500DC851E /* SKObjectGroupLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKObjectGroupLayer.h; sourceTree = "<group>"; };
+		A5BED1D91B16884500DC851E /* SKObjectGroupLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKObjectGroupLayer.m; sourceTree = "<group>"; };
+		A5BED1DA1B16884500DC851E /* SKTileLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTileLayer.h; sourceTree = "<group>"; };
+		A5BED1DB1B16884500DC851E /* SKTileLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTileLayer.m; sourceTree = "<group>"; };
+		A5BED1DC1B16884500DC851E /* SKTileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTileNode.h; sourceTree = "<group>"; };
+		A5BED1DD1B16884500DC851E /* SKTileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTileNode.m; sourceTree = "<group>"; };
+		A5BED1E81B177ADA00DC851E /* SKTMObjectGroupTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMObjectGroupTile.h; sourceTree = "<group>"; };
+		A5BED1E91B177ADA00DC851E /* SKTMObjectGroupTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMObjectGroupTile.m; sourceTree = "<group>"; };
+		A5BED1EC1B179CB800DC851E /* SKTMObjectGroupShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMObjectGroupShape.h; sourceTree = "<group>"; };
+		A5BED1ED1B179CB800DC851E /* SKTMObjectGroupShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMObjectGroupShape.m; sourceTree = "<group>"; };
+		AA08324E977D5DBC4C1503B4 /* Pods-SKTiledMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKTiledMap/Pods-SKTiledMap.debug.xcconfig"; sourceTree = "<group>"; };
+		BC2477E50821196DE24346F1 /* Pods-SKTiledMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKTiledMap/Pods-SKTiledMap.release.xcconfig"; sourceTree = "<group>"; };
+		C608C0E67B28B842F1E3D70E /* Pods-SKTiledMap-Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap-Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKTiledMap-Mac/Pods-SKTiledMap-Mac.release.xcconfig"; sourceTree = "<group>"; };
+		FCB045DE65C5F349F4BFC9C0 /* Pods-SKTiledMap-Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap-Mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKTiledMap-Mac/Pods-SKTiledMap-Mac.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A56AC6F81B09E04900D1EBAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A56AC7681B09E4FD00D1EBAE /* libz.dylib in Frameworks */,
+				8399841ACA2243140B49E5A5 /* libPods-SKTiledMap.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A56AC72A1B09E17100D1EBAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A56AC76A1B09E54B00D1EBAE /* libz.dylib in Frameworks */,
+				A81F8EC029873656FDBC70F4 /* libPods-SKTiledMap-Mac.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71EBD41CB267EBB59BA85DB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA08324E977D5DBC4C1503B4 /* Pods-SKTiledMap.debug.xcconfig */,
+				BC2477E50821196DE24346F1 /* Pods-SKTiledMap.release.xcconfig */,
+				FCB045DE65C5F349F4BFC9C0 /* Pods-SKTiledMap-Mac.debug.xcconfig */,
+				C608C0E67B28B842F1E3D70E /* Pods-SKTiledMap-Mac.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A56AC6F21B09E04900D1EBAE = {
+			isa = PBXGroup;
+			children = (
+				A56AC75D1B09E3AE00D1EBAE /* Framework */,
+				A56AC7521B09E2FD00D1EBAE /* Classes */,
+				A56AC6FD1B09E04900D1EBAE /* SKTiledMap */,
+				A56AC72E1B09E17100D1EBAE /* SKTiledMap-Mac */,
+				A56AC7591B09E33300D1EBAE /* Resources */,
+				A56AC7691B09E51800D1EBAE /* Frameworks */,
+				A56AC6FC1B09E04900D1EBAE /* Products */,
+				71EBD41CB267EBB59BA85DB2 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		A56AC6FC1B09E04900D1EBAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A56AC6FB1B09E04900D1EBAE /* SKTiledMap.app */,
+				A56AC72D1B09E17100D1EBAE /* SKTiledMap-Mac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A56AC6FD1B09E04900D1EBAE /* SKTiledMap */ = {
+			isa = PBXGroup;
+			children = (
+				A56AC7021B09E04900D1EBAE /* AppDelegate.h */,
+				A56AC7031B09E04900D1EBAE /* AppDelegate.m */,
+				A56AC70A1B09E04900D1EBAE /* GameViewController.h */,
+				A56AC70B1B09E04900D1EBAE /* GameViewController.m */,
+				A56AC70D1B09E04900D1EBAE /* Main.storyboard */,
+				A56AC7121B09E04900D1EBAE /* LaunchScreen.xib */,
+				A56AC6FE1B09E04900D1EBAE /* Supporting Files */,
+			);
+			path = SKTiledMap;
+			sourceTree = "<group>";
+		};
+		A56AC6FE1B09E04900D1EBAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A56AC6FF1B09E04900D1EBAE /* Info.plist */,
+				A56AC7001B09E04900D1EBAE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A56AC72E1B09E17100D1EBAE /* SKTiledMap-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				A56AC7311B09E17100D1EBAE /* AppDelegate.h */,
+				A56AC7321B09E17100D1EBAE /* AppDelegate.m */,
+				A56AC73D1B09E17100D1EBAE /* MainMenu.xib */,
+				A56AC72F1B09E17100D1EBAE /* Supporting Files */,
+			);
+			path = "SKTiledMap-Mac";
+			sourceTree = "<group>";
+		};
+		A56AC72F1B09E17100D1EBAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A56AC7301B09E17100D1EBAE /* Info.plist */,
+				A56AC7341B09E17100D1EBAE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A56AC7521B09E2FD00D1EBAE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A56AC7531B09E2FD00D1EBAE /* prefix.pch */,
+				A56AC7541B09E2FD00D1EBAE /* Scene */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A56AC7541B09E2FD00D1EBAE /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				A56AC7551B09E2FD00D1EBAE /* GameScene.h */,
+				A56AC7561B09E2FD00D1EBAE /* GameScene.m */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		A56AC7591B09E33300D1EBAE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A56AC76B1B09EC5400D1EBAE /* TiledMap */,
+				A56AC75A1B09E33300D1EBAE /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A56AC75D1B09E3AE00D1EBAE /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				A56AC7621B09E3AE00D1EBAE /* SKTiledMap.h */,
+				A5BED1D31B16884500DC851E /* Layer */,
+				A5BED1A91B16108200DC851E /* SpriteKitNode */,
+				A56AC76E1B09EC9200D1EBAE /* Classes */,
+				A56AC7611B09E3AE00D1EBAE /* Model */,
+				A56AC75E1B09E3AE00D1EBAE /* External */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		A56AC75E1B09E3AE00D1EBAE /* External */ = {
+			isa = PBXGroup;
+			children = (
+				A56AC75F1B09E3AE00D1EBAE /* SKZipUtils.h */,
+				A56AC7601B09E3AE00D1EBAE /* SKZipUtils.m */,
+				A5BED15B1B0C925500DC851E /* SKColor+TMXColorWithHex.h */,
+				A5BED15C1B0C925500DC851E /* SKColor+TMXColorWithHex.m */,
+				A5BED1641B0D301700DC851E /* WBImage+Utils.h */,
+				A5BED1651B0D301700DC851E /* WBImage+Utils.m */,
+				A5BED1681B0E1DE700DC851E /* WBMatrix.h */,
+				A5BED1691B0E1DE700DC851E /* WBMatrix.m */,
+				A5BED16C1B0F249700DC851E /* SKTexture+Utils.h */,
+				A5BED16D1B0F249700DC851E /* SKTexture+Utils.m */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		A56AC7611B09E3AE00D1EBAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5BED1A41B14ECDE00DC851E /* TMXBase.h */,
+				A56AC76F1B09F56900D1EBAE /* TMXTypes.h */,
+				A56AC7701B0A5A8200D1EBAE /* TMXObject.h */,
+				A56AC7711B0A5A8200D1EBAE /* TMXObject.m */,
+				A5BED1571B0BB2EF00DC851E /* TMXMap.h */,
+				A5BED1581B0BB2EF00DC851E /* TMXMap.m */,
+				A56AC7751B0A7F3C00D1EBAE /* TMXTile.h */,
+				A56AC7761B0A7F3C00D1EBAE /* TMXTile.m */,
+				A56AC7791B0A8E6800D1EBAE /* TMXTileset.h */,
+				A56AC77A1B0A8E6800D1EBAE /* TMXTileset.m */,
+				A5BED19C1B13AA7800DC851E /* TMXTileLayer.h */,
+				A5BED19D1B13AA7800DC851E /* TMXTileLayer.m */,
+				A5BED17C1B111E8E00DC851E /* TMXObjectGroup.h */,
+				A5BED17D1B111E8E00DC851E /* TMXObjectGroup.m */,
+				A5BED1801B1218E100DC851E /* TMXObjectGroupNode.h */,
+				A5BED1811B1218E100DC851E /* TMXObjectGroupNode.m */,
+				A5BED1841B126F4000DC851E /* TMXImageLayer.h */,
+				A5BED1851B126F4000DC851E /* TMXImageLayer.m */,
+				A5BED1701B0FB1DE00DC851E /* TMXTerrain.h */,
+				A5BED1711B0FB1DE00DC851E /* TMXTerrain.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A56AC7691B09E51800D1EBAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A56AC7671B09E4FD00D1EBAE /* libz.dylib */,
+				2BB75BE51A01C830D5123472 /* libPods-SKTiledMap.a */,
+				A417FC5FC14AD8810AA9BA16 /* libPods-SKTiledMap-Mac.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A56AC76E1B09EC9200D1EBAE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A5BED1981B13A36000DC851E /* SKMapRenderer.h */,
+				A5BED1991B13A36000DC851E /* SKMapRenderer.m */,
+				A5BED1A01B14A37000DC851E /* OrthogonalRenderer.h */,
+				A5BED1A11B14A37000DC851E /* OrthogonalRenderer.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A5BED1A91B16108200DC851E /* SpriteKitNode */ = {
+			isa = PBXGroup;
+			children = (
+				A5BED1CE1B163CC200DC851E /* SKTMBase.h */,
+				A5BED1AA1B1610B600DC851E /* SKTMNode.h */,
+				A5BED1AB1B1610B600DC851E /* SKTMNode.m */,
+				A5BED1C61B1639FE00DC851E /* SKTMTileNode.h */,
+				A5BED1C71B1639FE00DC851E /* SKTMTileNode.m */,
+				A5BED1E81B177ADA00DC851E /* SKTMObjectGroupTile.h */,
+				A5BED1E91B177ADA00DC851E /* SKTMObjectGroupTile.m */,
+				A5BED1EC1B179CB800DC851E /* SKTMObjectGroupShape.h */,
+				A5BED1ED1B179CB800DC851E /* SKTMObjectGroupShape.m */,
+				A5BED1B61B16165500DC851E /* SKTMLayer.h */,
+				A5BED1B71B16165500DC851E /* SKTMLayer.m */,
+				A5BED1CF1B163D5400DC851E /* SKTMTileLayer.h */,
+				A5BED1D01B163D5400DC851E /* SKTMTileLayer.m */,
+				A5BED1BE1B16383100DC851E /* SKTMObjectGroupLayer.h */,
+				A5BED1BF1B16383100DC851E /* SKTMObjectGroupLayer.m */,
+				A5BED1C21B16384B00DC851E /* SKTMImageLayer.h */,
+				A5BED1C31B16384B00DC851E /* SKTMImageLayer.m */,
+				A5BED1BA1B16290E00DC851E /* SKTMMapLayer.h */,
+				A5BED1BB1B16290E00DC851E /* SKTMMapLayer.m */,
+			);
+			path = SpriteKitNode;
+			sourceTree = "<group>";
+		};
+		A5BED1D31B16884500DC851E /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				A5BED1D41B16884500DC851E /* SKImageLayer.h */,
+				A5BED1D51B16884500DC851E /* SKImageLayer.m */,
+				A5BED1D61B16884500DC851E /* SKMapLayer.h */,
+				A5BED1D71B16884500DC851E /* SKMapLayer.m */,
+				A5BED1D81B16884500DC851E /* SKObjectGroupLayer.h */,
+				A5BED1D91B16884500DC851E /* SKObjectGroupLayer.m */,
+				A5BED1DA1B16884500DC851E /* SKTileLayer.h */,
+				A5BED1DB1B16884500DC851E /* SKTileLayer.m */,
+				A5BED1DC1B16884500DC851E /* SKTileNode.h */,
+				A5BED1DD1B16884500DC851E /* SKTileNode.m */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A56AC6FA1B09E04900D1EBAE /* SKTiledMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A56AC7231B09E04900D1EBAE /* Build configuration list for PBXNativeTarget "SKTiledMap" */;
+			buildPhases = (
+				F5A1CA923904EBA0401E1C5F /* Check Pods Manifest.lock */,
+				A56AC6F71B09E04900D1EBAE /* Sources */,
+				A56AC6F81B09E04900D1EBAE /* Frameworks */,
+				A56AC6F91B09E04900D1EBAE /* Resources */,
+				F548ED3DB2F8DDC8D0DD4778 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKTiledMap;
+			productName = SKTiledMap;
+			productReference = A56AC6FB1B09E04900D1EBAE /* SKTiledMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A56AC72C1B09E17100D1EBAE /* SKTiledMap-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A56AC74C1B09E17100D1EBAE /* Build configuration list for PBXNativeTarget "SKTiledMap-Mac" */;
+			buildPhases = (
+				0169F8A6CB83A6A4CCD5FA8D /* Check Pods Manifest.lock */,
+				A56AC7291B09E17100D1EBAE /* Sources */,
+				A56AC72A1B09E17100D1EBAE /* Frameworks */,
+				A56AC72B1B09E17100D1EBAE /* Resources */,
+				2D4161BE3F32133B6C3C1FE2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SKTiledMap-Mac";
+			productName = "SKTiledMap-Mac";
+			productReference = A56AC72D1B09E17100D1EBAE /* SKTiledMap-Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A56AC6F31B09E04900D1EBAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = JasioWoo;
+				TargetAttributes = {
+					A56AC6FA1B09E04900D1EBAE = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					A56AC72C1B09E17100D1EBAE = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A56AC6F61B09E04900D1EBAE /* Build configuration list for PBXProject "SKTiledMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A56AC6F21B09E04900D1EBAE;
+			productRefGroup = A56AC6FC1B09E04900D1EBAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A56AC6FA1B09E04900D1EBAE /* SKTiledMap */,
+				A56AC72C1B09E17100D1EBAE /* SKTiledMap-Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A56AC6F91B09E04900D1EBAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A56AC76C1B09EC5400D1EBAE /* TiledMap in Resources */,
+				A56AC75B1B09E33300D1EBAE /* Images.xcassets in Resources */,
+				A56AC7141B09E04900D1EBAE /* LaunchScreen.xib in Resources */,
+				A56AC70F1B09E04900D1EBAE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A56AC72B1B09E17100D1EBAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A56AC73F1B09E17100D1EBAE /* MainMenu.xib in Resources */,
+				A56AC76D1B09EC5400D1EBAE /* TiledMap in Resources */,
+				A56AC75C1B09E33300D1EBAE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0169F8A6CB83A6A4CCD5FA8D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2D4161BE3F32133B6C3C1FE2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKTiledMap-Mac/Pods-SKTiledMap-Mac-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F548ED3DB2F8DDC8D0DD4778 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKTiledMap/Pods-SKTiledMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5A1CA923904EBA0401E1C5F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A56AC6F71B09E04900D1EBAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A56AC7721B0A5A8200D1EBAE /* TMXObject.m in Sources */,
+				A5BED15D1B0C925500DC851E /* SKColor+TMXColorWithHex.m in Sources */,
+				A5BED1C01B16383100DC851E /* SKTMObjectGroupLayer.m in Sources */,
+				A56AC70C1B09E04900D1EBAE /* GameViewController.m in Sources */,
+				A5BED1AC1B1610B600DC851E /* SKTMNode.m in Sources */,
+				A5BED1591B0BB2EF00DC851E /* TMXMap.m in Sources */,
+				A5BED1DE1B16884500DC851E /* SKImageLayer.m in Sources */,
+				A5BED1E21B16884500DC851E /* SKObjectGroupLayer.m in Sources */,
+				A56AC77B1B0A8E6800D1EBAE /* TMXTileset.m in Sources */,
+				A5BED1E01B16884500DC851E /* SKMapLayer.m in Sources */,
+				A56AC7041B09E04900D1EBAE /* AppDelegate.m in Sources */,
+				A5BED16E1B0F249700DC851E /* SKTexture+Utils.m in Sources */,
+				A5BED1721B0FB1DE00DC851E /* TMXTerrain.m in Sources */,
+				A5BED1C41B16384B00DC851E /* SKTMImageLayer.m in Sources */,
+				A5BED1EE1B179CB800DC851E /* SKTMObjectGroupShape.m in Sources */,
+				A5BED17E1B111E8E00DC851E /* TMXObjectGroup.m in Sources */,
+				A5BED1861B126F4000DC851E /* TMXImageLayer.m in Sources */,
+				A5BED19E1B13AA7800DC851E /* TMXTileLayer.m in Sources */,
+				A5BED1E41B16884500DC851E /* SKTileLayer.m in Sources */,
+				A5BED1821B1218E100DC851E /* TMXObjectGroupNode.m in Sources */,
+				A5BED1EA1B177ADA00DC851E /* SKTMObjectGroupTile.m in Sources */,
+				A56AC7571B09E2FD00D1EBAE /* GameScene.m in Sources */,
+				A5BED1D11B163D5400DC851E /* SKTMTileLayer.m in Sources */,
+				A56AC7631B09E3AE00D1EBAE /* SKZipUtils.m in Sources */,
+				A5BED1E61B16884500DC851E /* SKTileNode.m in Sources */,
+				A5BED1661B0D301700DC851E /* WBImage+Utils.m in Sources */,
+				A5BED1A21B14A37000DC851E /* OrthogonalRenderer.m in Sources */,
+				A56AC7011B09E04900D1EBAE /* main.m in Sources */,
+				A56AC7771B0A7F3C00D1EBAE /* TMXTile.m in Sources */,
+				A5BED1BC1B16290E00DC851E /* SKTMMapLayer.m in Sources */,
+				A5BED1C81B1639FE00DC851E /* SKTMTileNode.m in Sources */,
+				A5BED16A1B0E1DE700DC851E /* WBMatrix.m in Sources */,
+				A5BED1B81B16165500DC851E /* SKTMLayer.m in Sources */,
+				A5BED19A1B13A36000DC851E /* SKMapRenderer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A56AC7291B09E17100D1EBAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5BED1671B0D301700DC851E /* WBImage+Utils.m in Sources */,
+				A56AC7351B09E17100D1EBAE /* main.m in Sources */,
+				A5BED1EB1B177ADA00DC851E /* SKTMObjectGroupTile.m in Sources */,
+				A5BED1831B1218E100DC851E /* TMXObjectGroupNode.m in Sources */,
+				A5BED16B1B0E1DE700DC851E /* WBMatrix.m in Sources */,
+				A56AC7781B0A7F3C00D1EBAE /* TMXTile.m in Sources */,
+				A5BED15E1B0C925500DC851E /* SKColor+TMXColorWithHex.m in Sources */,
+				A5BED15A1B0BB2EF00DC851E /* TMXMap.m in Sources */,
+				A5BED1C91B1639FE00DC851E /* SKTMTileNode.m in Sources */,
+				A5BED1E31B16884500DC851E /* SKObjectGroupLayer.m in Sources */,
+				A5BED1B91B16165500DC851E /* SKTMLayer.m in Sources */,
+				A56AC7731B0A5A8200D1EBAE /* TMXObject.m in Sources */,
+				A5BED1E51B16884500DC851E /* SKTileLayer.m in Sources */,
+				A5BED1AD1B1610B600DC851E /* SKTMNode.m in Sources */,
+				A5BED16F1B0F249700DC851E /* SKTexture+Utils.m in Sources */,
+				A5BED1A31B14A37000DC851E /* OrthogonalRenderer.m in Sources */,
+				A56AC7641B09E3AE00D1EBAE /* SKZipUtils.m in Sources */,
+				A5BED1C11B16383100DC851E /* SKTMObjectGroupLayer.m in Sources */,
+				A5BED17F1B111E8E00DC851E /* TMXObjectGroup.m in Sources */,
+				A5BED1C51B16384B00DC851E /* SKTMImageLayer.m in Sources */,
+				A5BED1E11B16884500DC851E /* SKMapLayer.m in Sources */,
+				A5BED1D21B163D5400DC851E /* SKTMTileLayer.m in Sources */,
+				A5BED1EF1B179CB800DC851E /* SKTMObjectGroupShape.m in Sources */,
+				A56AC77C1B0A8E6800D1EBAE /* TMXTileset.m in Sources */,
+				A56AC7581B09E2FD00D1EBAE /* GameScene.m in Sources */,
+				A5BED19F1B13AA7800DC851E /* TMXTileLayer.m in Sources */,
+				A5BED1E71B16884500DC851E /* SKTileNode.m in Sources */,
+				A5BED1731B0FB1DE00DC851E /* TMXTerrain.m in Sources */,
+				A5BED1DF1B16884500DC851E /* SKImageLayer.m in Sources */,
+				A5BED1BD1B16290E00DC851E /* SKTMMapLayer.m in Sources */,
+				A56AC7331B09E17100D1EBAE /* AppDelegate.m in Sources */,
+				A5BED1871B126F4000DC851E /* TMXImageLayer.m in Sources */,
+				A5BED19B1B13A36000DC851E /* SKMapRenderer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A56AC70D1B09E04900D1EBAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A56AC70E1B09E04900D1EBAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A56AC7121B09E04900D1EBAE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A56AC7131B09E04900D1EBAE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		A56AC73D1B09E17100D1EBAE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A56AC73E1B09E17100D1EBAE /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A56AC7211B09E04900D1EBAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A56AC7221B09E04900D1EBAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A56AC7241B09E04900D1EBAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA08324E977D5DBC4C1503B4 /* Pods-SKTiledMap.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SKTiledMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A56AC7251B09E04900D1EBAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC2477E50821196DE24346F1 /* Pods-SKTiledMap.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SKTiledMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A56AC74D1B09E17100D1EBAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCB045DE65C5F349F4BFC9C0 /* Pods-SKTiledMap-Mac.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SKTiledMap-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A56AC74E1B09E17100D1EBAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C608C0E67B28B842F1E3D70E /* Pods-SKTiledMap-Mac.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "SKTiledMap-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A56AC6F61B09E04900D1EBAE /* Build configuration list for PBXProject "SKTiledMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A56AC7211B09E04900D1EBAE /* Debug */,
+				A56AC7221B09E04900D1EBAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A56AC7231B09E04900D1EBAE /* Build configuration list for PBXNativeTarget "SKTiledMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A56AC7241B09E04900D1EBAE /* Debug */,
+				A56AC7251B09E04900D1EBAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A56AC74C1B09E17100D1EBAE /* Build configuration list for PBXNativeTarget "SKTiledMap-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A56AC74D1B09E17100D1EBAE /* Debug */,
+				A56AC74E1B09E17100D1EBAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A56AC6F31B09E04900D1EBAE /* Project object */;
+}

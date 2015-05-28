@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00BF6A3F8733105586E2AFE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BB9225762969C4CFA3E9CB /* Foundation.framework */; };
+		0B54BA06A93D34DF44AB0FCF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAFDE5D54DB01A9B2017D4E /* Cocoa.framework */; };
+		2ECC0100985E7B40CCED1D84 /* Ono.h in Headers */ = {isa = PBXBuildFile; fileRef = 788BEEF548E35BA83C4A5FF0 /* Ono.h */; };
+		3DB5B706E8F00FCE53A0EB1A /* Pods-SKTiledMap-Ono-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8D451ECD416484121737F7 /* Pods-SKTiledMap-Ono-dummy.m */; };
+		57B76C21FD539BA891AECB38 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAFDE5D54DB01A9B2017D4E /* Cocoa.framework */; };
+		5838EFAF8E497508694F151D /* Pods-SKTiledMap-Mac-Ono-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 321BEC58D2448175452C74D5 /* Pods-SKTiledMap-Mac-Ono-dummy.m */; };
+		60112DA4880DBA034F64C141 /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D06C53B38A26E9905816A /* ONOXMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		6137B7DC112B1EFF01555C0D /* Pods-SKTiledMap-Mac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAAA9E5A380401821674766 /* Pods-SKTiledMap-Mac-dummy.m */; };
+		7C28BB653731E2E7FBE1F1F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3BB9225762969C4CFA3E9CB /* Foundation.framework */; };
+		87148838E3DDCEBCF5452463 /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1D06C53B38A26E9905816A /* ONOXMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		A0BCAA41D517CE8547A5A657 /* ONOXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = F0F8A7EA53B6A72AB9181DFD /* ONOXMLDocument.h */; };
+		A647275DB774C05F1B94074A /* Ono.h in Headers */ = {isa = PBXBuildFile; fileRef = 788BEEF548E35BA83C4A5FF0 /* Ono.h */; };
+		AD71A0646CB516705410977C /* Pods-SKTiledMap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6270AD34368F78909091586 /* Pods-SKTiledMap-dummy.m */; };
+		D79008367F7265CEC49312A9 /* ONOXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = F0F8A7EA53B6A72AB9181DFD /* ONOXMLDocument.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		507E51ADA4D3B6AFBF5F5485 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89B6F58EB181D0D96D5E9E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A583E900F3F30EA03DED995;
+			remoteInfo = "Pods-SKTiledMap-Mac-Ono";
+		};
+		8C4C431CCCEEC10F37083073 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89B6F58EB181D0D96D5E9E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A5B501543A45492F27D8BF8;
+			remoteInfo = "Pods-SKTiledMap-Ono";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BF4DD74F4741D3183EA5AA5 /* Pods-SKTiledMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap.release.xcconfig"; sourceTree = "<group>"; };
+		1BFFF742D62B14B4CBC3C5F6 /* Pods-SKTiledMap-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKTiledMap-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2C0DBE4DBE88899F46EEF5AA /* Pods-SKTiledMap-Ono-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-SKTiledMap-Ono-prefix.pch"; path = "../Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-prefix.pch"; sourceTree = "<group>"; };
+		321BEC58D2448175452C74D5 /* Pods-SKTiledMap-Mac-Ono-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKTiledMap-Mac-Ono-dummy.m"; sourceTree = "<group>"; };
+		3A4C5784037560460827C683 /* Pods-SKTiledMap-Mac-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKTiledMap-Mac-environment.h"; sourceTree = "<group>"; };
+		456B1DCFC62BBAD38E8CA2B0 /* Pods-SKTiledMap-Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-Mac.debug.xcconfig"; sourceTree = "<group>"; };
+		4A5C047C7FB20488B03ED8DE /* Pods-SKTiledMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap.debug.xcconfig"; sourceTree = "<group>"; };
+		54FDE49EFA137DFF0D236702 /* Pods-SKTiledMap-Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-Mac.release.xcconfig"; sourceTree = "<group>"; };
+		620A9B992B8A0D30EF9CC3ED /* Pods-SKTiledMap-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKTiledMap-environment.h"; sourceTree = "<group>"; };
+		64F9479D1C811CF0828767C1 /* Pods-SKTiledMap-Mac-Ono.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-Mac-Ono.xcconfig"; sourceTree = "<group>"; };
+		659C9D3FAC8C9E730425FF6A /* Pods-SKTiledMap-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKTiledMap-acknowledgements.plist"; sourceTree = "<group>"; };
+		6CAAA9E5A380401821674766 /* Pods-SKTiledMap-Mac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKTiledMap-Mac-dummy.m"; sourceTree = "<group>"; };
+		6CBD461C06C1B8C5D28035E4 /* Pods-SKTiledMap-Mac-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKTiledMap-Mac-acknowledgements.plist"; sourceTree = "<group>"; };
+		788BEEF548E35BA83C4A5FF0 /* Ono.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Ono.h; path = Source/Ono.h; sourceTree = "<group>"; };
+		7CA0DB54CAAAD83F4F4F1F3D /* libPods-SKTiledMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F8D451ECD416484121737F7 /* Pods-SKTiledMap-Ono-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-SKTiledMap-Ono-dummy.m"; path = "../Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-dummy.m"; sourceTree = "<group>"; };
+		95EEDB81DE3FE47BB248661B /* Pods-SKTiledMap-Mac-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKTiledMap-Mac-acknowledgements.markdown"; sourceTree = "<group>"; };
+		979C0FA8BDB66144B60822AA /* libPods-SKTiledMap-Ono.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-Ono.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EAFDE5D54DB01A9B2017D4E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		B3AA4EE8604A4B6D20216C20 /* Pods-SKTiledMap-Ono.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap-Ono.xcconfig"; path = "../Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono.xcconfig"; sourceTree = "<group>"; };
+		B3BB9225762969C4CFA3E9CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BE1D06C53B38A26E9905816A /* ONOXMLDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ONOXMLDocument.m; path = Source/ONOXMLDocument.m; sourceTree = "<group>"; };
+		CE4874CB89AE91A451AA1F36 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CE9554F3924B46FBFF720002 /* Pods-SKTiledMap-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SKTiledMap-resources.sh"; sourceTree = "<group>"; };
+		E6385356CE36CB50CCD9834D /* libPods-SKTiledMap-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB3CF1013ACCCE6C1E97EC58 /* Pods-SKTiledMap-Ono-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap-Ono-Private.xcconfig"; path = "../Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-Private.xcconfig"; sourceTree = "<group>"; };
+		EE19E84A6D5B0EC389C90F3E /* Pods-SKTiledMap-Mac-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SKTiledMap-Mac-resources.sh"; sourceTree = "<group>"; };
+		F0F8A7EA53B6A72AB9181DFD /* ONOXMLDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ONOXMLDocument.h; path = Source/ONOXMLDocument.h; sourceTree = "<group>"; };
+		F61415E351AAC1B6E019DD1A /* Pods-SKTiledMap-Mac-Ono-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-Mac-Ono-Private.xcconfig"; sourceTree = "<group>"; };
+		F6270AD34368F78909091586 /* Pods-SKTiledMap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKTiledMap-dummy.m"; sourceTree = "<group>"; };
+		F72FDB0DB876BA135ED14250 /* libPods-SKTiledMap-Mac-Ono.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-Mac-Ono.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDE0DF1CFC2112C26AD6B02 /* Pods-SKTiledMap-Mac-Ono-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKTiledMap-Mac-Ono-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73F08423279E1E9CB7BAAA5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57B76C21FD539BA891AECB38 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA88A880A0753736BA0ED510 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B54BA06A93D34DF44AB0FCF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8137B13328B316AA07BEE5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00BF6A3F8733105586E2AFE8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3BAD6CDBD642369B8EB9381 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C28BB653731E2E7FBE1F1F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11B012656A427869C39E8C6D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B3BB9225762969C4CFA3E9CB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		15159FE920686E04036D6DEB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				78A7A6C5BBC4B9E87B78E4DB /* Pods-SKTiledMap */,
+				6D1B2D6BD38611FA93B7AB81 /* Pods-SKTiledMap-Mac */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		302CCAF80171F76B8CF62031 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				64F9479D1C811CF0828767C1 /* Pods-SKTiledMap-Mac-Ono.xcconfig */,
+				F61415E351AAC1B6E019DD1A /* Pods-SKTiledMap-Mac-Ono-Private.xcconfig */,
+				321BEC58D2448175452C74D5 /* Pods-SKTiledMap-Mac-Ono-dummy.m */,
+				FDDE0DF1CFC2112C26AD6B02 /* Pods-SKTiledMap-Mac-Ono-prefix.pch */,
+				B3AA4EE8604A4B6D20216C20 /* Pods-SKTiledMap-Ono.xcconfig */,
+				EB3CF1013ACCCE6C1E97EC58 /* Pods-SKTiledMap-Ono-Private.xcconfig */,
+				7F8D451ECD416484121737F7 /* Pods-SKTiledMap-Ono-dummy.m */,
+				2C0DBE4DBE88899F46EEF5AA /* Pods-SKTiledMap-Ono-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-SKTiledMap-Mac-Ono";
+			sourceTree = "<group>";
+		};
+		3E233985C2FE346B2A71FD11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CA0DB54CAAAD83F4F4F1F3D /* libPods-SKTiledMap.a */,
+				E6385356CE36CB50CCD9834D /* libPods-SKTiledMap-Mac.a */,
+				F72FDB0DB876BA135ED14250 /* libPods-SKTiledMap-Mac-Ono.a */,
+				979C0FA8BDB66144B60822AA /* libPods-SKTiledMap-Ono.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43976C325A756D97CF4AA732 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				505DD1479C119595135B970E /* OS X */,
+				11B012656A427869C39E8C6D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		505DD1479C119595135B970E /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				9EAFDE5D54DB01A9B2017D4E /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		692167BE76557B41B573B59D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C409C3DD53EE861D3EF51C27 /* Ono */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D1B2D6BD38611FA93B7AB81 /* Pods-SKTiledMap-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				95EEDB81DE3FE47BB248661B /* Pods-SKTiledMap-Mac-acknowledgements.markdown */,
+				6CBD461C06C1B8C5D28035E4 /* Pods-SKTiledMap-Mac-acknowledgements.plist */,
+				6CAAA9E5A380401821674766 /* Pods-SKTiledMap-Mac-dummy.m */,
+				3A4C5784037560460827C683 /* Pods-SKTiledMap-Mac-environment.h */,
+				EE19E84A6D5B0EC389C90F3E /* Pods-SKTiledMap-Mac-resources.sh */,
+				456B1DCFC62BBAD38E8CA2B0 /* Pods-SKTiledMap-Mac.debug.xcconfig */,
+				54FDE49EFA137DFF0D236702 /* Pods-SKTiledMap-Mac.release.xcconfig */,
+			);
+			name = "Pods-SKTiledMap-Mac";
+			path = "Target Support Files/Pods-SKTiledMap-Mac";
+			sourceTree = "<group>";
+		};
+		78A7A6C5BBC4B9E87B78E4DB /* Pods-SKTiledMap */ = {
+			isa = PBXGroup;
+			children = (
+				1BFFF742D62B14B4CBC3C5F6 /* Pods-SKTiledMap-acknowledgements.markdown */,
+				659C9D3FAC8C9E730425FF6A /* Pods-SKTiledMap-acknowledgements.plist */,
+				F6270AD34368F78909091586 /* Pods-SKTiledMap-dummy.m */,
+				620A9B992B8A0D30EF9CC3ED /* Pods-SKTiledMap-environment.h */,
+				CE9554F3924B46FBFF720002 /* Pods-SKTiledMap-resources.sh */,
+				4A5C047C7FB20488B03ED8DE /* Pods-SKTiledMap.debug.xcconfig */,
+				0BF4DD74F4741D3183EA5AA5 /* Pods-SKTiledMap.release.xcconfig */,
+			);
+			name = "Pods-SKTiledMap";
+			path = "Target Support Files/Pods-SKTiledMap";
+			sourceTree = "<group>";
+		};
+		C409C3DD53EE861D3EF51C27 /* Ono */ = {
+			isa = PBXGroup;
+			children = (
+				F0F8A7EA53B6A72AB9181DFD /* ONOXMLDocument.h */,
+				BE1D06C53B38A26E9905816A /* ONOXMLDocument.m */,
+				788BEEF548E35BA83C4A5FF0 /* Ono.h */,
+				302CCAF80171F76B8CF62031 /* Support Files */,
+			);
+			path = Ono;
+			sourceTree = "<group>";
+		};
+		E1D50805AA8D69EBAEC45D1E = {
+			isa = PBXGroup;
+			children = (
+				CE4874CB89AE91A451AA1F36 /* Podfile */,
+				43976C325A756D97CF4AA732 /* Frameworks */,
+				692167BE76557B41B573B59D /* Pods */,
+				3E233985C2FE346B2A71FD11 /* Products */,
+				15159FE920686E04036D6DEB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		05CD3DD0015D17B4656171FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0BCAA41D517CE8547A5A657 /* ONOXMLDocument.h in Headers */,
+				A647275DB774C05F1B94074A /* Ono.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		394A1C81B710D72C406BBE20 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D79008367F7265CEC49312A9 /* ONOXMLDocument.h in Headers */,
+				2ECC0100985E7B40CCED1D84 /* Ono.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3A583E900F3F30EA03DED995 /* Pods-SKTiledMap-Mac-Ono */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B554483CC8BF5DC75BFD04DB /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Mac-Ono" */;
+			buildPhases = (
+				B2EA324C6A92F26987A5CB3C /* Sources */,
+				BA88A880A0753736BA0ED510 /* Frameworks */,
+				05CD3DD0015D17B4656171FA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SKTiledMap-Mac-Ono";
+			productName = "Pods-SKTiledMap-Mac-Ono";
+			productReference = F72FDB0DB876BA135ED14250 /* libPods-SKTiledMap-Mac-Ono.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3A5B501543A45492F27D8BF8 /* Pods-SKTiledMap-Ono */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50324282E795A7026F1B8FD3 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Ono" */;
+			buildPhases = (
+				400A68692D60C4B9C6B252B4 /* Sources */,
+				D3BAD6CDBD642369B8EB9381 /* Frameworks */,
+				394A1C81B710D72C406BBE20 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SKTiledMap-Ono";
+			productName = "Pods-SKTiledMap-Ono";
+			productReference = 979C0FA8BDB66144B60822AA /* libPods-SKTiledMap-Ono.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7035FE77F027567E28D8E3A2 /* Pods-SKTiledMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC09E44E8C0D757F2F2E72C2 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap" */;
+			buildPhases = (
+				BF94CBAAE69DB1D984537516 /* Sources */,
+				C8137B13328B316AA07BEE5A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF7B2A2BF7AD191DC1A265DA /* PBXTargetDependency */,
+			);
+			name = "Pods-SKTiledMap";
+			productName = "Pods-SKTiledMap";
+			productReference = 7CA0DB54CAAAD83F4F4F1F3D /* libPods-SKTiledMap.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EB1E4B6CF95C2C70199C387D /* Pods-SKTiledMap-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C624017F66D9B941693A7E8D /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Mac" */;
+			buildPhases = (
+				BAF0C19E3E8314A8F6062420 /* Sources */,
+				73F08423279E1E9CB7BAAA5C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28279255F3AD7EA0439D4E32 /* PBXTargetDependency */,
+			);
+			name = "Pods-SKTiledMap-Mac";
+			productName = "Pods-SKTiledMap-Mac";
+			productReference = E6385356CE36CB50CCD9834D /* libPods-SKTiledMap-Mac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89B6F58EB181D0D96D5E9E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 7B005070E8D02319C989B332 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E1D50805AA8D69EBAEC45D1E;
+			productRefGroup = 3E233985C2FE346B2A71FD11 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7035FE77F027567E28D8E3A2 /* Pods-SKTiledMap */,
+				EB1E4B6CF95C2C70199C387D /* Pods-SKTiledMap-Mac */,
+				3A583E900F3F30EA03DED995 /* Pods-SKTiledMap-Mac-Ono */,
+				3A5B501543A45492F27D8BF8 /* Pods-SKTiledMap-Ono */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		400A68692D60C4B9C6B252B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87148838E3DDCEBCF5452463 /* ONOXMLDocument.m in Sources */,
+				3DB5B706E8F00FCE53A0EB1A /* Pods-SKTiledMap-Ono-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2EA324C6A92F26987A5CB3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60112DA4880DBA034F64C141 /* ONOXMLDocument.m in Sources */,
+				5838EFAF8E497508694F151D /* Pods-SKTiledMap-Mac-Ono-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAF0C19E3E8314A8F6062420 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6137B7DC112B1EFF01555C0D /* Pods-SKTiledMap-Mac-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF94CBAAE69DB1D984537516 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD71A0646CB516705410977C /* Pods-SKTiledMap-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28279255F3AD7EA0439D4E32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SKTiledMap-Mac-Ono";
+			target = 3A583E900F3F30EA03DED995 /* Pods-SKTiledMap-Mac-Ono */;
+			targetProxy = 507E51ADA4D3B6AFBF5F5485 /* PBXContainerItemProxy */;
+		};
+		FF7B2A2BF7AD191DC1A265DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SKTiledMap-Ono";
+			target = 3A5B501543A45492F27D8BF8 /* Pods-SKTiledMap-Ono */;
+			targetProxy = 8C4C431CCCEEC10F37083073 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0289945D7E5872A90B9D41CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 456B1DCFC62BBAD38E8CA2B0 /* Pods-SKTiledMap-Mac.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		0632AC84C76458202F28A8DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		19CEBD138232DA47E5AB0FB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F61415E351AAC1B6E019DD1A /* Pods-SKTiledMap-Mac-Ono-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SKTiledMap-Mac-Ono/Pods-SKTiledMap-Mac-Ono-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		28BBAC96395A00A6E5ABD6F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54FDE49EFA137DFF0D236702 /* Pods-SKTiledMap-Mac.release.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2DAC3CA714CD91C79078C009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F61415E351AAC1B6E019DD1A /* Pods-SKTiledMap-Mac-Ono-Private.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SKTiledMap-Mac-Ono/Pods-SKTiledMap-Mac-Ono-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		43B6621D14222A82274EC351 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F0B594B44A1314A06FC433E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3CF1013ACCCE6C1E97EC58 /* Pods-SKTiledMap-Ono-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9944BAFC290BE640017B1FB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BF4DD74F4741D3183EA5AA5 /* Pods-SKTiledMap.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E713663FD3304868FD697A3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A5C047C7FB20488B03ED8DE /* Pods-SKTiledMap.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F06415B2A45BB059A04C05D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB3CF1013ACCCE6C1E97EC58 /* Pods-SKTiledMap-Ono-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50324282E795A7026F1B8FD3 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Ono" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F06415B2A45BB059A04C05D8 /* Debug */,
+				5F0B594B44A1314A06FC433E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B005070E8D02319C989B332 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0632AC84C76458202F28A8DD /* Debug */,
+				43B6621D14222A82274EC351 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B554483CC8BF5DC75BFD04DB /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Mac-Ono" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19CEBD138232DA47E5AB0FB2 /* Debug */,
+				2DAC3CA714CD91C79078C009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C624017F66D9B941693A7E8D /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0289945D7E5872A90B9D41CC /* Debug */,
+				28BBAC96395A00A6E5ABD6F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC09E44E8C0D757F2F2E72C2 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E713663FD3304868FD697A3B /* Debug */,
+				9944BAFC290BE640017B1FB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89B6F58EB181D0D96D5E9E98 /* Project object */;
+}
