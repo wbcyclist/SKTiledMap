@@ -20,18 +20,13 @@
 - (SKTMTileLayer *)drawTileLayer:(TMXTileLayer *)layerData {
     SKTMTileLayer *layer = [SKTMTileLayer nodeWithModel:layerData];
     
-    int columnLength = layerData.map.width;
-    int rowLenght = layerData.map.height;
-    int tileWidth = layerData.map.tileWidth;
-    int tileHeight = layerData.map.tileHeight;
-    
     int startX = 0;
     int startY = 0;
-    int endX = columnLength - 1;
-    int endY = rowLenght - 1;
+    int endX = self.mapWidth - 1;
+    int endY = self.mapHeight - 1;
     
     int incX = 1, incY = 1;
-    RenderOrder renderOrder = layerData.map.renderOrder;
+    RenderOrder renderOrder = self.map.renderOrder;
     switch (renderOrder) {
         case RenderOrder_RightUp:
             SWAP(startY, endY);
@@ -58,8 +53,8 @@
     for (int y = startY; y != endY; y += incY) {
         for (int x = startX; x != endX; x += incX) {
 //            NSLog(@"x=%d, y=%d", x, y);
-//            NSLog(@"%@", array[x + y*columnLength]);
-            uint32_t gid = layerData.tiles[x + y*columnLength];
+//            NSLog(@"%@", array[x + y*self.mapWidth]);
+            uint32_t gid = layerData.tiles[x + y*self.mapWidth];
             
             BOOL flipX = (gid & kTileHorizontalFlag) != 0;
             BOOL flipY = (gid & kTileVerticalFlag) != 0;
@@ -74,7 +69,7 @@
             tile.flippedVertically = flipY;
             tile.flippedAntiDiagonally = flipDiag;
             
-            SKTMTileNode *tileNode = [SKTMTileNode nodeWithModel:tile position:CGPointMake(x*tileWidth, (y+1)*tileHeight) origin:BottomLeft];
+            SKTMTileNode *tileNode = [SKTMTileNode nodeWithModel:tile position:CGPointMake(x*self.tileWidth, (y+1)*self.tileHeight) origin:BottomLeft];
             tileNode.position = [self pixelToScreenCoords:tileNode.pixelPos];
             tileNode.zPosition = tileZIndex++;
             [layer addChild:tileNode];

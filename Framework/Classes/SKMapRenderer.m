@@ -12,27 +12,36 @@
 
 @implementation SKMapRenderer
 
-- (void)setTileWidth:(uint32_t)tileWidth {
-    _tileWidth = tileWidth;
-    [self updateMapPixelSize];
+- (void)setMap:(TMXMap *)map {
+    _map = map;
+    self.tileWidth = map.tileWidth;
+    self.tileHeight = map.tileHeight;
+    self.mapWidth = map.width;
+    self.mapHeight = map.height;
+    [self updateRenderParams];
 }
 
-- (void)setTileHeight:(uint32_t)tileHeight {
-    _tileHeight = tileHeight;
-    [self updateMapPixelSize];
-}
+//- (void)setTileWidth:(uint32_t)tileWidth {
+//    _tileWidth = tileWidth;
+//    [self updateRenderParams];
+//}
+//
+//- (void)setTileHeight:(uint32_t)tileHeight {
+//    _tileHeight = tileHeight;
+//    [self updateRenderParams];
+//}
+//
+//- (void)setMapWidth:(uint32_t)mapWidth {
+//    _mapWidth = mapWidth;
+//    [self updateRenderParams];
+//}
+//
+//- (void)setMapHeight:(uint32_t)mapHeight {
+//    _mapHeight = mapHeight;
+//    [self updateRenderParams];
+//}
 
-- (void)setMapWidth:(uint32_t)mapWidth {
-    _mapWidth = mapWidth;
-    [self updateMapPixelSize];
-}
-
-- (void)setMapHeight:(uint32_t)mapHeight {
-    _mapHeight = mapHeight;
-    [self updateMapPixelSize];
-}
-
-- (void)updateMapPixelSize {
+- (void)updateRenderParams {
     self.mapPixelSize = CGSizeMake(_tileWidth*_mapWidth, _tileHeight*_mapHeight);
 }
 

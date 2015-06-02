@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 
-@class SKTMTileLayer, SKTMObjectGroupLayer, SKTMImageLayer, TMXTileLayer, TMXObjectGroup, TMXImageLayer;
+@class SKTMTileLayer, SKTMObjectGroupLayer, SKTMImageLayer, TMXMap, TMXTileLayer, TMXObjectGroup, TMXImageLayer;
 
 
 @interface SKMapRenderer : NSObject
+
+@property (nonatomic, weak) TMXMap *map;
 
 @property (nonatomic, assign) uint32_t tileWidth;
 @property (nonatomic, assign) uint32_t tileHeight;
@@ -75,6 +77,6 @@
 
 
 
-- (void)updateMapPixelSize;
+- (void)updateRenderParams;
 
 @end

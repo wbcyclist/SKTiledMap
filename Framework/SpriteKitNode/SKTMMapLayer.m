@@ -66,10 +66,7 @@
 
 - (void)reloadMapModel {
     self.mapRenderer = [self createMapRenderer:self.model.orientation];
-    self.mapRenderer.tileWidth = self.model.tileWidth;
-    self.mapRenderer.tileHeight = self.model.tileHeight;
-    self.mapRenderer.mapWidth = self.model.width;
-    self.mapRenderer.mapHeight = self.model.height;
+    self.mapRenderer.map = self.model;
     [self createMapLayers];
 }
 
@@ -82,6 +79,7 @@
         mapRenderer = [IsometricRenderer new];
         
     } else if (ostyle==OrientationStyle_Staggered) {
+        mapRenderer = [StaggeredRenderer new];
         
     } else if (ostyle==OrientationStyle_Hexagonal) {
         

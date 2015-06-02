@@ -89,8 +89,8 @@ typedef NS_ENUM(NSUInteger, RenderOrder) {
 };
 
 /**
- * Which axis is staggered. Only used by the isometric staggered and
- * hexagonal map renderers.
+ * Which axis is staggered. 
+ * Only used by the isometric staggered and hexagonal map renderers.
  */
 typedef NS_ENUM(NSUInteger, StaggerAxis) {
     StaggerAxis_StaggerX,

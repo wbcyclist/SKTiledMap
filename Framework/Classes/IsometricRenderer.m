@@ -22,17 +22,9 @@
     CGPoint m_factor;
 }
 
-- (void)setTileWidth:(uint32_t)tileWidth {
-    m_tile_width_half = tileWidth/2.0;
-    [super setTileWidth:tileWidth];
-}
-
-- (void)setTileHeight:(uint32_t)tileHeight {
-    m_tile_height_half = tileHeight/2.0;
-    [super setTileHeight:tileHeight];
-}
-
-- (void)updateMapPixelSize {
+- (void)updateRenderParams {
+    m_tile_width_half = self.tileWidth/2.0;
+    m_tile_height_half = self.tileHeight/2.0;
     m_origin_x = self.mapHeight * m_tile_width_half;
     m_factor.x = m_tile_width_half/self.tileHeight;
     m_factor.y = m_tile_height_half/self.tileHeight;

@@ -10,6 +10,7 @@
 #import "SKMapRenderer.h"
 #import "OrthogonalRenderer.h"
 #import "IsometricRenderer.h"
+#import "StaggeredRenderer.h"
 
 @interface SKTMMapLayer : SKTMLayer
 

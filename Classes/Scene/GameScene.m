@@ -36,8 +36,8 @@
         m_contentCreated = YES;
         
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/desert.tmx"];
-        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Isometric/Iso1.tmx"];
-        
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Isometric/Iso1.tmx"];
+        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Isometric/Iso6.tmx"];
         
         self.backgroundColor = self.mapLayer.model.backgroundColor;
         [self addChild:self.mapLayer];

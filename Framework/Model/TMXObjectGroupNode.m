@@ -103,12 +103,11 @@
             
         } case ObjectGroupType_Ellipse: {
             CGAffineTransform transform;
-            if (renderer && style==OrientationStyle_Isometric) { //TODO: Not Implemented
+            if (renderer && style==OrientationStyle_Isometric) { //TODO: Not Implemented, google "draw isometric circles"
                 transform = CGAffineTransformMakeTranslation(-CGRectGetWidth(rect)/2.0, -CGRectGetHeight(rect));
             } else {
                 transform = CGAffineTransformMakeTranslation(0, -CGRectGetHeight(rect));
             }
-            
             resultPath = CGPathCreateWithEllipseInRect(rect, &transform);
             break;
             
