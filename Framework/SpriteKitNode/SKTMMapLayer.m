@@ -8,12 +8,18 @@
 
 #import "SKTMMapLayer.h"
 
-#import "SKMapRenderer.h"
-#import "OrthogonalRenderer.h"
+#import "SKTMTileNode.h"
+#import "SKTMObjectGroupTile.h"
+#import "SKTMObjectGroupShape.h"
+#import "SKTMTileLayer.h"
+#import "SKTMObjectGroupLayer.h"
+#import "SKTMImageLayer.h"
+
+
 
 
 @interface SKTMMapLayer ()
-@property (nonatomic, strong) SKMapRenderer *mapRenderer;
+
 @end
 
 @implementation SKTMMapLayer
@@ -52,12 +58,18 @@
 - (void)setModel:(TMXMap *)model {
     if (_model != model) {
         _model = model;
+        self.tileSize = CGSizeMake(model.tileWidth, model.tileHeight);
+        self.mapSize = CGSizeMake(model.width, model.height);
         [self reloadMapModel];
     }
 }
 
 - (void)reloadMapModel {
     self.mapRenderer = [self createMapRenderer:self.model.orientation];
+    self.mapRenderer.tileWidth = self.model.tileWidth;
+    self.mapRenderer.tileHeight = self.model.tileHeight;
+    self.mapRenderer.mapWidth = self.model.width;
+    self.mapRenderer.mapHeight = self.model.height;
     [self createMapLayers];
 }
 
@@ -67,6 +79,7 @@
         mapRenderer = [OrthogonalRenderer new];
         
     } else if (ostyle==OrientationStyle_Isometric) {
+        mapRenderer = [IsometricRenderer new];
         
     } else if (ostyle==OrientationStyle_Staggered) {
         

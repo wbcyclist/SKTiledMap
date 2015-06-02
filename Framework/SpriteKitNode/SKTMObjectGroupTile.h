@@ -12,12 +12,15 @@
 @interface SKTMObjectGroupTile : SKSpriteNode
 
 @property (nonatomic, strong) TMXObjectGroupNode *model;
-@property (nonatomic, assign) CGPoint tileOffset;
+@property (nonatomic, assign)CGPoint pixelPos;
 
-+ (instancetype)nodeWithModel:(TMXObjectGroupNode *)model;
-- (instancetype)initWithModel:(TMXObjectGroupNode *)model;
++ (instancetype)nodeWithModel:(TMXObjectGroupNode *)model position:(CGPoint)pos origin:(Origin)origin;
+- (instancetype)initWithModel:(TMXObjectGroupNode *)model position:(CGPoint)pos origin:(Origin)origin;
 
-- (void)updateTileFlippedFlags;
 - (void)updateTileRotation:(CGFloat)zRotation;
+
+
+
+
 
 @end

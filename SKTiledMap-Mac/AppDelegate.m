@@ -17,7 +17,7 @@
     //    CGSize size = self.skView.bounds.size;
     //    size.width = size.width*2;
     //    size.height = size.height*2;
-    GameScene *scene = [[GameScene alloc] initWithSize:CGSizeMake(1000, 600)];
+    GameScene *scene = [[GameScene alloc] initWithSize:CGSizeMake(1500, 900)];
     scene.scaleMode = SKSceneScaleModeAspectFit;
     [self.skView presentScene:scene];
     

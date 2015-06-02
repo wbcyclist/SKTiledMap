@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="32" tileheight="32" nextobjectid="63">
+<map version="1.0" orientation="orthogonal" renderorder="left-down" width="40" height="40" tilewidth="32" tileheight="32" backgroundcolor="#800080" nextobjectid="85">
  <tileset firstgid="1" name="Desert" tilewidth="32" tileheight="32" spacing="1" margin="1">
   <image source="tmw_desert_spacing.png" width="265" height="199"/>
   <terraintypes>
@@ -58,57 +58,52 @@
   <tile id="47" terrain="0,0,0,0" probability="0.5"/>
  </tileset>
  <tileset firstgid="49" source="Collect.tsx"/>
- <tileset firstgid="53" name="V_Headimg" tilewidth="32" tileheight="32" spacing="1" margin="1">
-  <image source="V_Headimg.png" trans="000000" width="796" height="796"/>
+ <tileset firstgid="53" name="Iso1_130x66_130x230" tilewidth="130" tileheight="230">
+  <image source="Isometric/Iso1_130x66_130x230.png" width="1560" height="1380"/>
  </tileset>
- <layer name="块层 1" width="40" height="40">
+ <layer name="块层 3" width="40" height="40">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA8VZbVLbMBQUNE2gJA4UCukXScsM0K/AEXqUHqVH6VF6lB6lTzPeYbO8J9uxCT92sGzHWu3qvSeJy5TSJeFe2mPDAV1PgvaY/k4IBy3fm8i32+LcsKDrl4Zjp52vK8PMMCdM6V7pvTm9w9pUjk4ex0qe6/tj6XNEPEY0Dn1PMSUtZzKeacAR39TxD6kbxqD3oc+FjJHnA55X1I706KOb95y90jHm7y/kOc/Fp9QNYO90jBwHVXocX6z70LoBGoPoT2Pp3LmPeTBL3XQbST8lePqwj5wTNY55XnbRDTFa0o35aS6Lcs01cec820W3Nprp/ON+0Afr15Rv2HcvnuFl01yL9Lt3PPY4sa/efPA87eJlyV/1CfeXxGlReNfTrauXET98GzmiTR2Db5wPL3p6GeUXrVc8/706zLVQ1yNcX/pyQ3ywV3eOn8pR8zHHCXhrLu2jH9feiJvGOfzjGohxIiaY57ZcvflVWieyxx43L3b7+M41Adcaw6zfMj3O5W3iYNs8w7mW43CRHtauel89HiIOSvo11bUoPz81t7nTH9dQXUvhXltPh+LnrQ/Yc90rVQP2v018eHUu2gftyl/dQ0b8dqmd+qs6erHyXPw8Hb0asktvlR+wcu5hLz9U3W+LdUp/PP0ybh1th6r7Hfj9i9bxJfSt+x34/Yo47Bn2CS9qXhHXiCfWstuMxfitIm4fDa8IH2qOJV25f15j79W/7Rr/6/q7Nw3cgKOC35i70Irn8onhNG3OizZ6qr95L3dYczkzvDa8EQ33A2R9lvStt4Z3hvd0jXZ+b5Wa14TG769qAX5H9XfQBs6EM8ZxKj58Mnw2fDf8qK/RzhxzfmjKW5xf2Av0x14zj0Np47d36eE8BPw8XKXNfB/tR7N+hp+ch3lNDq7K40TaHr4Yvgb4lvxYUZ7G7TdiRLWOzlN5HE3n2d6al8+9wIfPlpg3c+P1qReDXq3Ts7YSZz7n5O9XxEv3DOsaVdo8vyidw/DvoTGP2dtb8Tmh/n+itJf5D7/LLZoAGQAA
+   H4sIAAAAAAAAA+3YsQkAMRADQVfi/sv8Bj7bRIZZUD5cePecc8e3Gl+Lr8XX4mvxtfhafC2+Fl+Lr8XX4mvxtfhafC2+1ou+JfP6L3jpVn+94lveB38DMnQAGQAA
   </data>
  </layer>
- <layer name="块层 2" width="40" height="40">
+ <layer name="块层 1" width="40" height="40" visible="0">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA+3IsQ2AMBAEQbdhHAERuP/+uAacPJKjGWmTbQ0AAABY6elIo/B2ONOV7sLb4UlvmoUHAPDHB0E/r44AGQAA
+   H4sIAAAAAAAAA71ZWXITMRR8BBM7xB6ThXjYbAeqQticHIGjcBSOwlE4CkdBUzVdbnfe0ywe+6MroxlZavXbJGVtZvOEZY1Heq5wmjCh53HQPqW/Y8KkZb+xjA3cNbRvEkp6fpHwymlXz0XCrF4vMKV3uX5z6sPaFI5OCow5MV9XtHnOEfEY0Tq0n2JKWs5kPdOAI8bU9Q+pG9ag76HPQtbI/oDvBbUjPfbRzfvOttI1VuOX8p198ZC6AWw7XSPHQWFP44t1H1o3QGMQ82ks3Tjv4Qcz66bbSObJwdOH7cg5UeOY/bKLbojRnG7MT3NZlGvuiDvn2S66tdFM/Y/nwRysX1O+Ybt78QxbNvlapN+jY2OPE9vV8wfPpl1smbOv2gnvV8SpzPT1dOtqy4gfxkaOyNWxJfVd2K7/LsSWy2C+SKMov2i9Yv/36jDXQt2PcH3ZVzvEB9vqwbGnctR8zHEC3ppL+0Jrb8RN4xyxyDUQ60RMMM++XL19UhTDauOR+bHBfqX7jK4cuSbgWWOY9VvZ01zeJnf0zTOcazkOS9vuXfW92niIOMjll6Xl61qUnw/Nbe7MxzVU91J4xzaN8tbQ+nk+pT6IuC4GnL9PfHh1LjoHHcu+eoaM+B1TO7Wv6ujFShd+bXyzqY/nX7kackzbKj9g7bzDWX6out8WG7M/nn5eXSttm6cPnVeI379oH5/DvnW/A79fEYdnCSeE5zWviGvEE3vZPmtJ/NYRtw8JLwnva445XXl+8Crr8arfds1Pm3rczw3cgPOMveG78E/15Svb9Ys2eqp9q7PcWc3lOuEy4bVoeBKg0mdFY71JeJvwjp7RrvqtrXlPmPj9VS3A77weB23gWjhjHVdih9uEjwnfE37Uz2hXHO+tOW9xfgEuaD62NfM4kzZ++2Db+xDw8/DJdvN9dB6t9Ev4yXmY9+TgqjwupO3hS8LXAN/MjxXlmbj9Royo1tF9Kq8j+s79tA/fe4EP3y0xb+bG+1PEl1dPeB1615bjzPecPH5BvPTMsKlR2O79Re4ehn8PjXnN3tmK7wn1/xO5s8x/yYpwcAAZAAA=
   </data>
  </layer>
- <objectgroup color="#ff8000" name="对象层 1">
+ <layer name="块层 2" width="40" height="40" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3UsREAIAgEMFZy/+VYQBuOAjUpoXv+iACAXqu4+40smODUw91cZ+9Q/cHuCwAAvCYB/l6u8gAZAAA=
+  </data>
+ </layer>
+ <objectgroup color="#ffffff" name="对象层 1">
   <properties>
-   <property name="showShape" value="0"/>
+   <property name="showShape" value="1"/>
   </properties>
-  <object id="37" gid="46" x="160" y="864" width="32" height="32"/>
-  <object id="38" gid="1073741871" x="128" y="768" width="32" height="32" rotation="78.1248"/>
-  <object id="39" gid="3221225520" x="160" y="768" width="32" height="32" rotation="288.111"/>
-  <object id="40" gid="39" x="256" y="736" width="32" height="32" rotation="38.0115"/>
-  <object id="41" gid="2147483687" x="224" y="704" width="32" height="32" rotation="38.0115"/>
-  <object id="42" gid="46" x="192" y="896" width="32" height="32"/>
-  <object id="43" gid="46" x="192" y="864" width="32" height="32"/>
-  <object id="44" gid="46" x="224" y="864" width="32" height="32"/>
-  <object id="45" gid="46" x="192" y="832" width="32" height="32"/>
-  <object id="46" gid="2147483694" x="288" y="896" width="32" height="32"/>
-  <object id="47" gid="1073741870" x="288" y="864" width="32" height="32"/>
-  <object id="48" gid="3221225518" x="288" y="832" width="32" height="32"/>
-  <object id="50" gid="3221225518" x="316.471" y="908.124" width="32" height="32" rotation="45.0274"/>
-  <object id="52" gid="46" x="160" y="160" width="32" height="32"/>
-  <object id="53" gid="46" x="0" y="0" width="32" height="32"/>
-  <object id="54" x="32" y="512" width="128" height="96" rotation="-15.5001"/>
-  <object id="56" x="160" y="640"/>
-  <object id="57" x="224" y="512" width="32" height="128">
+  <object id="64" gid="3221225518" x="75.9067" y="982.369" width="122.392" height="135.055" rotation="77.5201"/>
+  <object id="65" gid="31" x="64" y="608" width="32" height="32"/>
+  <object id="66" gid="31" x="32" y="608" width="32" height="32" rotation="90"/>
+  <object id="67" gid="1073741855" x="128" y="672" width="32" height="32"/>
+  <object id="68" gid="46" x="32" y="576" width="32" height="32"/>
+  <object id="71" gid="46" x="32" y="704" width="32" height="32"/>
+  <object id="72" x="178.768" y="1121.44" width="64" height="64" rotation="313.172"/>
+  <object id="76" x="256" y="1120" width="64" height="96" rotation="-110.972">
    <ellipse/>
   </object>
-  <object id="58" x="224" y="480">
-   <polygon points="0,0 64,0 32,32"/>
+  <object id="78" x="320.723" y="1094.06" rotation="284.865">
+   <polygon points="0,0 -32,64 64,32"/>
   </object>
-  <object id="59" x="256" y="480">
-   <polygon points="0,0 -64,-32 0,-64"/>
+  <object id="79" x="352" y="832" rotation="252.909">
+   <polygon points="0,0 -128,-160 -128,-96 -160,-64 0,32 96,-32 64,-96 32,-96 0,-96 -64,-288"/>
   </object>
-  <object id="60" x="256" y="416">
-   <polygon points="0,0 64,32 0,64"/>
+  <object id="81" x="312.646" y="613.889" rotation="83.7424">
+   <polyline points="0,79.5234 -130.331,39.7617 -130.331,119.285 0,0 43.4437,79.5234 86.8875,-39.7617"/>
   </object>
-  <object id="61" x="288" y="576">
-   <polyline points="0,0 -32,-64 -96,-64 -96,64 -32,96 32,32 0,0"/>
+  <object id="82" x="384" y="544">
+   <polyline points="256,0 64,64 96,128 160,96 192,160 0,224 0,32 32,-32 96,0 0,32 32,96"/>
+  </object>
+  <object id="84" x="463.326" y="862.267" rotation="-41.1306">
+   <polyline points="0,160 96,160 -64,0 96,0 -64,128 -64,64"/>
   </object>
  </objectgroup>
- <imagelayer name="图像图层 1" x="-64" y="992">
-  <image source="bcry.png" trans="ffffff"/>
- </imagelayer>
 </map>

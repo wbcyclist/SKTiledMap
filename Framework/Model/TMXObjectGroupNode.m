@@ -10,6 +10,8 @@
 #import "TMXTile.h"
 #import "TMXObjectGroup.h"
 #import "TMXMap.h"
+#import "SKMapRenderer.h"
+
 
 @interface TMXObjectGroupNode ()
 
@@ -49,18 +51,49 @@
     }
 }
 
-- (id)getPathRef {
+- (id)getPathRef:(SKMapRenderer *)renderer {
     CGPathRef resultPath = nil;
     CGRect rect = {CGPointZero, _size};
+    
+    OrientationStyle style = self.objectGroup.map.orientation;
     
     switch (self.objGroupType) {
         case ObjectGroupType_Rectangle: {
             if (_size.width>0 && _size.height>0) {
                 CGMutablePathRef pathRef = CGPathCreateMutable();
-                CGPathMoveToPoint(pathRef, NULL, CGRectGetMinX(rect), CGRectGetMinY(rect));
-                CGPathAddLineToPoint(pathRef, NULL, CGRectGetMaxX(rect), CGRectGetMinY(rect));
-                CGPathAddLineToPoint(pathRef, NULL, CGRectGetMaxX(rect), -CGRectGetMaxY(rect));
-                CGPathAddLineToPoint(pathRef, NULL, CGRectGetMinX(rect), -CGRectGetMaxY(rect));
+                /*
+                 CGPathMoveToPoint(pathRef, NULL, CGRectGetMinX(rect), CGRectGetMinY(rect));
+                 CGPathAddLineToPoint(pathRef, NULL, CGRectGetMaxX(rect), CGRectGetMinY(rect));
+                 CGPathAddLineToPoint(pathRef, NULL, CGRectGetMaxX(rect), -CGRectGetMaxY(rect));
+                 CGPathAddLineToPoint(pathRef, NULL, CGRectGetMinX(rect), -CGRectGetMaxY(rect));
+                 */
+                
+                CGPoint p1 = CGPointMake(CGRectGetMinX(rect), CGRectGetMinY(rect));
+                CGPoint p2 = CGPointMake(CGRectGetMaxX(rect), CGRectGetMinY(rect));
+                CGPoint p3 = CGPointMake(CGRectGetMaxX(rect), -CGRectGetMaxY(rect));
+                CGPoint p4 = CGPointMake(CGRectGetMinX(rect), -CGRectGetMaxY(rect));
+                
+                if (renderer && style==OrientationStyle_Isometric) {
+                    p1 = [renderer pixelToScreenCoords:CGPointMake(CGRectGetMinX(rect), CGRectGetMinY(rect))];
+                    p2 = [renderer pixelToScreenCoords:CGPointMake(CGRectGetMaxX(rect), CGRectGetMinY(rect))];
+                    p3 = [renderer pixelToScreenCoords:CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect))];
+                    p4 = [renderer pixelToScreenCoords:CGPointMake(CGRectGetMinX(rect), CGRectGetMaxY(rect))];
+                    
+                    p2.x -=p1.x;
+                    p3.x -=p1.x;
+                    p4.x -=p1.x;
+                    
+                    p2.y -=p1.y;
+                    p3.y -=p1.y;
+                    p4.y -=p1.y;
+                    
+                    p1 = CGPointZero;
+                }
+                
+                CGPathMoveToPoint(pathRef, NULL, p1.x, p1.y);
+                CGPathAddLineToPoint(pathRef, NULL, p2.x, p2.y);
+                CGPathAddLineToPoint(pathRef, NULL, p3.x, p3.y);
+                CGPathAddLineToPoint(pathRef, NULL, p4.x, p4.y);
                 CGPathCloseSubpath (pathRef);
                 
                 resultPath = CGPathCreateCopy(pathRef);
@@ -69,20 +102,44 @@
             break;
             
         } case ObjectGroupType_Ellipse: {
-            CGAffineTransform transform = CGAffineTransformMakeTranslation(0, -CGRectGetHeight(rect));
+            CGAffineTransform transform;
+            if (renderer && style==OrientationStyle_Isometric) { //TODO: Not Implemented
+                transform = CGAffineTransformMakeTranslation(-CGRectGetWidth(rect)/2.0, -CGRectGetHeight(rect));
+            } else {
+                transform = CGAffineTransformMakeTranslation(0, -CGRectGetHeight(rect));
+            }
+            
             resultPath = CGPathCreateWithEllipseInRect(rect, &transform);
             break;
             
         } case ObjectGroupType_Polygon: {
             if (self.points.count>0) {
                 CGMutablePathRef pathRef = CGPathCreateMutable();
-                for (int i=0; i < self.points.count; i++) {
-                    NSValue *value = self.points[i];
-                    CGPoint point = SKTM_NSValueToCGPoint(value);
-                    if (i==0) {
-                        CGPathMoveToPoint(pathRef, nil, point.x, point.y);
-                    } else {
-                        CGPathAddLineToPoint(pathRef, nil, point.x, -point.y);
+                
+                if (renderer && style==OrientationStyle_Isometric) {
+                    CGPoint p1;
+                    for (int i=0; i < self.points.count; i++) {
+                        NSValue *value = self.points[i];
+                        CGPoint point = SKTM_NSValueToCGPoint(value);
+                        point = [renderer pixelToScreenCoords:point];
+                        if (i==0) {
+                            p1 = point;
+                            CGPathMoveToPoint(pathRef, nil, 0, 0);
+                        } else {
+                            point.x -=p1.x;
+                            point.y -=p1.y;
+                            CGPathAddLineToPoint(pathRef, nil, point.x, point.y);
+                        }
+                    }
+                } else {
+                    for (int i=0; i < self.points.count; i++) {
+                        NSValue *value = self.points[i];
+                        CGPoint point = SKTM_NSValueToCGPoint(value);
+                        if (i==0) {
+                            CGPathMoveToPoint(pathRef, nil, point.x, point.y);
+                        } else {
+                            CGPathAddLineToPoint(pathRef, nil, point.x, -point.y);
+                        }
                     }
                 }
                 CGPathCloseSubpath(pathRef);
@@ -95,13 +152,32 @@
         } case ObjectGroupType_Polyline: {
             if (self.points.count>0) {
                 CGMutablePathRef pathRef = CGPathCreateMutable();
-                for (int i=0; i < self.points.count; i++) {
-                    NSValue *value = self.points[i];
-                    CGPoint point = SKTM_NSValueToCGPoint(value);
-                    if (i==0) {
-                        CGPathMoveToPoint(pathRef, nil, point.x, point.y);
-                    } else {
-                        CGPathAddLineToPoint(pathRef, nil, point.x, -point.y);
+                if (renderer && style==OrientationStyle_Isometric) {
+                    CGPoint p1;
+                    for (int i=0; i < self.points.count; i++) {
+                        NSValue *value = self.points[i];
+                        CGPoint point = SKTM_NSValueToCGPoint(value);
+                        point = [renderer pixelToScreenCoords:point];
+                        if (i==0) {
+                            p1 = point;
+                            CGPathMoveToPoint(pathRef, nil, 0, 0);
+                        } else {
+                            point.x -=p1.x;
+                            point.y -=p1.y;
+                            CGPathAddLineToPoint(pathRef, nil, point.x, point.y);
+                        }
+                    }
+                    
+                    
+                } else {
+                    for (int i=0; i < self.points.count; i++) {
+                        NSValue *value = self.points[i];
+                        CGPoint point = SKTM_NSValueToCGPoint(value);
+                        if (i==0) {
+                            CGPathMoveToPoint(pathRef, nil, point.x, point.y);
+                        } else {
+                            CGPathAddLineToPoint(pathRef, nil, point.x, -point.y);
+                        }
                     }
                 }
 //                CGPathCloseSubpath(pathRef);

@@ -10,30 +10,38 @@
 
 @implementation SKTMObjectGroupTile {
     CGFloat m_radius;
+    Origin m_origin;
 }
 
-+ (instancetype)nodeWithModel:(TMXObjectGroupNode *)model {
-    SKTMObjectGroupTile *node = [[self class] spriteNodeWithTexture:model.tile.texture];
-    if (node) {
-        node.model = model;
-    }
++ (instancetype)nodeWithModel:(TMXObjectGroupNode *)model position:(CGPoint)pos origin:(Origin)origin {
+//    SKTMObjectGroupTile *node = [[self class] spriteNodeWithTexture:model.tile.texture size:model.size];
+    SKTMObjectGroupTile *node = [[[self class] alloc] initWithModel:model position:pos origin:origin];
     return node;
 }
 
-- (instancetype)initWithModel:(TMXObjectGroupNode *)model {
-    self = [self initWithTexture:model.tile.texture];
+- (instancetype)initWithModel:(TMXObjectGroupNode *)model position:(CGPoint)pos origin:(Origin)origin {
+    self = [self initWithTexture:model.tile.texture color:nil size:model.size];
     if (self) {
+        m_origin = origin;
         self.model = model;
+        
+        OrientationStyle style = model.objectGroup.map.orientation;
+        if (style == OrientationStyle_Isometric) {
+            [self renderISONode:model position:pos];
+        } else {
+            [self renderNode:model position:pos origin:origin];
+        }
     }
     return self;
 }
+
 
 - (void)setModel:(TMXObjectGroupNode *)model {
     if (_model != model) {
         _model = model;
         self.name = model.name;
         self.hidden = !model.visible;
-        [self setupModel];
+//        [self setupModel];
     }
 }
 
@@ -41,20 +49,7 @@
     if (self.texture!=self.model.tile.texture) {
         [self runAction:[SKAction setTexture:self.model.tile.texture resize:YES]];
     }
-    self.tileOffset = CGPointMake(self.size.width/2.0, -self.size.height/2.0);
 //    m_radius = sqrt(pow(self.size.width/2.0, 2) + pow(self.size.height/2.0, 2));
-    [self updateTileFlippedFlags];
-}
-
-- (void)updateTileFlippedFlags {
-    self.xScale = self.yScale = 1.0;
-    
-    TMXTile *tile = self.model.tile;
-    BOOL flipX = tile.flippedHorizontally;
-    BOOL flipY = tile.flippedVertically;
-    
-    flipX ? self.xScale *= -1 : NO;
-    flipY ? self.yScale *= -1 : NO;
 }
 
 - (void)updateTileRotation:(CGFloat)zRotation {
@@ -67,6 +62,57 @@
     CGFloat y = (y1 - y2)*cos(zRotation) + (x1 - x2)*sin(zRotation) + y2;
     self.position = CGPointMake(x, y);
 }
+
+
+
+- (void)renderNode:(TMXObjectGroupNode *)model position:(CGPoint)pos origin:(Origin)origin {
+    CGSize imageSize = model.tile.texture.size;
+    CGSize objectSize = self.size;
+    CGPoint scale = CGPointMake(objectSize.width/imageSize.width, objectSize.height/imageSize.height);
+    CGPoint offset = model.tile.tileset.tileOffset;
+    CGSize sizeHalf = CGSizeMake(objectSize.width/2.0, objectSize.height/2.0);
+    
+    CGPoint p = CGPointMake(pos.x + (offset.x*scale.x) + sizeHalf.width,
+                            pos.y + (offset.y*scale.y) + sizeHalf.height - objectSize.height);
+    
+    BOOL flipX = model.tile.flippedHorizontally;
+    BOOL flipY = model.tile.flippedVertically;
+    
+    if (origin == BottomCenter) {
+        p.x -= sizeHalf.width;
+    }
+    
+    // already scale
+//    self.xScale = scale.x * (flipX ? -1 : 1);
+//    self.yScale = scale.y * (flipY ? -1 : 1);
+    self.xScale = flipX ? -1 : 1;
+    self.yScale = flipY ? -1 : 1;
+    
+    self.pixelPos = p;
+}
+
+- (void)renderISONode:(TMXObjectGroupNode *)model position:(CGPoint)pos {
+    CGSize imageSize = model.tile.texture.size;
+    CGSize objectSize = self.size;
+    CGPoint scale = CGPointMake(objectSize.width/imageSize.width, objectSize.height/imageSize.height);
+    CGPoint offset = model.tile.tileset.tileOffset;
+    
+    pos.x += (offset.x*scale.x);
+    pos.y -= (offset.y*scale.y);
+    
+    BOOL flipX = model.tile.flippedHorizontally;
+    BOOL flipY = model.tile.flippedVertically;
+    self.xScale = flipX ? -1 : 1;
+    self.yScale = flipY ? -1 : 1;
+    
+    pos.y += self.size.height/2.0;
+    
+    self.position = pos;
+    [self updateTileRotation:TMX_ROTATION(model.rotation)]; //FIXME: not perfect, some position offset.
+}
+
+
+
 
 
 

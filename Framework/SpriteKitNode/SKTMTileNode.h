@@ -12,12 +12,10 @@
 @interface SKTMTileNode : SKSpriteNode
 
 @property (nonatomic, strong) TMXTile *model;
-@property (nonatomic, assign) CGPoint tileOffset;
+@property (nonatomic, assign)CGPoint pixelPos;
 
-+ (instancetype)nodeWithModel:(TMXTile *)model;
-- (instancetype)initWithModel:(TMXTile *)model;
-
-- (void)updateTileFlippedFlags;
++ (instancetype)nodeWithModel:(TMXTile *)model position:(CGPoint)pos origin:(Origin)origin;
+- (instancetype)initWithModel:(TMXTile *)model position:(CGPoint)pos origin:(Origin)origin;
 
 
 @end

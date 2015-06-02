@@ -17,6 +17,9 @@
 #else
     #define SKTM_CGPointToNSValue(p) [NSValue valueWithPoint:p]
     #define SKTM_NSValueToCGPoint(v) v.pointValue
+    #define NSStringFromCGPoint(x) NSStringFromPoint(NSPointFromCGPoint(x))
+    #define NSStringFromCGSize(x) NSStringFromSize(NSSizeFromCGSize(x))
+    #define NSStringFromCGRect(x) NSStringFromRect(NSRectFromCGRect(x))
 #endif
 
 
@@ -137,9 +140,10 @@ typedef NS_ENUM(NSUInteger, DrawOrderType) {
 
 
 
-
-
-
+typedef NS_ENUM(int, Origin) {
+    BottomLeft,
+    BottomCenter
+};
 
 
 

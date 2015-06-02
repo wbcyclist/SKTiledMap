@@ -10,6 +10,7 @@
 
 @class TMXTile;
 @class TMXObjectGroup;
+@class SKMapRenderer;
 
 @interface TMXObjectGroupNode : TMXObject
 
@@ -34,7 +35,7 @@
 
 /** Turns the object's outline in a CGPathRef.
  @returns The newly created CGPathRef. */
-- (id)getPathRef;
+- (id)getPathRef:(SKMapRenderer*)renderer;
 
 
 // customize

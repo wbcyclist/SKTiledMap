@@ -14,4 +14,7 @@
 
 @property (nonatomic, strong) SKShapeNode *shape;
 
++ (instancetype)nodeWithModel:(TMXObjectGroupNode *)model renderer:(SKMapRenderer *)renderer;
+- (instancetype)initWithModel:(TMXObjectGroupNode *)model renderer:(SKMapRenderer *)renderer;
+
 @end

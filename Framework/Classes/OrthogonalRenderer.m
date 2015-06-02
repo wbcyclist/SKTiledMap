@@ -7,6 +7,9 @@
 //
 
 #import "OrthogonalRenderer.h"
+#import "TMXBase.h"
+#import "SKTMBase.h"
+
 
 #define SWAP(x, y) do { typeof(x) SWAP = x; x = y; y = SWAP; } while (0)
 
@@ -21,8 +24,6 @@
     int rowLenght = layerData.map.height;
     int tileWidth = layerData.map.tileWidth;
     int tileHeight = layerData.map.tileHeight;
-    CGSize mapSize = CGSizeMake(columnLength*tileWidth, rowLenght*tileHeight);
-    
     
     int startX = 0;
     int startY = 0;
@@ -73,15 +74,9 @@
             tile.flippedVertically = flipY;
             tile.flippedAntiDiagonally = flipDiag;
             
-            CGPoint offset = tile.tileset.tileOffset;
-            
-            SKTMTileNode *tileNode = [SKTMTileNode nodeWithModel:tile];
-            tile.position = CGPointMake(x*tileWidth + offset.x, (y+1)*tileHeight + offset.y);
-            tileNode.position = [self tileToScreenCoords:CGPointMake(tile.position.x + tileNode.tileOffset.x,
-                                                                     tile.position.y + tileNode.tileOffset.y)
-                                             withMapSize:mapSize];
+            SKTMTileNode *tileNode = [SKTMTileNode nodeWithModel:tile position:CGPointMake(x*tileWidth, (y+1)*tileHeight) origin:BottomLeft];
+            tileNode.position = [self pixelToScreenCoords:tileNode.pixelPos];
             tileNode.zPosition = tileZIndex++;
-            
             [layer addChild:tileNode];
         }
     }
@@ -92,29 +87,19 @@
 - (SKTMObjectGroupLayer *)drawObjectGroupLayer:(TMXObjectGroup *)layerData {
     SKTMObjectGroupLayer *layer = [SKTMObjectGroupLayer nodeWithModel:layerData];
     
-    int columnLength = layerData.map.width;
-    int rowLenght = layerData.map.height;
-    int tileWidth = layerData.map.tileWidth;
-    int tileHeight = layerData.map.tileHeight;
-    CGSize mapSize = CGSizeMake(columnLength*tileWidth, rowLenght*tileHeight);
-    
     int tileZIndex = 0;
     NSArray *objects = [layerData sortedObjectsWithDrawOrder:layerData.drawOrder];
     for (TMXObjectGroupNode *nodeData in objects) {
         if (nodeData.objGroupType == ObjectGroupType_Tile) {
-            CGPoint offset = nodeData.tile.tileset.tileOffset;
-            
-            SKTMObjectGroupTile *tileNode = [SKTMObjectGroupTile nodeWithModel:nodeData];
-            tileNode.position = [self tileToScreenCoords:CGPointMake(nodeData.position.x + tileNode.tileOffset.x + offset.x,
-                                                                     nodeData.position.y + tileNode.tileOffset.y + offset.y)
-                                             withMapSize:mapSize];
+            SKTMObjectGroupTile *tileNode = [SKTMObjectGroupTile nodeWithModel:nodeData position:nodeData.position origin:BottomLeft];
+            tileNode.position = [self pixelToScreenCoords:tileNode.pixelPos];
             [tileNode updateTileRotation:TMX_ROTATION(nodeData.rotation)];
             tileNode.zPosition = tileZIndex++;
             [layer addChild:tileNode];
             
         } else {
             SKTMObjectGroupShape *shapeNode = [SKTMObjectGroupShape nodeWithModel:nodeData];
-            shapeNode.position = [self tileToScreenCoords:CGPointMake(nodeData.position.x, nodeData.position.y) withMapSize:mapSize];
+            shapeNode.position = [self pixelToScreenCoords:CGPointMake(nodeData.position.x, nodeData.position.y)];
             shapeNode.zRotation = TMX_ROTATION(nodeData.rotation);
             shapeNode.zPosition = tileZIndex++;
             [layer addChild:shapeNode];
@@ -128,20 +113,42 @@
 - (SKTMImageLayer *)drawImageLayer:(TMXImageLayer *)layerData {
     SKTMImageLayer *imageLayer = [SKTMImageLayer nodeWithModel:layerData];
     
-    int columnLength = layerData.map.width;
-    int rowLenght = layerData.map.height;
-    int tileWidth = layerData.map.tileWidth;
-    int tileHeight = layerData.map.tileHeight;
-    CGSize mapSize = CGSizeMake(columnLength*tileWidth, rowLenght*tileHeight);
-    
-    imageLayer.position = [self tileToScreenCoords:CGPointMake(layerData.position.x, layerData.position.y) withMapSize:mapSize];
+    imageLayer.position = [self pixelToScreenCoords:CGPointMake(layerData.position.x, layerData.position.y)];
     return imageLayer;
 }
 
 
-- (CGPoint)tileToScreenCoords:(CGPoint)tPoint withMapSize:(CGSize)mapSize{
-    return CGPointMake(tPoint.x, mapSize.height - tPoint.y);
+#pragma mark - Coordinates System Convert
+- (CGPoint)pixelToScreenCoords:(CGPoint)pos {
+    return CGPointMake(pos.x, self.mapPixelSize.height - pos.y);
 }
+
+- (CGPoint)pixelToTileCoords:(CGPoint)pos {
+    return CGPointMake((int)(pos.x / self.tileWidth), (int)(pos.y / self.tileHeight));
+}
+
+- (CGPoint)tileToPixelCoords:(CGPoint)pos {
+    return CGPointMake(pos.x * self.tileWidth, pos.y * self.tileHeight);;
+}
+
+- (CGPoint)tileToScreenCoords:(CGPoint)pos {
+    CGPoint pixel = [self tileToPixelCoords:pos];
+    return [self pixelToScreenCoords:pixel];
+}
+
+- (CGPoint)screenToPixelCoords:(CGPoint)pos {
+    return CGPointMake(pos.x, self.mapPixelSize.height - pos.y);
+}
+
+- (CGPoint)screenToTileCoords:(CGPoint)pos {
+    CGPoint pixel = [self screenToPixelCoords:pos];
+    return [self pixelToTileCoords:pixel];
+}
+
+
+
+
+
 
 
 

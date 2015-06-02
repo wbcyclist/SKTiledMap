@@ -35,8 +35,21 @@
     if (!m_contentCreated) {
         m_contentCreated = YES;
         
-        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/desert.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/desert.tmx"];
+        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Isometric/Iso1.tmx"];
+        
+        
+        self.backgroundColor = self.mapLayer.model.backgroundColor;
         [self addChild:self.mapLayer];
+        
+//        SKTexture *tex = [SKTexture textureWithImageNamed:@"TiledMap/quitBtn.png"];
+//        tex.filteringMode = SKTextureFilteringNearest;
+//        SKSpriteNode *btn = [SKSpriteNode spriteNodeWithTexture:tex size:CGSizeMake(300, 350)];
+////        SKSpriteNode *btn = [[SKSpriteNode alloc] initWithTexture:tex color:nil size:CGSizeMake(300, 350)];
+//        btn.zPosition = 900000;
+//        btn.position = CGPointMake(btn.size.height/2.0, btn.size.width/2.0);
+//        btn.zRotation = TMX_ROTATION(90);
+//        [self addChild:btn];
         
     }
 }
@@ -90,6 +103,11 @@
 CGPoint lastMovedPoint;
 - (void)touchIn:(CGPoint)point {
     lastMovedPoint = point;
+    
+    CGPoint testPoint = [self.mapLayer convertPoint:point fromNode:self];
+//    NSLog(@"%@", NSStringFromCGPoint(testPoint));
+    
+    NSLog(@"%@", NSStringFromCGPoint([self.mapLayer.mapRenderer screenToTileCoords:testPoint]));
 }
 
 - (void)touchMoved:(CGPoint)point {

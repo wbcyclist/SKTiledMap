@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8399841ACA2243140B49E5A5 /* libPods-SKTiledMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB75BE51A01C830D5123472 /* libPods-SKTiledMap.a */; };
+		A50B8E301B1CE4960023BCC5 /* StaggeredRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B8E2F1B1CE4960023BCC5 /* StaggeredRenderer.m */; };
+		A50B8E311B1CE4960023BCC5 /* StaggeredRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B8E2F1B1CE4960023BCC5 /* StaggeredRenderer.m */; };
 		A56AC7011B09E04900D1EBAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7001B09E04900D1EBAE /* main.m */; };
 		A56AC7041B09E04900D1EBAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7031B09E04900D1EBAE /* AppDelegate.m */; };
 		A56AC70C1B09E04900D1EBAE /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC70B1B09E04900D1EBAE /* GameViewController.m */; };
@@ -70,26 +72,20 @@
 		A5BED1C91B1639FE00DC851E /* SKTMTileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1C71B1639FE00DC851E /* SKTMTileNode.m */; };
 		A5BED1D11B163D5400DC851E /* SKTMTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D01B163D5400DC851E /* SKTMTileLayer.m */; };
 		A5BED1D21B163D5400DC851E /* SKTMTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D01B163D5400DC851E /* SKTMTileLayer.m */; };
-		A5BED1DE1B16884500DC851E /* SKImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D51B16884500DC851E /* SKImageLayer.m */; };
-		A5BED1DF1B16884500DC851E /* SKImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D51B16884500DC851E /* SKImageLayer.m */; };
-		A5BED1E01B16884500DC851E /* SKMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D71B16884500DC851E /* SKMapLayer.m */; };
-		A5BED1E11B16884500DC851E /* SKMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D71B16884500DC851E /* SKMapLayer.m */; };
-		A5BED1E21B16884500DC851E /* SKObjectGroupLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D91B16884500DC851E /* SKObjectGroupLayer.m */; };
-		A5BED1E31B16884500DC851E /* SKObjectGroupLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1D91B16884500DC851E /* SKObjectGroupLayer.m */; };
-		A5BED1E41B16884500DC851E /* SKTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1DB1B16884500DC851E /* SKTileLayer.m */; };
-		A5BED1E51B16884500DC851E /* SKTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1DB1B16884500DC851E /* SKTileLayer.m */; };
-		A5BED1E61B16884500DC851E /* SKTileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1DD1B16884500DC851E /* SKTileNode.m */; };
-		A5BED1E71B16884500DC851E /* SKTileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1DD1B16884500DC851E /* SKTileNode.m */; };
 		A5BED1EA1B177ADA00DC851E /* SKTMObjectGroupTile.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1E91B177ADA00DC851E /* SKTMObjectGroupTile.m */; };
 		A5BED1EB1B177ADA00DC851E /* SKTMObjectGroupTile.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1E91B177ADA00DC851E /* SKTMObjectGroupTile.m */; };
 		A5BED1EE1B179CB800DC851E /* SKTMObjectGroupShape.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1ED1B179CB800DC851E /* SKTMObjectGroupShape.m */; };
 		A5BED1EF1B179CB800DC851E /* SKTMObjectGroupShape.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1ED1B179CB800DC851E /* SKTMObjectGroupShape.m */; };
+		A5BED1F21B17B5D300DC851E /* IsometricRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1F11B17B5D300DC851E /* IsometricRenderer.m */; };
+		A5BED1F31B17B5D300DC851E /* IsometricRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1F11B17B5D300DC851E /* IsometricRenderer.m */; };
 		A81F8EC029873656FDBC70F4 /* libPods-SKTiledMap-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A417FC5FC14AD8810AA9BA16 /* libPods-SKTiledMap-Mac.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2BB75BE51A01C830D5123472 /* libPods-SKTiledMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A417FC5FC14AD8810AA9BA16 /* libPods-SKTiledMap-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50B8E2E1B1CE4960023BCC5 /* StaggeredRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaggeredRenderer.h; sourceTree = "<group>"; };
+		A50B8E2F1B1CE4960023BCC5 /* StaggeredRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaggeredRenderer.m; sourceTree = "<group>"; };
 		A56AC6FB1B09E04900D1EBAE /* SKTiledMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKTiledMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56AC6FF1B09E04900D1EBAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A56AC7001B09E04900D1EBAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -161,20 +157,12 @@
 		A5BED1CE1B163CC200DC851E /* SKTMBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMBase.h; sourceTree = "<group>"; };
 		A5BED1CF1B163D5400DC851E /* SKTMTileLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMTileLayer.h; sourceTree = "<group>"; };
 		A5BED1D01B163D5400DC851E /* SKTMTileLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMTileLayer.m; sourceTree = "<group>"; };
-		A5BED1D41B16884500DC851E /* SKImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKImageLayer.h; sourceTree = "<group>"; };
-		A5BED1D51B16884500DC851E /* SKImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKImageLayer.m; sourceTree = "<group>"; };
-		A5BED1D61B16884500DC851E /* SKMapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKMapLayer.h; sourceTree = "<group>"; };
-		A5BED1D71B16884500DC851E /* SKMapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKMapLayer.m; sourceTree = "<group>"; };
-		A5BED1D81B16884500DC851E /* SKObjectGroupLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKObjectGroupLayer.h; sourceTree = "<group>"; };
-		A5BED1D91B16884500DC851E /* SKObjectGroupLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKObjectGroupLayer.m; sourceTree = "<group>"; };
-		A5BED1DA1B16884500DC851E /* SKTileLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTileLayer.h; sourceTree = "<group>"; };
-		A5BED1DB1B16884500DC851E /* SKTileLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTileLayer.m; sourceTree = "<group>"; };
-		A5BED1DC1B16884500DC851E /* SKTileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTileNode.h; sourceTree = "<group>"; };
-		A5BED1DD1B16884500DC851E /* SKTileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTileNode.m; sourceTree = "<group>"; };
 		A5BED1E81B177ADA00DC851E /* SKTMObjectGroupTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMObjectGroupTile.h; sourceTree = "<group>"; };
 		A5BED1E91B177ADA00DC851E /* SKTMObjectGroupTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMObjectGroupTile.m; sourceTree = "<group>"; };
 		A5BED1EC1B179CB800DC851E /* SKTMObjectGroupShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTMObjectGroupShape.h; sourceTree = "<group>"; };
 		A5BED1ED1B179CB800DC851E /* SKTMObjectGroupShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMObjectGroupShape.m; sourceTree = "<group>"; };
+		A5BED1F01B17B5D300DC851E /* IsometricRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsometricRenderer.h; sourceTree = "<group>"; };
+		A5BED1F11B17B5D300DC851E /* IsometricRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsometricRenderer.m; sourceTree = "<group>"; };
 		AA08324E977D5DBC4C1503B4 /* Pods-SKTiledMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKTiledMap/Pods-SKTiledMap.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2477E50821196DE24346F1 /* Pods-SKTiledMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKTiledMap/Pods-SKTiledMap.release.xcconfig"; sourceTree = "<group>"; };
 		C608C0E67B28B842F1E3D70E /* Pods-SKTiledMap-Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap-Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKTiledMap-Mac/Pods-SKTiledMap-Mac.release.xcconfig"; sourceTree = "<group>"; };
@@ -311,7 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				A56AC7621B09E3AE00D1EBAE /* SKTiledMap.h */,
-				A5BED1D31B16884500DC851E /* Layer */,
 				A5BED1A91B16108200DC851E /* SpriteKitNode */,
 				A56AC76E1B09EC9200D1EBAE /* Classes */,
 				A56AC7611B09E3AE00D1EBAE /* Model */,
@@ -381,6 +368,10 @@
 				A5BED1991B13A36000DC851E /* SKMapRenderer.m */,
 				A5BED1A01B14A37000DC851E /* OrthogonalRenderer.h */,
 				A5BED1A11B14A37000DC851E /* OrthogonalRenderer.m */,
+				A5BED1F01B17B5D300DC851E /* IsometricRenderer.h */,
+				A5BED1F11B17B5D300DC851E /* IsometricRenderer.m */,
+				A50B8E2E1B1CE4960023BCC5 /* StaggeredRenderer.h */,
+				A50B8E2F1B1CE4960023BCC5 /* StaggeredRenderer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -409,23 +400,6 @@
 				A5BED1BB1B16290E00DC851E /* SKTMMapLayer.m */,
 			);
 			path = SpriteKitNode;
-			sourceTree = "<group>";
-		};
-		A5BED1D31B16884500DC851E /* Layer */ = {
-			isa = PBXGroup;
-			children = (
-				A5BED1D41B16884500DC851E /* SKImageLayer.h */,
-				A5BED1D51B16884500DC851E /* SKImageLayer.m */,
-				A5BED1D61B16884500DC851E /* SKMapLayer.h */,
-				A5BED1D71B16884500DC851E /* SKMapLayer.m */,
-				A5BED1D81B16884500DC851E /* SKObjectGroupLayer.h */,
-				A5BED1D91B16884500DC851E /* SKObjectGroupLayer.m */,
-				A5BED1DA1B16884500DC851E /* SKTileLayer.h */,
-				A5BED1DB1B16884500DC851E /* SKTileLayer.m */,
-				A5BED1DC1B16884500DC851E /* SKTileNode.h */,
-				A5BED1DD1B16884500DC851E /* SKTileNode.m */,
-			);
-			path = Layer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -597,16 +571,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A50B8E301B1CE4960023BCC5 /* StaggeredRenderer.m in Sources */,
 				A56AC7721B0A5A8200D1EBAE /* TMXObject.m in Sources */,
 				A5BED15D1B0C925500DC851E /* SKColor+TMXColorWithHex.m in Sources */,
 				A5BED1C01B16383100DC851E /* SKTMObjectGroupLayer.m in Sources */,
 				A56AC70C1B09E04900D1EBAE /* GameViewController.m in Sources */,
 				A5BED1AC1B1610B600DC851E /* SKTMNode.m in Sources */,
 				A5BED1591B0BB2EF00DC851E /* TMXMap.m in Sources */,
-				A5BED1DE1B16884500DC851E /* SKImageLayer.m in Sources */,
-				A5BED1E21B16884500DC851E /* SKObjectGroupLayer.m in Sources */,
 				A56AC77B1B0A8E6800D1EBAE /* TMXTileset.m in Sources */,
-				A5BED1E01B16884500DC851E /* SKMapLayer.m in Sources */,
 				A56AC7041B09E04900D1EBAE /* AppDelegate.m in Sources */,
 				A5BED16E1B0F249700DC851E /* SKTexture+Utils.m in Sources */,
 				A5BED1721B0FB1DE00DC851E /* TMXTerrain.m in Sources */,
@@ -615,13 +587,11 @@
 				A5BED17E1B111E8E00DC851E /* TMXObjectGroup.m in Sources */,
 				A5BED1861B126F4000DC851E /* TMXImageLayer.m in Sources */,
 				A5BED19E1B13AA7800DC851E /* TMXTileLayer.m in Sources */,
-				A5BED1E41B16884500DC851E /* SKTileLayer.m in Sources */,
 				A5BED1821B1218E100DC851E /* TMXObjectGroupNode.m in Sources */,
 				A5BED1EA1B177ADA00DC851E /* SKTMObjectGroupTile.m in Sources */,
 				A56AC7571B09E2FD00D1EBAE /* GameScene.m in Sources */,
 				A5BED1D11B163D5400DC851E /* SKTMTileLayer.m in Sources */,
 				A56AC7631B09E3AE00D1EBAE /* SKZipUtils.m in Sources */,
-				A5BED1E61B16884500DC851E /* SKTileNode.m in Sources */,
 				A5BED1661B0D301700DC851E /* WBImage+Utils.m in Sources */,
 				A5BED1A21B14A37000DC851E /* OrthogonalRenderer.m in Sources */,
 				A56AC7011B09E04900D1EBAE /* main.m in Sources */,
@@ -629,6 +599,7 @@
 				A5BED1BC1B16290E00DC851E /* SKTMMapLayer.m in Sources */,
 				A5BED1C81B1639FE00DC851E /* SKTMTileNode.m in Sources */,
 				A5BED16A1B0E1DE700DC851E /* WBMatrix.m in Sources */,
+				A5BED1F21B17B5D300DC851E /* IsometricRenderer.m in Sources */,
 				A5BED1B81B16165500DC851E /* SKTMLayer.m in Sources */,
 				A5BED19A1B13A36000DC851E /* SKMapRenderer.m in Sources */,
 			);
@@ -639,7 +610,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5BED1671B0D301700DC851E /* WBImage+Utils.m in Sources */,
+				A50B8E311B1CE4960023BCC5 /* StaggeredRenderer.m in Sources */,
 				A56AC7351B09E17100D1EBAE /* main.m in Sources */,
+				A5BED1F31B17B5D300DC851E /* IsometricRenderer.m in Sources */,
 				A5BED1EB1B177ADA00DC851E /* SKTMObjectGroupTile.m in Sources */,
 				A5BED1831B1218E100DC851E /* TMXObjectGroupNode.m in Sources */,
 				A5BED16B1B0E1DE700DC851E /* WBMatrix.m in Sources */,
@@ -647,10 +620,8 @@
 				A5BED15E1B0C925500DC851E /* SKColor+TMXColorWithHex.m in Sources */,
 				A5BED15A1B0BB2EF00DC851E /* TMXMap.m in Sources */,
 				A5BED1C91B1639FE00DC851E /* SKTMTileNode.m in Sources */,
-				A5BED1E31B16884500DC851E /* SKObjectGroupLayer.m in Sources */,
 				A5BED1B91B16165500DC851E /* SKTMLayer.m in Sources */,
 				A56AC7731B0A5A8200D1EBAE /* TMXObject.m in Sources */,
-				A5BED1E51B16884500DC851E /* SKTileLayer.m in Sources */,
 				A5BED1AD1B1610B600DC851E /* SKTMNode.m in Sources */,
 				A5BED16F1B0F249700DC851E /* SKTexture+Utils.m in Sources */,
 				A5BED1A31B14A37000DC851E /* OrthogonalRenderer.m in Sources */,
@@ -658,15 +629,12 @@
 				A5BED1C11B16383100DC851E /* SKTMObjectGroupLayer.m in Sources */,
 				A5BED17F1B111E8E00DC851E /* TMXObjectGroup.m in Sources */,
 				A5BED1C51B16384B00DC851E /* SKTMImageLayer.m in Sources */,
-				A5BED1E11B16884500DC851E /* SKMapLayer.m in Sources */,
 				A5BED1D21B163D5400DC851E /* SKTMTileLayer.m in Sources */,
 				A5BED1EF1B179CB800DC851E /* SKTMObjectGroupShape.m in Sources */,
 				A56AC77C1B0A8E6800D1EBAE /* TMXTileset.m in Sources */,
 				A56AC7581B09E2FD00D1EBAE /* GameScene.m in Sources */,
 				A5BED19F1B13AA7800DC851E /* TMXTileLayer.m in Sources */,
-				A5BED1E71B16884500DC851E /* SKTileNode.m in Sources */,
 				A5BED1731B0FB1DE00DC851E /* TMXTerrain.m in Sources */,
-				A5BED1DF1B16884500DC851E /* SKImageLayer.m in Sources */,
 				A5BED1BD1B16290E00DC851E /* SKTMMapLayer.m in Sources */,
 				A56AC7331B09E17100D1EBAE /* AppDelegate.m in Sources */,
 				A5BED1871B126F4000DC851E /* TMXImageLayer.m in Sources */,

@@ -7,12 +7,32 @@
 //
 
 #import "SKTMObjectGroupShape.h"
+#import "SKMapRenderer.h"
+
+@interface SKTMObjectGroupShape ()
+
+@property (nonatomic, weak)SKMapRenderer *renderer;
+
+@end
 
 @implementation SKTMObjectGroupShape
 
 - (ObjectType)nodeType {
     static const ObjectType s_nodeType = ObjectType_ObjectGroupNode;
     return s_nodeType;
+}
+
++ (instancetype)nodeWithModel:(TMXObjectGroupNode *)model renderer:(SKMapRenderer *)renderer {
+    return [[self alloc] initWithModel:model renderer:renderer];
+}
+
+- (instancetype)initWithModel:(TMXObjectGroupNode *)model renderer:(SKMapRenderer *)renderer {
+    self = [super init];
+    if (self) {
+        self.renderer = renderer;
+        self.model = model;
+    }
+    return self;
 }
 
 - (void)setModel:(TMXObjectGroupNode *)model {
@@ -41,7 +61,7 @@
     if (![self.model isShowShape]) {
         return;
     }
-    CGPathRef pathRef = (__bridge_retained CGPathRef)([self.model getPathRef]);
+    CGPathRef pathRef = (__bridge_retained CGPathRef)([self.model getPathRef:self.renderer]);
     if (!pathRef) {
         return;
     }
