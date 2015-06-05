@@ -59,27 +59,27 @@
 
 #pragma mark - Coordinates System Convert
 - (CGPoint)pixelToScreenCoords:(CGPoint)pos {
-    return CGPointZero;
+    return pos;
 }
 
 - (CGPoint)pixelToTileCoords:(CGPoint)pos {
-    return CGPointZero;
+    return pos;
 }
 
 - (CGPoint)tileToPixelCoords:(CGPoint)pos {
-    return CGPointZero;
+    return pos;
 }
 
 - (CGPoint)tileToScreenCoords:(CGPoint)pos {
-    return CGPointZero;
+    return pos;
 }
 
 - (CGPoint)screenToPixelCoords:(CGPoint)pos {
-    return CGPointZero;
+    return pos;
 }
 
 - (CGPoint)screenToTileCoords:(CGPoint)pos {
-    return CGPointZero;
+    return pos;
 }
 
 

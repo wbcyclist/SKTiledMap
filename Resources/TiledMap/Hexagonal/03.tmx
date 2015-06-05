@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="hexagonal" renderorder="right-down" width="35" height="20" tilewidth="32" tileheight="32" hexsidelength="16" staggeraxis="x" staggerindex="odd" backgroundcolor="#586f47" nextobjectid="1">
+ <properties>
+  <property name="scale" value="2"/>
+ </properties>
+ <tileset firstgid="1" name="Hex3_32x32_32x32" tilewidth="32" tileheight="32">
+  <image source="03_32x32_32x32.png" trans="5e81a2" width="96" height="768"/>
+ </tileset>
+ <layer name="Ground" width="35" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzNlUsKwDAIRF1E75T7X6ybFkTiL5HYxSAtDfNwop0AMJuEr+hV5uxQasZbPhPkWEZAFuv3DQpxDsm5yyGFi6oxEHt/yoGGp8fAWby8oxzcS1bNm8RZjSWTRcRby4TnuCuv71qvqMA7yhK9O5X+kqPSZ4dF68dNeTuii6Uzp9P+VM2xdncyOVX3zuOwelKd4V9mabXHOlisvX57jqL/nxOWB9nvIGw=
+  </data>
+ </layer>
+ <layer name="Objects" width="35" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzFltEKwjAMRQO+iKJMJwwEEYUpvuoP+OD/f5MNSyCUpk23jB24bJQ1XLL0bgDzcyeBuFr2xPtzey/ivjfWLtWUz5ZqIhvS2/DsXBzIA/MJejnWt/SMacT9k+SNfJc96N4aZX0JuqDH0iaINmhL8qJmRhA+NxIvT1YfKQ8xPyh70s6aJf++Bg8xqT5hBqyDVjCcuXjWOMv4PeH+E61xH46VPjRPcQZItF5cYeiFVnOsp3PQrrIO9qLN1LzB9GyT/c/5QHLfIfTgkfWdQw1maubj/Hjn01jkLEtPqexI/b94kprJfWIt9uGJJTNzePip9fAHZlILHg==
+  </data>
+ </layer>
+ <layer name="Vehicles" width="35" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4C6wABKmwyoK1DBYHLLQAITBsywMAVifQrNNSCshCR1lLqHHGA+AHYig+GYRs0G2H4rKK2BJKaBRZ4coEFYCd0AsfmKnoDa4TMY/TgSwVCOBwC7ggQ5
+  </data>
+ </layer>
+</map>

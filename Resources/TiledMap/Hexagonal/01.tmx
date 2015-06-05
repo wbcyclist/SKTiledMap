@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="hexagonal" renderorder="right-down" width="10" height="10" tilewidth="65" tileheight="65" hexsidelength="31" staggeraxis="y" staggerindex="even" backgroundcolor="#90a1a2" nextobjectid="2">
+ <tileset firstgid="1" name="Hex1_65x65_65x230" tilewidth="65" tileheight="230">
+  <image source="01_65x65_65x230.png" width="1300" height="690"/>
+ </tileset>
+ <layer name="Ground" width="10" height="10">
+  <data encoding="base64" compression="zlib">
+   eJx1jDEKwDAMA51HpF6bBAKeMvX/X6sHGYRxhsNgnbRFxJwDPnDw3wkj3wpnOKvoMYvcWz6dF86kXd4Op2KknQYecOuFp4XbktORK12lPJxOW0zl/cmqC2o=
+  </data>
+ </layer>
+ <layer name="Decoration" width="10" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxljskKAkEMRIP7ijpe3L0oiguM3rT74/x0XzPVGMaCR6WTzhLN7AYPKOEFb7MPZlcIxCd5hJRLesIF7vZTVN9B77PLBeUa9q/g4kL/85yMV3R1r2PNvbrQhA3sajt8z4xavnEMKzejLe9o1kIkreVz+lNfC6bEfbyHL6u9NoI9bKtdNoAJDHXbF8cUDY4=
+  </data>
+ </layer>
+ <objectgroup color="#800080" name="对象层 1" opacity="0.6">
+  <properties>
+   <property name="showShape" value="1"/>
+  </properties>
+  <object id="1" x="384" y="94" width="64" height="64"/>
+ </objectgroup>
+</map>

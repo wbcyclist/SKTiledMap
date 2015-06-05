@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="15" tilewidth="32" tileheight="32" backgroundcolor="#165801" nextobjectid="1">
+ <tileset firstgid="1" name="06_32x32_32x64" tilewidth="32" tileheight="64">
+  <image source="06_32x32_32x64.png" width="128" height="192"/>
+ </tileset>
+ <layer name="Orientation" width="30" height="15" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJytlDEOwCAMA4Hy/zd3RVaanEMHTwQOG4s5xphAG8w8h3RtQY4yT1VMwo1mHB71GnEzdpUz8RllXO2jHh1mtNe5QzWrzP0TN5N61Z50zq969pVv1U2yrjNL1PVC/gnl3bxL5Fe9dLzR3tzmlvU2Y7qZEB7x6nSq4895M9o1ohfZcwK7
+  </data>
+ </layer>
+ <layer name="Landscape (with tile border)" width="30" height="15" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJytlDEOwCAMA1mg/P/FXZGVJufQwROBw8ZijjEm0AYzzyFdW5CjzFMVk3CjGYdHvUbcjF3lTHxGGVf7qEeHGe117lDNKnP/xM2kXrUnnfOrnn3lW3WTrOvMEnW9kH9CeTfvEvlVLx1vtDe3uWW9zZhuJoRHvDqd6vhz3ox2jegFoRoJww==
+  </data>
+ </layer>
+ <layer name="Landscape" width="30" height="15">
+  <data encoding="base64" compression="zlib">
+   eJy1lDEOwCAMA7NC+f97uyIrjW1Ih0wEjjMRIyKGUEvoebbCtSlykLkXYyrcrMfhqa4Zt2KznBXPLGO2T3V0mNle5w6sF5mriVsVuuKcnJzP5uwrXzabyjr2TKhTF+WfQN7Nu2S+6HLrpnp0n10x3Uz+5jpv7+RZ5drp+AI8URCl
+  </data>
+ </layer>
+ <layer name="floodfilled" width="30" height="15" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJzjZGBg4BzFo3gUj+JRPIpHKAYAyC0P0w==
+  </data>
+ </layer>
+</map>

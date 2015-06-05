@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" renderorder="right-down" width="15" height="31" tilewidth="56" tileheight="36" backgroundcolor="#0a5801" nextobjectid="1">
+ <tileset firstgid="1" name="03_56x36_56x60" tilewidth="56" tileheight="60">
+  <image source="03_56x36_56x60.png" width="224" height="180"/>
+ </tileset>
+ <layer name="Orientation" width="15" height="31" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJytlNsKwCAMQ9X5/988Bg5KiE0qPuRFd3pJXXtrrS+NpQ6aSwOE3+E9apKYVWFOFu8/e4JYjch3wSqfGM/uFJ/lznpwcqsaInvSA7IZ77A7/x3vGZ+9XWcGKrdiK3y1b1T8H0Y4O2WRd2LdYmNNzj7YeaU4NaeTum+w2ftgc3JY9LG6V1g/2U5xdtItVu2QHYuc4j/2BYHxAwU=
+  </data>
+ </layer>
+ <layer name="Landscape (with tile border)" width="15" height="31" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJzVlMEOgCAMQ7mAfraf5qehB5KlGV2HXDTpZeaxbmhL+d9THZ1Go3YYjVozQr4GLJ7h+UDeexfxrDebQekdebDsygzIMl5hZ/tXdu/xyt0x/1/ZDJ+dG2X/h2Zqqyzyylm7WOsJdD261V1hRsz6Mj7rewfLvg/vnhQWMzObK948LFOUTNrFRhkyY5GL+JftT/sKbA==
+  </data>
+ </layer>
+ <layer name="Landscape" width="15" height="31">
+  <data encoding="base64" compression="zlib">
+   eJzV1MEOgCAMA1CuoP//vcYDSdOMtUMumuyCebgNWWv/e3oQN8RcuyDm2oBg34XlPaI82EfvlM++ndXgfFvlgHanBraZd+yq/07vI++cXZb/V1vx1bo58D4MWNu17J29TlnMKbrrbq+UU+e0k/cJm/0f0Tk5lvtYnStRPdlMcWbSKatmyMqyU/61D7ldD7Y=
+  </data>
+ </layer>
+ <layer name="floodfilled" width="15" height="31" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxjYBh6gHEUj+JRPIpH8SgeBBgAbPcBpQ==
+  </data>
+ </layer>
+</map>

@@ -70,6 +70,7 @@
         self.shape.fillColor = self.model.objectGroup.color;
     }
     self.shape.strokeColor = self.model.objectGroup.color;
+//    self.shape.lineWidth = 0;
     [self addChild:self.shape];
     CGPathRelease(pathRef);
 }

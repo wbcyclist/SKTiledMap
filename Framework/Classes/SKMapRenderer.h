@@ -16,10 +16,10 @@
 
 @property (nonatomic, weak) TMXMap *map;
 
-@property (nonatomic, assign) uint32_t tileWidth;
-@property (nonatomic, assign) uint32_t tileHeight;
-@property (nonatomic, assign) uint32_t mapWidth;
-@property (nonatomic, assign) uint32_t mapHeight;
+@property (nonatomic, assign) int tileWidth;
+@property (nonatomic, assign) int tileHeight;
+@property (nonatomic, assign) int mapWidth;
+@property (nonatomic, assign) int mapHeight;
 @property (nonatomic, assign) CGSize mapPixelSize;
 
 - (SKTMTileLayer *)drawTileLayer:(TMXTileLayer*)layerData;

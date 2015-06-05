@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" backgroundcolor="#000000" nextobjectid="1">
+ <properties>
+  <property name="scale" value="2"/>
+ </properties>
+ <tileset firstgid="1" name="05_16x16_16x16" tilewidth="16" tileheight="16">
+  <image source="05_16x16_16x16.png" trans="5e81a2" width="480" height="560"/>
+ </tileset>
+ <layer name="Geometry" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJy1kmtOAkEQhHcTxGPgIz5Q1B8mnAPxh2dZWPUY4Kqn4o0v0ItYnVQlve0Gf7HJl5lM1/RU7UwjSZLGP9yCM9ACd26u8Rx0gz7WW05zBTLwANrgHuSgB/pcP3b9pM9Z7wXNJRiAF/Z7BgUYgieu+34X1BesD6k5oOdDMAYTcM35G3jnOKnwN2b9w2ky53UO1uCR85HjBxy5fpZnGTRrepbXKZiBV7AI2m9m6bo8UbOTlv1qtLVa+vfsjJlzl2dUgf+q6so7YL+CeaI/Yzct96un1f0si+5EWWIG/Re9o00ZlNn6fYFPjqvgQXeyKYPPbP1OQBOcgv2wx3LIv+7B/oE8rJyfWVJ+g3rX0+A3+rd9ezy/Gfx0Qr8bV5NOe/z+uG+b/AJsF4/f
+  </data>
+ </layer>
+ <layer name="Objects" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgcoAGI3ZgYGBpxyIPkYhkhbBAN4uMCfkC5eVD2fCD2x6I2GWhGNdQ8GI0MnIF6nKD6ctD052IxrxFqhh2SHMzNINofSAdA2d5o+r3w+AUETiK5D+bWXCCdh8XdIJCCRTwZh1piQBOaXnA8UWAetcFpEtyCHCfUArA4OTWIwmS4AgAGSBGi
+  </data>
+ </layer>
+ <layer name="Heroes" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFIwWIMSPYfMy41RELTJDM0KGCebQC/FR2m+4g9utwBwDXpQDT
+  </data>
+ </layer>
+ <layer name="Enemies" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFAwEKmBkaqG1mNTMDQw0z9cybCTRrFhXMy6eBX2kFCqnk1rwh5OehBAAHmgYB
+  </data>
+ </layer>
+ <layer name="Ceilings" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B6QAGI1YFYkUrmKQGxNhArU8m8UTC0AQDfVwDZ
+  </data>
+ </layer>
+</map>

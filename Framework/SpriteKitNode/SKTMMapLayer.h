@@ -11,6 +11,7 @@
 #import "OrthogonalRenderer.h"
 #import "IsometricRenderer.h"
 #import "StaggeredRenderer.h"
+#import "HexagonalRenderer.h"
 
 @interface SKTMMapLayer : SKTMLayer
 

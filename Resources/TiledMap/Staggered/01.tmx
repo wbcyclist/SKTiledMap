@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="staggered" renderorder="right-down" width="10" height="20" tilewidth="64" tileheight="32" staggeraxis="y" staggerindex="odd" backgroundcolor="#000000" nextobjectid="1">
+ <tileset firstgid="1" name="01_64x32_64_128" tilewidth="64" tileheight="128">
+  <image source="01_64x32_64_128.png" width="1024" height="1920"/>
+ </tileset>
+ <layer name="Ground" width="10" height="20">
+  <data encoding="base64" compression="zlib">
+   eJytktEKgCAMRZVI8lEsfKmXqPD/v7ANriDi0qLBwWBnNy2V+lYa9HqSqwV6nNxtOZJnCU8cjVlDbMQu5HHOAmbCEWMlh3sBXPB4ZkJeJE54ppgN2GueVeZHrMlz8OzD2dhdO76fF95ZI3lcQ8d/Ulm/fH571/6sGzBnA1M=
+  </data>
+ </layer>
+ <layer name="Walls" width="10" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYKA9SCZCjSEQmxGhLhSIy4E4CMoPR5O3hJrVCcRlQBwHxKZIZhtBaZBYChA3Iul1hNJWQBwFxJFAnIDFDe1I7FYgjsCipghKxwOxHS7P4AHFeORAfmgmwowQLGKgsGshQm8rErsCTQ6dDwNdSOwmKO2OJOaMxz5jILaAss2B2ASLHmMobYHENkFTj6wOBKyxsE3Q1OACIHUARhgS2w==
+  </data>
+ </layer>
+</map>

@@ -82,7 +82,7 @@
         mapRenderer = [StaggeredRenderer new];
         
     } else if (ostyle==OrientationStyle_Hexagonal) {
-        
+        mapRenderer = [HexagonalRenderer new];
     }
     return mapRenderer;
 }

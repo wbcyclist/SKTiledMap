@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" renderorder="right-down" width="15" height="20" tilewidth="102" tileheight="64" backgroundcolor="#1b6927" nextobjectid="1">
+ <tileset firstgid="1" name="02_102x64_102x64" tilewidth="102" tileheight="64">
+  <image source="02_102x64_102x64.png" trans="5e81a2" width="816" height="256"/>
+ </tileset>
+ <layer name="Track" width="15" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzFklELwjAMhLO5ub2qqKCo/an96SbYwnHL+agfhLVNLktvM/sNxeOUnF9bbjCrkwfXvGB9/5LLakZYD1Q32pbV35/l8TzrFSxQg/k9ablXMIverOV9cBHahWpxXzzO1GcV8+M+85vnYm3vOwmt8g37HoVW3R21B4/bJ18j3Ova7/5sz1loFQ8xQ8C+ZxTb+m+W/1eI8j9QHnV4TqR7tGse+TcLD+Iu6Zz/5A2kYg+K
+  </data>
+ </layer>
+ <layer name="Additional" width="15" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAOSCCxRfDIoasRxyIng0cOXc0owATYwpsYgC285cg0S5ZMffQEghTql8QhPpzCn9gwwuVOXGEEA9ROJwBPhwIi
+  </data>
+ </layer>
+</map>

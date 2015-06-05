@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="12" tilewidth="32" tileheight="32" backgroundcolor="#9d9794" nextobjectid="1">
+ <tileset firstgid="1" name="Ortho1_32x32_32x32" tilewidth="32" tileheight="32">
+  <image source="01_32x32_32x32.png" width="256" height="1450"/>
+ </tileset>
+ <layer name="Ground" width="20" height="12">
+  <data encoding="base64" compression="zlib">
+   eJyNkb8OgjAQh1s22fQNFCFRxETd8A38s5i4+LbopK6OjI6KPIK/C9fkKAUdvlxpe1/vjlApFTrIwFlwAXcwBCMw40gkIOCcROzLe1dwE5ArAhMwdRCzz3VGjMFc1BtxDdpiAZZgxb5NC6YvQ8B5NimzZt+pBZcv7cD47P+gONpziv/0BbpJqJtzeoA9FltdRZ+/c5ot3yffAYsdOFrOl6rzUZXLQL5CvEc1kM92mVzvB+Qs2dUjv6732+XxO7zUbx/5A+GzPfS2XBs87vEJ3nxeinlkHH0r1+Uy+7mYmfQW7PsCYfRFyQ==
+  </data>
+ </layer>
+ <layer name="Decoration" width="20" height="12">
+  <data encoding="base64" compression="zlib">
+   eJytjL0OQUEQhWcLFMQVfwXiMW4toVCq0PEadPRKpRINKiSo8GLOxshdYxMj7km+nPk9RE9twY7i0wEcFXd5UOB64cxDcSd7n+xNBVRBBiwVP1Yr9o3wteK3aYhaJnKrl+/p3TUKHbc0uC9zPwJjUPyS0zdR3QEp7ts8q4MEmIApqPE8aW9FVg+/Q0MfyolZWu5BFgRcz5zdwJOnVZd97tkFf+T+qhM4M5cYfq/gxtxBSZHzAOpLGtk=
+  </data>
+ </layer>
+ <layer name="Deco2" width="20" height="12">
+  <data encoding="base64" compression="zlib">
+   eJzV0LcNgEAQRNGlIMiALugEk2ASTIJJMAmmXH5ABTAJIz3poq/VmWnnOmaeo+v5tAJh78tiJEiRCXo5CpSoBL0aDVp0LxsRfx0+7x4DRkyfrzObsWDFJujtOHDiEvT+uBt8Dw2N
+  </data>
+ </layer>
+</map>

@@ -10,6 +10,8 @@
 		8399841ACA2243140B49E5A5 /* libPods-SKTiledMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB75BE51A01C830D5123472 /* libPods-SKTiledMap.a */; };
 		A50B8E301B1CE4960023BCC5 /* StaggeredRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B8E2F1B1CE4960023BCC5 /* StaggeredRenderer.m */; };
 		A50B8E311B1CE4960023BCC5 /* StaggeredRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B8E2F1B1CE4960023BCC5 /* StaggeredRenderer.m */; };
+		A50B8E341B1FD64F0023BCC5 /* HexagonalRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B8E331B1FD64F0023BCC5 /* HexagonalRenderer.m */; };
+		A50B8E351B1FD64F0023BCC5 /* HexagonalRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B8E331B1FD64F0023BCC5 /* HexagonalRenderer.m */; };
 		A56AC7011B09E04900D1EBAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7001B09E04900D1EBAE /* main.m */; };
 		A56AC7041B09E04900D1EBAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7031B09E04900D1EBAE /* AppDelegate.m */; };
 		A56AC70C1B09E04900D1EBAE /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC70B1B09E04900D1EBAE /* GameViewController.m */; };
@@ -86,6 +88,8 @@
 		A417FC5FC14AD8810AA9BA16 /* libPods-SKTiledMap-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50B8E2E1B1CE4960023BCC5 /* StaggeredRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaggeredRenderer.h; sourceTree = "<group>"; };
 		A50B8E2F1B1CE4960023BCC5 /* StaggeredRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaggeredRenderer.m; sourceTree = "<group>"; };
+		A50B8E321B1FD64F0023BCC5 /* HexagonalRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexagonalRenderer.h; sourceTree = "<group>"; };
+		A50B8E331B1FD64F0023BCC5 /* HexagonalRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexagonalRenderer.m; sourceTree = "<group>"; };
 		A56AC6FB1B09E04900D1EBAE /* SKTiledMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKTiledMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56AC6FF1B09E04900D1EBAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A56AC7001B09E04900D1EBAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -372,6 +376,8 @@
 				A5BED1F11B17B5D300DC851E /* IsometricRenderer.m */,
 				A50B8E2E1B1CE4960023BCC5 /* StaggeredRenderer.h */,
 				A50B8E2F1B1CE4960023BCC5 /* StaggeredRenderer.m */,
+				A50B8E321B1FD64F0023BCC5 /* HexagonalRenderer.h */,
+				A50B8E331B1FD64F0023BCC5 /* HexagonalRenderer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -599,6 +605,7 @@
 				A5BED1BC1B16290E00DC851E /* SKTMMapLayer.m in Sources */,
 				A5BED1C81B1639FE00DC851E /* SKTMTileNode.m in Sources */,
 				A5BED16A1B0E1DE700DC851E /* WBMatrix.m in Sources */,
+				A50B8E341B1FD64F0023BCC5 /* HexagonalRenderer.m in Sources */,
 				A5BED1F21B17B5D300DC851E /* IsometricRenderer.m in Sources */,
 				A5BED1B81B16165500DC851E /* SKTMLayer.m in Sources */,
 				A5BED19A1B13A36000DC851E /* SKMapRenderer.m in Sources */,
@@ -624,6 +631,7 @@
 				A56AC7731B0A5A8200D1EBAE /* TMXObject.m in Sources */,
 				A5BED1AD1B1610B600DC851E /* SKTMNode.m in Sources */,
 				A5BED16F1B0F249700DC851E /* SKTexture+Utils.m in Sources */,
+				A50B8E351B1FD64F0023BCC5 /* HexagonalRenderer.m in Sources */,
 				A5BED1A31B14A37000DC851E /* OrthogonalRenderer.m in Sources */,
 				A56AC7641B09E3AE00D1EBAE /* SKZipUtils.m in Sources */,
 				A5BED1C11B16383100DC851E /* SKTMObjectGroupLayer.m in Sources */,

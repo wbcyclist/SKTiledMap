@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="staggered" renderorder="right-down" width="15" height="35" tilewidth="64" tileheight="33" staggeraxis="y" staggerindex="odd" backgroundcolor="#000000" nextobjectid="1">
+ <tileset firstgid="1" name="03_64x33_64x192" tilewidth="64" tileheight="192">
+  <image source="03_64x33_64x192.png" trans="5e81a2" width="1152" height="768"/>
+  <tile id="54">
+   <animation>
+    <frame tileid="54" duration="150"/>
+    <frame tileid="55" duration="150"/>
+    <frame tileid="56" duration="150"/>
+    <frame tileid="57" duration="150"/>
+   </animation>
+  </tile>
+  <tile id="58">
+   <animation>
+    <frame tileid="58" duration="50"/>
+    <frame tileid="59" duration="50"/>
+    <frame tileid="60" duration="50"/>
+    <frame tileid="61" duration="50"/>
+   </animation>
+  </tile>
+ </tileset>
+ <layer name="Floor1" width="15" height="35">
+  <data encoding="base64" compression="zlib">
+   eJzt0kkKgDAMBdA4azxQ738z7aJQQmbdaSELJY98awD+8/WDyT4MWmSeLU/7kLz3Wml+1GmWc1qf5IojW3Qm59+yBWwvzfLelZXZ+z9oVm03rDqSdrxrcXwXMHmrHYiXdodztbbgHfR2CljLcXuendnsmnD93DmYt56zs5GZ1O8PrDer12v2AnqjClU=
+  </data>
+ </layer>
+ <layer name="Objects1" width="15" height="35">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4A4IEqAjw+IALEwHj4uIAulYWpFoLQckXbCgDAWPjH6sAF8emXxyMEANrcTshOf3cTqRddPjFuRAbK7SbETm9301AsCxKQXWtk9CkbBcAIAKsgCfw==
+  </data>
+ </layer>
+ <layer name="Objects2" width="15" height="35">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4A4ID2AdmtAaXUS9Ayke0FAjAS1Q8mtgwEMJfcOJbeOglFACAAAv5AA+Q==
+  </data>
+ </layer>
+ <layer name="Objects3" width="15" height="35">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2DkAcmBdgCZYKi6GwSGsttHwSgYBRAAAFqLAEw=
+  </data>
+ </layer>
+ <layer name="Floor2" width="15" height="35">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BoAU4K9DIBMSuZ+qwp0MsIxaToR9ZHjl5OMvTzMyDCCKYP5G92Iu3lR7ILpp+ZSL28aHqJ1Yeun51Mvcxk6IMBQQr1joJRMFQAAHKDAVQ=
+  </data>
+ </layer>
+ <layer name="Objects4" width="15" height="35">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDGYgP4B2K9DBDmk62DGU7BQbADtJBTJIbHT30sNOcgGpYUsNO0kF+MKWHnYSAgCzqQGr
+  </data>
+ </layer>
+</map>

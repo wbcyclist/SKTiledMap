@@ -11,20 +11,15 @@
 #import "SKTMBase.h"
 
 @implementation StaggeredRenderer {
-    int m_sideLengthX;
-    int m_sideOffsetX;
-    int m_sideLengthY;
-    int m_sideOffsetY;
-    int m_rowHeight;
-    int m_columnWidth;
-    BOOL m_staggerX;
-    BOOL m_staggerEven;
+    
 }
 
+// 交错时景深在前的返回YES (StaggerOdd时，奇数返回YES。StaggerEven时，偶数返回YES)
 - (BOOL)doStaggerX:(int)x {
     return m_staggerX && (x & 1) ^ m_staggerEven;
 }
 
+// 交错时靠右的返回YES (StaggerOdd时，奇数返回YES。StaggerEven时，偶数返回YES)
 - (BOOL)doStaggerY:(int)y {
     return !m_staggerX && (y & 1) ^ m_staggerEven;
 }
@@ -33,6 +28,7 @@
     m_staggerX = self.map.staggerAxis == StaggerAxis_StaggerX;
     m_staggerEven = self.map.staggerIndex == StaggerIndex_StaggerEven;
     
+    m_sideLengthX = m_sideLengthY = 0;
     if (self.map.orientation==OrientationStyle_Hexagonal) {
         if (m_staggerX) {
             m_sideLengthX = self.map.hexSideLength;
@@ -41,8 +37,12 @@
         }
     }
     
+    // 将奇数-1变为偶数
+    self.tileWidth = self.tileWidth & ~1;
+    self.tileHeight = self.tileHeight & ~1;
+    
     m_sideOffsetX = (self.tileWidth - m_sideLengthX) / 2;
-    m_sideLengthY = (self.tileHeight - m_sideLengthY) / 2;
+    m_sideOffsetY = (self.tileHeight - m_sideLengthY) / 2;
     
     m_columnWidth = m_sideOffsetX + m_sideLengthX;
     m_rowHeight = m_sideOffsetY + m_sideLengthY;
@@ -62,90 +62,56 @@
         if (self.mapHeight > 1)
             self.mapPixelSize = CGSizeMake(self.mapPixelSize.width + m_columnWidth, self.mapPixelSize.height);
     }
+//    SKTMLog(@"self.mapPixelSize=%@", NSStringFromCGSize(self.mapPixelSize));
+//    SKTMLog(@"self.tileSize=%d, %d", self.tileWidth, self.tileHeight);
+//    SKTMLog(@"m_columnWidth=%@", @(m_columnWidth));
+//    SKTMLog(@"m_rowHeight=%@", @(m_rowHeight));
+//    SKTMLog(@"m_sideLengthX=%@", @(m_sideLengthX));
+//    SKTMLog(@"m_sideOffsetX=%@", @(m_sideOffsetX));
+//    SKTMLog(@"m_sideOffsetY=%@", @(m_sideOffsetY));
 }
-
-
-- (CGRect)boundingRect {
-    CGRect rect = CGRectMake(0, 0, self.mapWidth, self.mapHeight);
-    CGPoint topLeft = [self tileToScreenCoords:rect.origin];
-    int width, height;
-    
-    if (m_staggerX) {
-        width = CGRectGetWidth(rect) * m_columnWidth + m_sideOffsetX;
-        height = CGRectGetHeight(rect) * (self.tileHeight + m_sideLengthY);
-        
-        if (CGRectGetWidth(rect) > 1) {
-            height += m_rowHeight;
-            if ([self doStaggerX:rect.origin.x]) {
-                topLeft.y -= m_rowHeight;
-            }
-            
-        }
-    } else {
-        width = CGRectGetWidth(rect) * (self.tileWidth + m_sideLengthX);
-        height = CGRectGetHeight(rect) * m_rowHeight + m_sideOffsetY;
-        
-        if (CGRectGetHeight(rect) > 1) {
-            width += m_columnWidth;
-            if ([self doStaggerY:rect.origin.y]) {
-                topLeft.x -= m_columnWidth;
-            }
-                
-        }
-    }
-    
-    return CGRectMake(topLeft.x, topLeft.y, width, height);
-}
-
-
 
 - (SKTMTileLayer *)drawTileLayer:(TMXTileLayer *)layerData {
     SKTMTileLayer *layer = [SKTMTileLayer nodeWithModel:layerData];
     
-    CGRect rect = [self boundingRect];
-    
-    // Determine the tile and pixel coordinates to start at
-    CGPoint startTile = [self screenToTileCoords:rect.origin];
+    CGPoint startTile = CGPointMake(0, 0);
     CGPoint startPos = [self tileToScreenCoords:startTile];
-    
-    /* Determine in which half of the tile the top-left corner of the area we
-     * need to draw is. If we're in the upper half, we need to start one row
-     * up due to those tiles being visible as well. How we go up one row
-     * depends on whether we're in the left or right half of the tile.
-     */
-    BOOL inUpperHalf = rect.origin.y - startPos.y < m_sideOffsetY;
-    BOOL inLeftHalf = rect.origin.x - startPos.x < m_sideOffsetX;
-    
-    if (inUpperHalf)
-        startTile.y--;
-    if (inLeftHalf)
-        startTile.x--;
+//    NSLog(@"self.mapPixelSize=%@", NSStringFromCGSize(self.mapPixelSize));
+    int tileZIndex = 0;
     
     if (m_staggerX) {
-        startTile.x = MAX(-1, startTile.x);
-        startTile.y = MAX(-1, startTile.y);
-        
-        startPos = [self tileToScreenCoords:startTile];
-        startPos.y += self.tileHeight;
-        
         BOOL staggeredRow = [self doStaggerX:startTile.x];
         
-        for (; startPos.y < (CGRectGetMaxY(rect) - 1) && startTile.y < self.mapHeight;) {
+        if (staggeredRow) {
+            startTile.x += 1;
+            startPos.x += m_columnWidth;
+            startPos.y += m_rowHeight;
+        }
+        
+        for (; startPos.y > 0 && startTile.y < self.mapHeight;) {
             CGPoint rowTile = startTile;
             CGPoint rowPos = startPos;
             
-            for (; rowPos.x < (CGRectGetMaxX(rect) - 1) && rowTile.x < self.mapWidth; rowTile.x += 2) {
-                
+            for (; rowPos.x < self.mapPixelSize.width && rowTile.x < self.mapWidth; rowTile.x += 2) {
                 if (rowTile.x>=0 && rowTile.y>=0 && rowTile.x < self.mapWidth && rowTile.y < self.mapHeight) {
-                    NSLog(@"rowTile=%@", NSStringFromCGPoint(rowTile));
+//                    NSLog(@"rowTile=%@", NSStringFromCGPoint(rowTile));
+//                    NSLog(@"rowPos=%@", NSStringFromCGPoint(rowPos));
+                    SKTMTileNode *tileNode = [self createTileNodeWithRowTile:rowTile andRowPos:rowPos atLayer:layerData];
+                    if (tileNode) {
+                        tileNode.zPosition = tileZIndex++;
+                        [layer addChild:tileNode];
+                    }
+                    
                 }
-                
                 rowPos.x += self.tileWidth + m_sideLengthX;
+            }
+            
+            if ([self doStaggerX:startTile.x]) {
+                startTile.y += 1;
             }
             
             if (staggeredRow) {
                 startTile.x -= 1;
-                startTile.y += 1;
                 startPos.x -= m_columnWidth;
                 staggeredRow = NO;
             } else {
@@ -154,35 +120,31 @@
                 staggeredRow = YES;
             }
             
-            startPos.y += m_rowHeight;
+            startPos.y -= m_rowHeight;
         }
+        
     } else {
-        startTile.x = MAX(0, startTile.x);
-        startTile.y = MAX(0, startTile.y);
-        
-        startPos = [self tileToScreenCoords:startTile];
-        startPos.y += self.tileHeight;
-        
-        // Odd row shifting is applied in the rendering loop, so un-apply it here
-        if ([self doStaggerY:startTile.y])
-            startPos.x -= m_columnWidth;
-        
-        for (; startPos.y < (CGRectGetMaxY(rect) - 1) && startTile.y < self.mapHeight; startTile.y++) {
+        startPos.x = 0;
+        for (; startPos.y > 0 && startTile.y < self.mapHeight; startTile.y++) {
             CGPoint rowTile = startTile;
             CGPoint rowPos = startPos;
             
             if ([self doStaggerY:startTile.y])
                 rowPos.x += m_columnWidth;
             
-            for (; rowPos.x < (CGRectGetMaxX(rect) - 1) && rowTile.x < self.mapWidth; rowTile.x++) {
-                if (rowTile.x>=0 && rowTile.y>=0 && rowTile.x < self.mapWidth && rowTile.y < self.mapHeight) {
-                    NSLog(@"rowTile=%@", NSStringFromCGPoint(rowTile));
+            for (int i=0; i<self.mapWidth; i++) {
+                
+                SKTMTileNode *tileNode = [self createTileNodeWithRowTile:rowTile andRowPos:rowPos atLayer:layerData];
+                if (tileNode) {
+                    tileNode.zPosition = tileZIndex++;
+                    [layer addChild:tileNode];
                 }
                 
+                rowTile.x++;
                 rowPos.x += self.tileWidth + m_sideLengthX;
             }
             
-            startPos.y += m_rowHeight;
+            startPos.y -= m_rowHeight;
         }
     }
     
@@ -192,10 +154,31 @@
 }
 
 
-
-
-
-
+- (SKTMTileNode *)createTileNodeWithRowTile:(CGPoint)rowTile andRowPos:(CGPoint)rowPos atLayer:(TMXTileLayer *)layerData {
+    int x, y;
+    x = rowTile.x;
+    y = rowTile.y;
+    uint32_t gid = layerData.tiles[x + y*self.mapWidth];
+    
+    BOOL flipX = (gid & kTileHorizontalFlag) != 0;
+    BOOL flipY = (gid & kTileVerticalFlag) != 0;
+    BOOL flipDiag = (gid & kTileDiagonalFlag) != 0;
+    // clear all flag
+    gid = gid & kFlippedMask;
+    TMXTile *tile = [layerData.map tileAtGid:gid];
+    if (!tile) {
+        return nil;
+    }
+    tile.flippedHorizontally = flipX;
+    tile.flippedVertically = flipY;
+    tile.flippedAntiDiagonally = flipDiag;
+    
+    CGPoint pixelPos = [self screenToPixelCoords:CGPointMake(rowPos.x, rowPos.y - self.tileHeight)];
+    SKTMTileNode *tileNode = [SKTMTileNode nodeWithModel:tile position:pixelPos origin:BottomLeft];
+    tileNode.position = [self pixelToScreenCoords:tileNode.pixelPos];
+    
+    return tileNode;
+}
 
 
 #pragma mark - Coordinates System Convert
@@ -209,9 +192,9 @@
     int pixelX, pixelY;
     
     if (m_staggerX) {
-        pixelY = tileY * (self.tileHeight + m_sideLengthY);
+        pixelY = self.mapPixelSize.height - tileY * (self.tileHeight + m_sideLengthY);
         if ([self doStaggerX:tileX]) {
-            pixelY += m_rowHeight;
+            pixelY -= m_rowHeight;
         }
         pixelX = tileX * m_columnWidth;
         
@@ -220,13 +203,15 @@
         if ([self doStaggerY:tileY]) {
             pixelX += m_columnWidth;
         }
-        pixelY = tileY * m_rowHeight;
+        pixelY = self.mapPixelSize.height - tileY * m_rowHeight;
     }
     
     return CGPointMake(pixelX, pixelY);
 }
 
-
+- (CGPoint)tileToPixelCoords:(CGPoint)pos {
+    return [self screenToPixelCoords:[self tileToScreenCoords:pos]];
+}
 
 /**
  * Converts screen to tile coordinates.
@@ -234,18 +219,20 @@
  */
 - (CGPoint)screenToTileCoords:(CGPoint)pos {
     
+    pos.y = self.mapPixelSize.height - pos.y;
+    
     if (m_staggerX)
-        pos.x -= m_staggerEven ? self.tileWidth : m_sideOffsetX;
+        pos.x -= m_staggerEven ? m_sideOffsetX : 0;
     else
-        pos.y -= m_staggerEven ? self.tileHeight : m_sideOffsetY;
+        pos.y -= m_staggerEven ? m_sideOffsetY : 0;
     
     // Start with the coordinates of a grid-aligned tile
-    CGPoint referencePoint = CGPointMake(floor(pos.x / (self.tileWidth + m_sideLengthX)),
-                                         floor(pos.y / (self.tileHeight + m_sideLengthY)));
+    CGPoint referencePoint = CGPointMake(floor(pos.x / self.tileWidth),
+                                         floor(pos.y / self.tileHeight));
     
     // Relative x and y position on the base square of the grid-aligned tile
-    CGPoint rel = CGPointMake(pos.x - referencePoint.x * (self.tileWidth + m_sideLengthX),
-                              pos.y - referencePoint.y * (self.tileHeight + m_sideLengthY));
+    CGPoint rel = CGPointMake(pos.x - referencePoint.x * self.tileWidth,
+                              pos.y - referencePoint.y * self.tileHeight);
     
     // Adjust the reference point to the correct tile coordinates
     if (m_staggerX) {
@@ -258,55 +245,84 @@
             referencePoint.y++;
     }
     
-    // Determine the nearest hexagon tile by the distance to the center
-    CGPoint centers[4];
+    CGFloat y_pos = rel.x * ((CGFloat)self.tileHeight / (CGFloat)self.tileWidth);
     
-    if (m_staggerX) {
-        int left = m_sideLengthX / 2;
-        int centerX = left + m_columnWidth;
-        int centerY = self.tileHeight / 2;
-        
-        centers[0] = CGPointMake(left, centerY);
-        centers[1] = CGPointMake(centerX, centerY - m_rowHeight);
-        centers[2] = CGPointMake(centerX, centerY + m_rowHeight);
-        centers[3] = CGPointMake(centerX + m_columnWidth, centerY);
+    // Check whether the cursor is in any of the corners (neighboring tiles)
+    if (m_sideOffsetY - y_pos > rel.y)
+        return [self topLeftX:referencePoint.x Y:referencePoint.y];
+    if (-m_sideOffsetY + y_pos > rel.y)
+        return [self topRightX:referencePoint.x Y:referencePoint.y];
+    
+    if (m_sideOffsetY + y_pos < rel.y)
+        return [self bottomLeftX:referencePoint.x Y:referencePoint.y];
+    if (m_sideOffsetY * 3 - y_pos < rel.y)
+        return [self bottomRightX:referencePoint.x Y:referencePoint.y];
+    
+    return referencePoint;
+    
+}
+
+- (CGPoint)pixelToTileCoords:(CGPoint)pos {
+    return [self screenToTileCoords:[self pixelToScreenCoords:pos]];
+}
+
+
+
+
+- (CGPoint)topLeftX:(int)x Y:(int)y {
+    if (!m_staggerX) {
+        if ((y & 1) ^ self.map.staggerIndex)
+            return CGPointMake(x, y - 1);
+        else
+            return CGPointMake(x - 1, y - 1);
     } else {
-        int top = m_sideLengthY / 2;
-        int centerX = self.tileWidth / 2;
-        int centerY = top + m_rowHeight;
-        
-        centers[0] = CGPointMake(centerX, top);
-        centers[1] = CGPointMake(centerX - m_columnWidth, centerY);
-        centers[2] = CGPointMake(centerX + m_columnWidth, centerY);
-        centers[3] = CGPointMake(centerX, centerY + m_rowHeight);
+        if ((x & 1) ^ self.map.staggerIndex)
+            return CGPointMake(x - 1, y);
+        else
+            return CGPointMake(x - 1, y - 1);
     }
-    
-    int nearest = 0;
-    CGFloat minDist = CGFLOAT_MAX;
-    
-    for (int i = 0; i < 4; i++) {
-        CGPoint center = centers[i];
-        CGFloat dx = center.x - rel.x;
-        CGFloat dy = center.y - rel.y;
-//        CGFloat dc = (center - rel).lengthSquared();
-        CGFloat dc = dx*dx + dy+dy;
-        if (dc < minDist) {
-            minDist = dc;
-            nearest = i;
-        }
+}
+
+- (CGPoint)topRightX:(int)x Y:(int)y {
+    if (!m_staggerX) {
+        if ((y & 1) ^ self.map.staggerIndex)
+            return CGPointMake(x + 1, y - 1);
+        else
+            return CGPointMake(x, y - 1);
+    } else {
+        if ((x & 1) ^ self.map.staggerIndex)
+            return CGPointMake(x + 1, y);
+        else
+            return CGPointMake(x + 1, y - 1);
     }
-    
-    
-    static const CGPoint offsetsStaggerX[4] = {
-        {0, 0}, {1, -1}, {1, 0}, {2, 0}
-    };
-    
-    static const CGPoint offsetsStaggerY[4] = {
-        {0, 0}, {1, 1}, {0, 1}, {0, 2}
-    };
-    
-    const CGPoint *offsets = m_staggerX ? offsetsStaggerX : offsetsStaggerY;
-    return CGPointMake(referencePoint.x + offsets[nearest].x, referencePoint.y + offsets[nearest].y);
+}
+
+- (CGPoint)bottomLeftX:(int)x Y:(int)y {
+    if (!m_staggerX) {
+        if ((y & 1) ^ self.map.staggerIndex)
+            return CGPointMake(x, y + 1);
+        else
+            return CGPointMake(x - 1, y + 1);
+    } else {
+        if ((x & 1) ^ self.map.staggerIndex)
+            return CGPointMake(x - 1, y + 1);
+        else
+            return CGPointMake(x - 1, y);
+    }
+}
+
+- (CGPoint)bottomRightX:(int)x Y:(int)y {
+    if (!m_staggerX) {
+        if ((y & 1) ^ self.map.staggerIndex)
+            return CGPointMake(x + 1, y + 1);
+        else
+            return CGPointMake(x, y + 1);
+    } else {
+        if ((x & 1) ^ self.map.staggerIndex)
+            return CGPointMake(x + 1, y + 1);
+        else
+            return CGPointMake(x + 1, y);
+    }
 }
 
 

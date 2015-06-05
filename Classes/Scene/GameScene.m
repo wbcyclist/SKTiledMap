@@ -35,22 +35,32 @@
     if (!m_contentCreated) {
         m_contentCreated = YES;
         
-//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/desert.tmx"];
-//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Isometric/Iso1.tmx"];
-        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Isometric/Iso6.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/01.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/02.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/03.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/04.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/05.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/06.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/07.tmx"];
+//
+        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Isometric/01.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Isometric/02.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Isometric/03.tmx"];
+//
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Staggered/01.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Staggered/02.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Staggered/03.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Staggered/04.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Staggered/05.tmx"];
+        
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Hexagonal/01.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Hexagonal/02.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Hexagonal/03.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Hexagonal/04.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Hexagonal/05.tmx"];
         
         self.backgroundColor = self.mapLayer.model.backgroundColor;
         [self addChild:self.mapLayer];
-        
-//        SKTexture *tex = [SKTexture textureWithImageNamed:@"TiledMap/quitBtn.png"];
-//        tex.filteringMode = SKTextureFilteringNearest;
-//        SKSpriteNode *btn = [SKSpriteNode spriteNodeWithTexture:tex size:CGSizeMake(300, 350)];
-////        SKSpriteNode *btn = [[SKSpriteNode alloc] initWithTexture:tex color:nil size:CGSizeMake(300, 350)];
-//        btn.zPosition = 900000;
-//        btn.position = CGPointMake(btn.size.height/2.0, btn.size.width/2.0);
-//        btn.zRotation = TMX_ROTATION(90);
-//        [self addChild:btn];
-        
     }
 }
 

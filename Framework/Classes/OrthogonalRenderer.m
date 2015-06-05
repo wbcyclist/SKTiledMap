@@ -79,6 +79,7 @@
     return layer;
 }
 
+// OrthogonalRenderer, StaggeredRenderer, HexagonalRenderer
 - (SKTMObjectGroupLayer *)drawObjectGroupLayer:(TMXObjectGroup *)layerData {
     SKTMObjectGroupLayer *layer = [SKTMObjectGroupLayer nodeWithModel:layerData];
     
@@ -95,6 +96,7 @@
         } else {
             SKTMObjectGroupShape *shapeNode = [SKTMObjectGroupShape nodeWithModel:nodeData];
             shapeNode.position = [self pixelToScreenCoords:CGPointMake(nodeData.position.x, nodeData.position.y)];
+            
             shapeNode.zRotation = TMX_ROTATION(nodeData.rotation);
             shapeNode.zPosition = tileZIndex++;
             [layer addChild:shapeNode];
@@ -104,7 +106,7 @@
     return layer;
 }
 
-
+// OrthogonalRenderer, StaggeredRenderer, HexagonalRenderer
 - (SKTMImageLayer *)drawImageLayer:(TMXImageLayer *)layerData {
     SKTMImageLayer *imageLayer = [SKTMImageLayer nodeWithModel:layerData];
     
@@ -114,6 +116,7 @@
 
 
 #pragma mark - Coordinates System Convert
+// OrthogonalRenderer, StaggeredRenderer, HexagonalRenderer
 - (CGPoint)pixelToScreenCoords:(CGPoint)pos {
     return CGPointMake(pos.x, self.mapPixelSize.height - pos.y);
 }
@@ -131,6 +134,7 @@
     return [self pixelToScreenCoords:pixel];
 }
 
+// OrthogonalRenderer, StaggeredRenderer, HexagonalRenderer
 - (CGPoint)screenToPixelCoords:(CGPoint)pos {
     return CGPointMake(pos.x, self.mapPixelSize.height - pos.y);
 }

@@ -199,10 +199,10 @@
 
 #pragma mark - customize
 - (BOOL)isShowShape {
-    if ([self.objectGroup isShowShape]) {
-        return YES;
+    if ([self hasProperty:@"showShape"]) {
+        return [[self propertyForName:@"showShape"] intValue] == 1;
     }
-    return [[self propertyForName:@"showShape"] intValue] == 1;
+    return [self.objectGroup isShowShape];
 }
 
 

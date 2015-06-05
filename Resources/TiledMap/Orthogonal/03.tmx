@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" backgroundcolor="#39a8ff" nextobjectid="3">
+ <properties>
+  <property name="scale" value="2"/>
+ </properties>
+ <tileset firstgid="1" name="03_16x16_16x16" tilewidth="16" tileheight="16">
+  <image source="03_16x16_16x16.png" trans="5e81a2" width="368" height="256"/>
+ </tileset>
+ <layer name="Clouds" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJzt0kkSQ0AYhmHWQUhuQGK6QZAynCBBGQ5huP8qr22qKLSlr+pZtO7+fovWZEm6Ym907hq44Y4n7L++F+sAISK8F+Y57Lnw4M+c+/D9ixwFSoH/X5uYGQlSZAfMq+io0aA9oK+jo8eAcUPfhbMKVGiCb2GKyX0Lj5m3cOaMSH6x5AlN
+  </data>
+ </layer>
+ <layer name="BackgroundWalls" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgwmUAnEJDrqRDPN6gLgbiS6D0uVAPIMM82Bu6UVzG7Huq4LqgWFktyHTPUS6rx9qTjUpniDCfZOg/BdA/BKIrwDxVTLMg7mvEsp/BcSXgPgykpqXSOwaIK7Fg8vQzIOJ1+OwfyIDaniDcDkDatpC9i8sbkHh+Q+Pf3qxmIuMYe6DpY1KDJPIAwBzSzJ2
+  </data>
+ </layer>
+ <layer name="Geometry" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJyt0rdOAzEcx/H/RdQJGCgRJRswAGJipCZEQmKkJaEMjHReIM9CkYA3oEggZYAHoEiUnbZQZsTXub+FOQXISVj66O8455/vbIv8TzvT2os+9GMAgxhCHIkQedWowRjGMYFJTCGFNDIh8trQjgUsYgnLWMEq1rAeIs+0mCdSSq1Aufj9Mu2bscqQeT3k1Xtfv+uc/oyX39JQbZT5XU5Gp/fzs8W0eeYnnIy40x8uIrtEJFtFzYl/vhFkmDeLOaRxqs9O/5HXRFYjWjXPnO8IGtCNqPZNTIvWiP8O+WbXtO+VpD7rfzmtWwXWvdd1NrCJpGY36zoxHbvEVSDvMJC1g13t7+OgwHq1zj7Yu2HzHgLjxzjBOS7whGvc4g438v3MOgJ5e1rdO2O/0+zFNl7whne8in9+tqUCeR9a7Z15dL7T7MWR+GfiMmcW/aV+Aj5FOmA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 3" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKhAQAEsAAB
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="1" x="132" y="144">
+   <polyline points="12,16 28,16 32,4 56,4 56,16 76,16 120,-32 140,-32 124,-8 124,32 -4,32"/>
+  </object>
+ </objectgroup>
+</map>

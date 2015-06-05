@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="hexagonal" renderorder="right-down" width="15" height="30" tilewidth="60" tileheight="52" hexsidelength="26" staggeraxis="y" staggerindex="even" backgroundcolor="#0c5801" nextobjectid="1">
+ <tileset firstgid="1" name="Hex5_PointyTop_60x52_60x80" tilewidth="60" tileheight="80">
+  <image source="05_PointyTop_60x52_60x80.png" width="240" height="240"/>
+ </tileset>
+ <layer name="Orientation" width="15" height="30" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJytk1EOwCAIQxW9/5n34xLSlIJsH8QYeZQNusYYi8QUYefscshijkFuxCLDamAdxqqeka1y+8Sby1ifw3jUQS5io/4quhnLZnXL4nzYN7I740zosn1SNbLdvWFwRlV2B6zaSb/TVTbzLeOY3yMP/8Uq7ivf7bnzr5TP0I9Zn0ZY9PMK8pXuBE3lKbWP/h01mJ9Zz57P/ByxWXj2AZ9KAxA=
+  </data>
+ </layer>
+ <layer name="Landscape (with tile border)" width="15" height="30" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJytk8EOgCAMQ7kw/P8v9qIJad46QA+LMfbR4dbRWhtQ3VQ8z1NOWdWEaDNWGTpDzyHW9azsKnc99WqJnTXEq49yGZv1t+JbsTSrXVbnQ3ekd+LC+NI+uTOq3d1ldAdWWZ2v01OOVtgqt8RR3rMM/8U67it/2vPJv3I50zxWfQawmueR6J1vF0+XKbeP83f1oDxTzzPv7h+GrWpmb0fRCg8=
+  </data>
+ </layer>
+ <layer name="Landscape" width="15" height="30">
+  <data encoding="base64" compression="zlib">
+   eJyt08EOwCAIA1Cvwv7/e3fRhDSloNvB7DCesGl9jOFkTbFsPW8dWqwxqM0sGrYH7sOsmhlt1z1r7VpmYw3z2AddZrP5On0re3JOHcvOLrPMmejL5lR7VHf31OAd6Fo8X1XPctSxVW6ZY3nPMvyXVe6rv5355l+pnGEeqzmNWMyzJ/Wq74SeKlPqPsb32IPlmc0cvfp+E7Za0b4USBEY
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" backgroundcolor="#1e1b23" nextobjectid="1">
+ <properties>
+  <property name="scale" value="2"/>
+ </properties>
+ <tileset firstgid="1" name="04_16x16_16x16" tilewidth="16" tileheight="16">
+  <image source="04_16x16_16x16.png" trans="5e81a2" width="368" height="384"/>
+ </tileset>
+ <layer name="Background" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJx7z8DA8H4Uj+JRPIqHAAYAykYYJA==
+  </data>
+ </layer>
+ <layer name="Geometry" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJy1kl2OAVEQhctfjB0MJtgB1wQvnv0FO9Bm4hVPZnS8YhPYlF1YhlOJTlfqlkl7mJN8SXfV6T43N6dIRCVQBh/kq2bMIl2NWQM40ASfxr4F3gQFsbsZ/j4YgCEYGfsxqArkebuGPwBz8AW+xTyvztV+0BGeivG/H/ALtiBUXj7bBEzVc6ToLuQdPJOVrRXdRS2Bd5HAkwJpkAFZkBNz+c7aJfjfO1iCFVhT3Dee6/7pbJ3H6oE9OIAjxf2ok98/zihS3HVHft/ZcwJncBF7ztH94wzZdUd+32dk921Gfv84Q3bdkd/3Ddl925DfP50dqLxXZWWHf37xP7oDtb4kFg==
+  </data>
+ </layer>
+ <layer name="Geometry2" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJy7yMDAcBGILzFQB7yA4pdUMm8UoIKdQLwLindTwTwJIHYHYiMgNqaCeReA2JCBemnqORCrMkDS02iaGgUAF24OXA==
+  </data>
+ </layer>
+ <layer name="Bridges" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBiZYA2VzTs8xMyj1P+3CJhPKUA3nxZgChBPRcLT6GAnLvtHAXEAABIgCsA=
+  </data>
+ </layer>
+ <layer name="Objects" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAuWAfEcowQmlQgy4gpdhSNHopgHQN54YHLrKNQjG4mLj46jQyO4mAj8w3R+OTGyR0cfHSaVJBOpj50QCg8SQW4wnMUkA8AxpAVqg==
+  </data>
+ </layer>
+ <layer name="Enemies" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAOKDAyMCgyEqmYCGAONMuCiubRCwQA3RxIRXenA83KGOBw8APa709FN6QCzUojwbwgoNpgKtqfCTQriw5h+gmIP1PRPE6gm7mGYJ6gJwAANG0HCw==
+  </data>
+ </layer>
+</map>
