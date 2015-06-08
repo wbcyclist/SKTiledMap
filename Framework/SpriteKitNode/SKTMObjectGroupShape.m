@@ -50,17 +50,10 @@
     
     if (!self.model) return;
     
-    if (self.model.objGroupType == ObjectGroupType_Tile) {
-        return;
-    } else {
-        [self createShape];
-    }
+    [self createShape];
 }
 
 - (void)createShape {
-    if (![self.model isShowShape]) {
-        return;
-    }
     CGPathRef pathRef = (__bridge_retained CGPathRef)([self.model getPathRef:self.renderer]);
     if (!pathRef) {
         return;
@@ -71,10 +64,16 @@
     }
     self.shape.strokeColor = self.model.objectGroup.color;
 //    self.shape.lineWidth = 0;
-    [self addChild:self.shape];
     CGPathRelease(pathRef);
+    
+    if ([self.model isShowShape]) {
+        [self addChild:self.shape];
+    }
 }
 
+- (CGPathRef)path {
+    return self.shape.path;
+}
 
 
 @end

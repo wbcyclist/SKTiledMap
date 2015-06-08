@@ -8,6 +8,13 @@
 
 #import "GameViewController.h"
 #import "GameScene.h"
+#import "WBGamePad.h"
+
+@interface GameViewController ()
+
+@property (nonatomic, strong)WBGamePad *gamePad;
+
+@end
 
 @implementation GameViewController
 
@@ -29,6 +36,18 @@
     viewSize.height *= 2;
     GameScene *scene = [[GameScene alloc] initWithSize:viewSize];
     scene.scaleMode = SKSceneScaleModeFill;
+    
+    
+    // game pad
+    int tmp = self.view.bounds.size.height;
+    self.gamePad = [[WBGamePad alloc] initWithFrame:CGRectMake(0, tmp-120, 120, 120)
+                                       withDPadSize:CGSizeMake(100, 100)
+                                     withButtonSize:CGSizeMake(50, 50)];
+    self.gamePad.buttonAView.hidden = YES;
+//    self.gamePad.hidden = YES;
+    [skView addSubview:self.gamePad];
+    scene.gamePad = self.gamePad;
+    
     
     // Present the scene.
     [skView presentScene:scene];

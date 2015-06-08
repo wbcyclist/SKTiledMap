@@ -41,7 +41,7 @@
         _model = model;
         self.name = model.name;
         self.hidden = !model.visible;
-//        [self setupModel];
+        [self setupModel];
     }
 }
 
@@ -50,6 +50,32 @@
         [self runAction:[SKAction setTexture:self.model.tile.texture resize:YES]];
     }
 //    m_radius = sqrt(pow(self.size.width/2.0, 2) + pow(self.size.height/2.0, 2));
+    [self runTileAnimation:self.model.tile];
+}
+
+- (void)runTileAnimation:(TMXTile *)tile {
+    if (tile.animatedFrames.count < 1) {
+        [self removeActionForKey:@"TileAnimation"];
+        return;
+    }
+    
+    NSMutableArray *frames = [NSMutableArray arrayWithCapacity:tile.animatedFrames.count];
+    NSTimeInterval duration = 0;;
+    
+    for (TMXAnimatedFrame *frameObj in tile.animatedFrames) {
+        TMXTile *tmp = [tile.tileset tileAtIndex:frameObj.tileId];
+        if (tmp.texture) {
+            duration = frameObj.duration * 0.001;
+            [frames addObject:tmp.texture];
+        }
+    }
+    
+    if (frames.count > 0) {
+        SKAction *act = [SKAction repeatActionForever:[SKAction animateWithTextures:frames timePerFrame:duration resize:NO restore:YES]];
+        [self runAction:act withKey:@"TileAnimation"];
+    } else {
+        [self removeActionForKey:@"TileAnimation"];
+    }
 }
 
 - (void)updateTileRotation:(CGFloat)zRotation {

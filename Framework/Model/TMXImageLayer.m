@@ -9,7 +9,7 @@
 #import "TMXImageLayer.h"
 #import "TMXMap.h"
 #import "SKColor+TMXColorWithHex.h"
-#import "WBImage+Utils.h"
+#import "WBImage+WBUtils.h"
 
 
 @implementation TMXImageLayer

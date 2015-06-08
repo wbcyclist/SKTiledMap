@@ -136,6 +136,94 @@
 
 
 
+#pragma mark - get sub layers
+- (SKTMLayer *)allLayerWithName:(NSString *)name {
+    for (SKNode *node in self.children) {
+        if ([node isKindOfClass:[SKTMLayer class]] && [node.name isEqualToString:name]) {
+            return (SKTMLayer*)node;
+        }
+    }
+    return nil;
+}
+
+- (SKTMLayer *)allLayerAtIndex:(NSUInteger)index {
+    int currentIndex = 0;
+    for (SKNode *node in self.children) {
+        if ([node isKindOfClass:[SKTMLayer class]]) {
+            if (currentIndex == index) {
+                return (SKTMLayer *)node;
+            }
+            currentIndex++;
+        }
+    }
+    return nil;
+}
+
+- (SKTMTileLayer *)tileLayerWithName:(NSString *)name {
+    for (SKNode *node in self.children) {
+        if ([node isKindOfClass:[SKTMTileLayer class]] && [node.name isEqualToString:name]) {
+            return (SKTMTileLayer *)node;
+        }
+    }
+    return nil;
+}
+
+- (SKTMTileLayer *)tileLayerAtIndex:(NSUInteger)index {
+    int currentIndex = 0;
+    for (SKNode *node in self.children) {
+        if ([node isKindOfClass:[SKTMTileLayer class]]) {
+            if (currentIndex == index) {
+                return (SKTMTileLayer *)node;
+            }
+            currentIndex++;
+        }
+    }
+    return nil;
+}
+
+- (SKTMObjectGroupLayer *)objectLayerWithName:(NSString *)name {
+    for (SKNode *node in self.children) {
+        if ([node isKindOfClass:[SKTMObjectGroupLayer class]] && [node.name isEqualToString:name]) {
+            return (SKTMObjectGroupLayer *)node;
+        }
+    }
+    return nil;
+}
+
+- (SKTMObjectGroupLayer *)objectLayerAtIndex:(NSUInteger)index {
+    int currentIndex = 0;
+    for (SKNode *node in self.children) {
+        if ([node isKindOfClass:[SKTMObjectGroupLayer class]]) {
+            if (currentIndex == index) {
+                return (SKTMObjectGroupLayer *)node;
+            }
+            currentIndex++;
+        }
+    }
+    return nil;
+}
+
+- (SKTMImageLayer *)imageLayerWithName:(NSString *)name {
+    for (SKNode *node in self.children) {
+        if ([node isKindOfClass:[SKTMImageLayer class]] && [node.name isEqualToString:name]) {
+            return (SKTMImageLayer *)node;
+        }
+    }
+    return nil;
+}
+
+- (SKTMImageLayer *)imageLayerAtIndex:(NSUInteger)index {
+    int currentIndex = 0;
+    for (SKNode *node in self.children) {
+        if ([node isKindOfClass:[SKTMImageLayer class]]) {
+            if (currentIndex == index) {
+                return (SKTMImageLayer *)node;
+            }
+            currentIndex++;
+        }
+    }
+    return nil;
+}
 
 
 

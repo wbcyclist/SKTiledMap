@@ -7,6 +7,8 @@
 //
 
 #import "SKTMObjectGroupLayer.h"
+#import "SKTMObjectGroupShape.h"
+#import "SKTMObjectGroupTile.h"
 
 @implementation SKTMObjectGroupLayer
 
@@ -25,7 +27,23 @@
 }
 
 
+- (SKTMObjectGroupShape *)shapeWithName:(NSString *)name {
+    for (SKNode *node in self.children) {
+        if ([node isKindOfClass:[SKTMObjectGroupShape class]] && [node.name isEqualToString:name]) {
+            return (SKTMObjectGroupShape *)node;
+        }
+    }
+    return nil;
+}
 
+- (SKTMObjectGroupTile *)tileWithName:(NSString *)name {
+    for (SKNode *node in self.children) {
+        if ([node isKindOfClass:[SKTMObjectGroupTile class]] && [node.name isEqualToString:name]) {
+            return (SKTMObjectGroupTile *)node;
+        }
+    }
+    return nil;
+}
 
 
 

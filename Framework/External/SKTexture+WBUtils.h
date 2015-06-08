@@ -1,5 +1,5 @@
 //
-//  SKTexture+Utils.h
+//  SKTexture+WBUtils.h
 //  SKTiledMap
 //
 //  Created by JasioWoo on 15/5/22.
@@ -8,7 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface SKTexture (Utils)
+@interface SKTexture (WBUtils)
 
 + (instancetype)textureWithNodeRect:(CGRect)rect inTexture:(SKTexture *)texture;
 

@@ -11,6 +11,15 @@
 @class TMXTileset;
 @class TMXTerrain;
 
+/**
+ * A single frame of an animated tile.
+ */
+@interface TMXAnimatedFrame : NSObject
+@property (nonatomic, assign) int tileId;
+@property (nonatomic, assign) int duration;
+@end
+
+
 @interface TMXTile : TMXObject
 
 @property (nonatomic, weak) TMXTileset *tileset;
@@ -34,9 +43,10 @@
 @property (nonatomic, assign) BOOL flippedAntiDiagonally;
 
 
+// animation
+@property (nonatomic, strong) NSMutableArray *animatedFrames;
 
-
-
+- (void)readAnimationFrames:(ONOXMLElement *)element;
 
 
 
@@ -66,3 +76,13 @@
 
 
 @end
+
+
+
+
+
+
+
+
+
+

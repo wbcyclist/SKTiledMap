@@ -37,7 +37,7 @@
 - (void)setModel:(TMXTile *)model {
     if (_model != model) {
         _model = model;
-//        [self setupModel];
+        [self setupModel];
     }
 }
 
@@ -46,8 +46,34 @@
     if (self.texture!=self.model.texture) {
         [self runAction:[SKAction setTexture:self.model.texture resize:YES]];
     }
-//    [self renderNode:self.model position:pos origin:m_origin];
+    [self runTileAnimation:self.model];
 }
+
+- (void)runTileAnimation:(TMXTile *)tile {
+    if (tile.animatedFrames.count < 1) {
+        [self removeActionForKey:@"TileAnimation"];
+        return;
+    }
+    
+    NSMutableArray *frames = [NSMutableArray arrayWithCapacity:tile.animatedFrames.count];
+    NSTimeInterval duration = 0;;
+    
+    for (TMXAnimatedFrame *frameObj in tile.animatedFrames) {
+        TMXTile *tmp = [tile.tileset tileAtIndex:frameObj.tileId];
+        if (tmp.texture) {
+            duration = frameObj.duration * 0.001;
+            [frames addObject:tmp.texture];
+        }
+    }
+    
+    if (frames.count > 0) {
+        SKAction *act = [SKAction repeatActionForever:[SKAction animateWithTextures:frames timePerFrame:duration resize:NO restore:YES]];
+        [self runAction:act withKey:@"TileAnimation"];
+    } else {
+        [self removeActionForKey:@"TileAnimation"];
+    }
+}
+
 
 - (void)renderNode:(TMXTile *)model position:(CGPoint)pos origin:(Origin)origin {
     CGSize imageSize = model.texture.size;

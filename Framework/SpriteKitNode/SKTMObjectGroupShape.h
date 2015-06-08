@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) TMXObjectGroupNode *model;
 
+@property (nonatomic, readonly) CGPathRef path;
 @property (nonatomic, strong) SKShapeNode *shape;
 
 + (instancetype)nodeWithModel:(TMXObjectGroupNode *)model renderer:(SKMapRenderer *)renderer;

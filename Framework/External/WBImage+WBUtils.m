@@ -5,7 +5,7 @@
 //
 //
 
-#import "WBImage+Utils.h"
+#import "WBImage+WBUtils.h"
 
 typedef enum {
     ALPHA = 0,
@@ -14,7 +14,7 @@ typedef enum {
     RED = 3
 } PIXELS;
 
-@implementation WBImage (Utils)
+@implementation WBImage (WBUtils)
 
 - (WBImage *)replacingOccurrencesOfPixel:(WBColor *)tagetColor withColor:(WBColor *)replaceColor {
     

@@ -7,6 +7,7 @@
 //
 
 #import "SKTMTileLayer.h"
+#import "SKTMTileNode.h"
 
 @implementation SKTMTileLayer
 
@@ -22,6 +23,11 @@
         self.hidden = !model.visible;
         self.alpha = model.opacity;
     }
+}
+
+- (SKTMTileNode *)tileNodeWithTileCoords:(CGPoint)pos {
+    NSString *name = [NSString stringWithFormat:@"%d,%d", (int)pos.x, (int)pos.y];
+    return (SKTMTileNode *)[self childNodeWithName:name];
 }
 
 

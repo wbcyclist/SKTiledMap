@@ -9,6 +9,7 @@
 #ifndef SKTiledMap_SKTMBase_h
 #define SKTiledMap_SKTMBase_h
 
+#import "SKNode+WBUtils.h"
 
 #import "SKTMTileNode.h"
 #import "SKTMObjectGroupTile.h"

@@ -9,11 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 
 
-#if __IPHONE_OS_VERSION_MIN_REQUIRED
-    #ifndef __IPHONE_8_0
-        #warning "This project uses features only available in iOS SDK 8.0 and later."
-    #endif
-
+#if TARGET_OS_IPHONE
+    #import "WBGamePad.h"
 #else
     #define NSStringFromCGPoint(x) NSStringFromPoint(NSPointFromCGPoint(x))
     #define NSStringFromCGSize(x) NSStringFromSize(NSSizeFromCGSize(x))
@@ -22,5 +19,14 @@
 
 
 @interface GameScene : SKScene
+#if TARGET_OS_IPHONE
+<WBGamePadDelegate>
+#endif
+
+#if TARGET_OS_IPHONE
+@property (nonatomic, weak)WBGamePad *gamePad;
+#endif
+
+
 
 @end

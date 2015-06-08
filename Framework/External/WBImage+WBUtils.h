@@ -1,5 +1,5 @@
 //
-//  WBImage+Utils.h
+//  WBImage+WBUtils.h
 //
 //  Created by JasioWoo on 15/5/21.
 //
@@ -16,7 +16,7 @@
     #define WBColor NSColor
 #endif
 
-@interface WBImage (Utils)
+@interface WBImage (WBUtils)
 
 -(WBImage *)replacingOccurrencesOfPixel:(WBColor *)tagetColor withColor:(WBColor *)replaceColor;
 

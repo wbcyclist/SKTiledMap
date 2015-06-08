@@ -11,9 +11,9 @@
 #import "TMXMap.h"
 #import "TMXTerrain.h"
 #import "SKColor+TMXColorWithHex.h"
-#import "WBImage+Utils.h"
+#import "WBImage+WBUtils.h"
 #import "WBMatrix.h"
-#import "SKTexture+Utils.h"
+#import "SKTexture+WBUtils.h"
 
 @implementation TMXTileset {
     WBMatrix *m_Tiles;
@@ -441,7 +441,7 @@
 //            tile->setObjectGroup(readObjectGroup());
             
         } else if ([@"animation" isEqualToString:subElement.tag]) {
-//            tile->setFrames(readAnimationFrames());
+            [tile readAnimationFrames:subElement];
             
         }
     }
@@ -449,8 +449,6 @@
     
     return YES;
 }
-
-
 
 
 

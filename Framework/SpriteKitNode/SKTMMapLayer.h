@@ -24,4 +24,19 @@
 - (instancetype)initWithContentsOfFile:(NSString*)tmxFile;
 
 
+- (SKTMLayer *)allLayerWithName:(NSString *)name;
+- (SKTMLayer *)allLayerAtIndex:(NSUInteger)index;
+
+- (SKTMTileLayer *)tileLayerWithName:(NSString *)name;
+- (SKTMTileLayer *)tileLayerAtIndex:(NSUInteger)index;
+
+- (SKTMObjectGroupLayer *)objectLayerWithName:(NSString *)name;
+- (SKTMObjectGroupLayer *)objectLayerAtIndex:(NSUInteger)index;
+
+- (SKTMImageLayer *)imageLayerWithName:(NSString *)name;
+- (SKTMImageLayer *)imageLayerAtIndex:(NSUInteger)index;
+
+
+
+
 @end

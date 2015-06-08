@@ -8,9 +8,14 @@
 
 #import "SKTMLayer.h"
 
+@class SKTMObjectGroupShape, SKTMObjectGroupTile;
+
 @interface SKTMObjectGroupLayer : SKTMLayer
 
 @property (nonatomic, strong) TMXObjectGroup *model;
 
+
+- (SKTMObjectGroupShape *)shapeWithName:(NSString *)name;
+- (SKTMObjectGroupTile *)tileWithName:(NSString *)name;
 
 @end

@@ -1,14 +1,14 @@
 //
-//  SKTexture+Utils.m
+//  SKTexture+WBUtils.m
 //  SKTiledMap
 //
 //  Created by JasioWoo on 15/5/22.
 //  Copyright (c) 2015年 JasioWoo. All rights reserved.
 //
 
-#import "SKTexture+Utils.h"
+#import "SKTexture+WBUtils.h"
 
-@implementation SKTexture (Utils)
+@implementation SKTexture (WBUtils)
 
 + (instancetype)textureWithNodeRect:(CGRect)rect inTexture:(SKTexture *)texture {
     

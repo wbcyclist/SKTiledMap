@@ -11,6 +11,10 @@
 #import "TMXMap.h"
 #import "TMXTerrain.h"
 
+@implementation TMXAnimatedFrame
+
+@end
+
 @implementation TMXTile
 
 - (void)initDefaultValue {
@@ -33,6 +37,7 @@
     copy.terrainValue = self.terrainValue;
     copy.terrainProbability = self.terrainProbability;
     copy.texture = _texture;
+    copy.animatedFrames = self.animatedFrames;
     return copy;
 }
 
@@ -51,6 +56,7 @@
             // get image texture
             NSString *imgFilePath = [self.tileset.map.filePath stringByAppendingPathComponent:self.imageSource];
             _texture = [SKTexture textureWithImageNamed:imgFilePath];
+//            _texture.filteringMode = SKTextureFilteringNearest;
             if (!_texture) {
                 SKTMLog(@"Image Not Found: %@", self.imageSource);
             }
@@ -88,6 +94,21 @@
 }
 
 
+- (void)readAnimationFrames:(ONOXMLElement *)element {
+    self.animatedFrames = [NSMutableArray array];
+    
+    if ([@"animation" isEqualToString:element.tag]) {
+        for (ONOXMLElement *subele in element.children) {
+            if ([@"frame" isEqualToString:subele.tag]) {
+                TMXAnimatedFrame *frameObj = [TMXAnimatedFrame new];
+                frameObj.tileId = [subele[@"tileid"] intValue];
+                frameObj.duration = [subele[@"duration"] intValue];
+                [self.animatedFrames addObject:frameObj];
+            }
+        }
+    }
+    
+}
 
 
 @end

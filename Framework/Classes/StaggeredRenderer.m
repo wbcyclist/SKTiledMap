@@ -176,7 +176,7 @@
     CGPoint pixelPos = [self screenToPixelCoords:CGPointMake(rowPos.x, rowPos.y - self.tileHeight)];
     SKTMTileNode *tileNode = [SKTMTileNode nodeWithModel:tile position:pixelPos origin:BottomLeft];
     tileNode.position = [self pixelToScreenCoords:tileNode.pixelPos];
-    
+    tileNode.name = [NSString stringWithFormat:@"%d,%d", x, y];
     return tileNode;
 }
 

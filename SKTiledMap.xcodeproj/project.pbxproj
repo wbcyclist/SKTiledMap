@@ -12,6 +12,37 @@
 		A50B8E311B1CE4960023BCC5 /* StaggeredRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B8E2F1B1CE4960023BCC5 /* StaggeredRenderer.m */; };
 		A50B8E341B1FD64F0023BCC5 /* HexagonalRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B8E331B1FD64F0023BCC5 /* HexagonalRenderer.m */; };
 		A50B8E351B1FD64F0023BCC5 /* HexagonalRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A50B8E331B1FD64F0023BCC5 /* HexagonalRenderer.m */; };
+		A516BCE01B22897800F90505 /* SKNode+WBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A516BCDF1B22897800F90505 /* SKNode+WBUtils.m */; };
+		A516BCE11B22897800F90505 /* SKNode+WBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A516BCDF1B22897800F90505 /* SKNode+WBUtils.m */; };
+		A516BCFB1B24739200F90505 /* Goblin.m in Sources */ = {isa = PBXBuildFile; fileRef = A516BCFA1B24739200F90505 /* Goblin.m */; };
+		A516BCFC1B24739200F90505 /* Goblin.m in Sources */ = {isa = PBXBuildFile; fileRef = A516BCFA1B24739200F90505 /* Goblin.m */; };
+		A516BCFF1B24746A00F90505 /* WBGameUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A516BCFE1B24746A00F90505 /* WBGameUtilities.m */; };
+		A516BD001B24746A00F90505 /* WBGameUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A516BCFE1B24746A00F90505 /* WBGameUtilities.m */; };
+		A516BD0C1B254CD400F90505 /* goblin2_idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A516BD061B254CD400F90505 /* goblin2_idle.atlas */; };
+		A516BD0D1B254CD400F90505 /* goblin2_idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A516BD061B254CD400F90505 /* goblin2_idle.atlas */; };
+		A516BD0E1B254CD400F90505 /* goblin2_run_0.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A516BD071B254CD400F90505 /* goblin2_run_0.atlas */; };
+		A516BD0F1B254CD400F90505 /* goblin2_run_0.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A516BD071B254CD400F90505 /* goblin2_run_0.atlas */; };
+		A516BD101B254CD400F90505 /* goblin2_run_1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A516BD081B254CD400F90505 /* goblin2_run_1.atlas */; };
+		A516BD111B254CD400F90505 /* goblin2_run_1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A516BD081B254CD400F90505 /* goblin2_run_1.atlas */; };
+		A516BD121B254CD400F90505 /* goblin2_run_2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A516BD091B254CD400F90505 /* goblin2_run_2.atlas */; };
+		A516BD131B254CD400F90505 /* goblin2_run_2.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A516BD091B254CD400F90505 /* goblin2_run_2.atlas */; };
+		A516BD141B254CD400F90505 /* goblin2_run_3.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A516BD0A1B254CD400F90505 /* goblin2_run_3.atlas */; };
+		A516BD151B254CD400F90505 /* goblin2_run_3.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A516BD0A1B254CD400F90505 /* goblin2_run_3.atlas */; };
+		A516BD161B254CD400F90505 /* goblin2_run_4.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A516BD0B1B254CD400F90505 /* goblin2_run_4.atlas */; };
+		A516BD171B254CD400F90505 /* goblin2_run_4.atlas in Resources */ = {isa = PBXBuildFile; fileRef = A516BD0B1B254CD400F90505 /* goblin2_run_4.atlas */; };
+		A516BD3D1B25A9EB00F90505 /* pad_a.png in Resources */ = {isa = PBXBuildFile; fileRef = A516BD201B25A9EB00F90505 /* pad_a.png */; };
+		A516BD3E1B25A9EB00F90505 /* pad_a.png in Resources */ = {isa = PBXBuildFile; fileRef = A516BD201B25A9EB00F90505 /* pad_a.png */; };
+		A516BD411B25A9EB00F90505 /* pad_b.png in Resources */ = {isa = PBXBuildFile; fileRef = A516BD221B25A9EB00F90505 /* pad_b.png */; };
+		A516BD421B25A9EB00F90505 /* pad_b.png in Resources */ = {isa = PBXBuildFile; fileRef = A516BD221B25A9EB00F90505 /* pad_b.png */; };
+		A516BD451B25A9EB00F90505 /* pad_Control.png in Resources */ = {isa = PBXBuildFile; fileRef = A516BD241B25A9EB00F90505 /* pad_Control.png */; };
+		A516BD461B25A9EB00F90505 /* pad_Control.png in Resources */ = {isa = PBXBuildFile; fileRef = A516BD241B25A9EB00F90505 /* pad_Control.png */; };
+		A516BD491B25A9EB00F90505 /* pad_left.png in Resources */ = {isa = PBXBuildFile; fileRef = A516BD261B25A9EB00F90505 /* pad_left.png */; };
+		A516BD4A1B25A9EB00F90505 /* pad_left.png in Resources */ = {isa = PBXBuildFile; fileRef = A516BD261B25A9EB00F90505 /* pad_left.png */; };
+		A516BD4B1B25A9EB00F90505 /* pad_right.png in Resources */ = {isa = PBXBuildFile; fileRef = A516BD271B25A9EB00F90505 /* pad_right.png */; };
+		A516BD4C1B25A9EB00F90505 /* pad_right.png in Resources */ = {isa = PBXBuildFile; fileRef = A516BD271B25A9EB00F90505 /* pad_right.png */; };
+		A516BD611B25AAE000F90505 /* WBGamepadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A516BD5E1B25AAE000F90505 /* WBGamepadButton.m */; };
+		A516BD621B25AAE000F90505 /* WBGamepadDPad.m in Sources */ = {isa = PBXBuildFile; fileRef = A516BD601B25AAE000F90505 /* WBGamepadDPad.m */; };
+		A516BD641B25B04B00F90505 /* WBGamePad.m in Sources */ = {isa = PBXBuildFile; fileRef = A516BD631B25B04B00F90505 /* WBGamePad.m */; };
 		A56AC7011B09E04900D1EBAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7001B09E04900D1EBAE /* main.m */; };
 		A56AC7041B09E04900D1EBAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7031B09E04900D1EBAE /* AppDelegate.m */; };
 		A56AC70C1B09E04900D1EBAE /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC70B1B09E04900D1EBAE /* GameViewController.m */; };
@@ -40,12 +71,12 @@
 		A5BED15A1B0BB2EF00DC851E /* TMXMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1581B0BB2EF00DC851E /* TMXMap.m */; };
 		A5BED15D1B0C925500DC851E /* SKColor+TMXColorWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED15C1B0C925500DC851E /* SKColor+TMXColorWithHex.m */; };
 		A5BED15E1B0C925500DC851E /* SKColor+TMXColorWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED15C1B0C925500DC851E /* SKColor+TMXColorWithHex.m */; };
-		A5BED1661B0D301700DC851E /* WBImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1651B0D301700DC851E /* WBImage+Utils.m */; };
-		A5BED1671B0D301700DC851E /* WBImage+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1651B0D301700DC851E /* WBImage+Utils.m */; };
+		A5BED1661B0D301700DC851E /* WBImage+WBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1651B0D301700DC851E /* WBImage+WBUtils.m */; };
+		A5BED1671B0D301700DC851E /* WBImage+WBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1651B0D301700DC851E /* WBImage+WBUtils.m */; };
 		A5BED16A1B0E1DE700DC851E /* WBMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1691B0E1DE700DC851E /* WBMatrix.m */; };
 		A5BED16B1B0E1DE700DC851E /* WBMatrix.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1691B0E1DE700DC851E /* WBMatrix.m */; };
-		A5BED16E1B0F249700DC851E /* SKTexture+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED16D1B0F249700DC851E /* SKTexture+Utils.m */; };
-		A5BED16F1B0F249700DC851E /* SKTexture+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED16D1B0F249700DC851E /* SKTexture+Utils.m */; };
+		A5BED16E1B0F249700DC851E /* SKTexture+WBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED16D1B0F249700DC851E /* SKTexture+WBUtils.m */; };
+		A5BED16F1B0F249700DC851E /* SKTexture+WBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED16D1B0F249700DC851E /* SKTexture+WBUtils.m */; };
 		A5BED1721B0FB1DE00DC851E /* TMXTerrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1711B0FB1DE00DC851E /* TMXTerrain.m */; };
 		A5BED1731B0FB1DE00DC851E /* TMXTerrain.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1711B0FB1DE00DC851E /* TMXTerrain.m */; };
 		A5BED17E1B111E8E00DC851E /* TMXObjectGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED17D1B111E8E00DC851E /* TMXObjectGroup.m */; };
@@ -90,6 +121,29 @@
 		A50B8E2F1B1CE4960023BCC5 /* StaggeredRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StaggeredRenderer.m; sourceTree = "<group>"; };
 		A50B8E321B1FD64F0023BCC5 /* HexagonalRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexagonalRenderer.h; sourceTree = "<group>"; };
 		A50B8E331B1FD64F0023BCC5 /* HexagonalRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexagonalRenderer.m; sourceTree = "<group>"; };
+		A516BCDE1B22897800F90505 /* SKNode+WBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKNode+WBUtils.h"; sourceTree = "<group>"; };
+		A516BCDF1B22897800F90505 /* SKNode+WBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKNode+WBUtils.m"; sourceTree = "<group>"; };
+		A516BCF91B24739200F90505 /* Goblin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goblin.h; sourceTree = "<group>"; };
+		A516BCFA1B24739200F90505 /* Goblin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goblin.m; sourceTree = "<group>"; };
+		A516BCFD1B24746A00F90505 /* WBGameUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBGameUtilities.h; sourceTree = "<group>"; };
+		A516BCFE1B24746A00F90505 /* WBGameUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBGameUtilities.m; sourceTree = "<group>"; };
+		A516BD061B254CD400F90505 /* goblin2_idle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin2_idle.atlas; sourceTree = "<group>"; };
+		A516BD071B254CD400F90505 /* goblin2_run_0.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin2_run_0.atlas; sourceTree = "<group>"; };
+		A516BD081B254CD400F90505 /* goblin2_run_1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin2_run_1.atlas; sourceTree = "<group>"; };
+		A516BD091B254CD400F90505 /* goblin2_run_2.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin2_run_2.atlas; sourceTree = "<group>"; };
+		A516BD0A1B254CD400F90505 /* goblin2_run_3.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin2_run_3.atlas; sourceTree = "<group>"; };
+		A516BD0B1B254CD400F90505 /* goblin2_run_4.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin2_run_4.atlas; sourceTree = "<group>"; };
+		A516BD201B25A9EB00F90505 /* pad_a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pad_a.png; sourceTree = "<group>"; };
+		A516BD221B25A9EB00F90505 /* pad_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pad_b.png; sourceTree = "<group>"; };
+		A516BD241B25A9EB00F90505 /* pad_Control.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pad_Control.png; sourceTree = "<group>"; };
+		A516BD261B25A9EB00F90505 /* pad_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pad_left.png; sourceTree = "<group>"; };
+		A516BD271B25A9EB00F90505 /* pad_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pad_right.png; sourceTree = "<group>"; };
+		A516BD5C1B25AAE000F90505 /* WBGamePad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBGamePad.h; sourceTree = "<group>"; };
+		A516BD5D1B25AAE000F90505 /* WBGamepadButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBGamepadButton.h; sourceTree = "<group>"; };
+		A516BD5E1B25AAE000F90505 /* WBGamepadButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBGamepadButton.m; sourceTree = "<group>"; };
+		A516BD5F1B25AAE000F90505 /* WBGamepadDPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBGamepadDPad.h; sourceTree = "<group>"; };
+		A516BD601B25AAE000F90505 /* WBGamepadDPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBGamepadDPad.m; sourceTree = "<group>"; };
+		A516BD631B25B04B00F90505 /* WBGamePad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBGamePad.m; sourceTree = "<group>"; };
 		A56AC6FB1B09E04900D1EBAE /* SKTiledMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKTiledMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56AC6FF1B09E04900D1EBAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A56AC7001B09E04900D1EBAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -125,12 +179,12 @@
 		A5BED1581B0BB2EF00DC851E /* TMXMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXMap.m; sourceTree = "<group>"; };
 		A5BED15B1B0C925500DC851E /* SKColor+TMXColorWithHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKColor+TMXColorWithHex.h"; sourceTree = "<group>"; };
 		A5BED15C1B0C925500DC851E /* SKColor+TMXColorWithHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKColor+TMXColorWithHex.m"; sourceTree = "<group>"; };
-		A5BED1641B0D301700DC851E /* WBImage+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBImage+Utils.h"; sourceTree = "<group>"; };
-		A5BED1651B0D301700DC851E /* WBImage+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WBImage+Utils.m"; sourceTree = "<group>"; };
+		A5BED1641B0D301700DC851E /* WBImage+WBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBImage+WBUtils.h"; sourceTree = "<group>"; };
+		A5BED1651B0D301700DC851E /* WBImage+WBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WBImage+WBUtils.m"; sourceTree = "<group>"; };
 		A5BED1681B0E1DE700DC851E /* WBMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBMatrix.h; sourceTree = "<group>"; };
 		A5BED1691B0E1DE700DC851E /* WBMatrix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBMatrix.m; sourceTree = "<group>"; };
-		A5BED16C1B0F249700DC851E /* SKTexture+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKTexture+Utils.h"; sourceTree = "<group>"; };
-		A5BED16D1B0F249700DC851E /* SKTexture+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTexture+Utils.m"; sourceTree = "<group>"; };
+		A5BED16C1B0F249700DC851E /* SKTexture+WBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKTexture+WBUtils.h"; sourceTree = "<group>"; };
+		A5BED16D1B0F249700DC851E /* SKTexture+WBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKTexture+WBUtils.m"; sourceTree = "<group>"; };
 		A5BED1701B0FB1DE00DC851E /* TMXTerrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXTerrain.h; sourceTree = "<group>"; };
 		A5BED1711B0FB1DE00DC851E /* TMXTerrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXTerrain.m; sourceTree = "<group>"; };
 		A5BED17C1B111E8E00DC851E /* TMXObjectGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXObjectGroup.h; sourceTree = "<group>"; };
@@ -206,6 +260,61 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A516BCE41B24706D00F90505 /* Texture Atlases */ = {
+			isa = PBXGroup;
+			children = (
+				A516BD051B254CD400F90505 /* Goblin2 */,
+			);
+			path = "Texture Atlases";
+			sourceTree = "<group>";
+		};
+		A516BCF81B24728800F90505 /* Sprite */ = {
+			isa = PBXGroup;
+			children = (
+				A516BCF91B24739200F90505 /* Goblin.h */,
+				A516BCFA1B24739200F90505 /* Goblin.m */,
+			);
+			name = Sprite;
+			sourceTree = "<group>";
+		};
+		A516BD051B254CD400F90505 /* Goblin2 */ = {
+			isa = PBXGroup;
+			children = (
+				A516BD061B254CD400F90505 /* goblin2_idle.atlas */,
+				A516BD071B254CD400F90505 /* goblin2_run_0.atlas */,
+				A516BD081B254CD400F90505 /* goblin2_run_1.atlas */,
+				A516BD091B254CD400F90505 /* goblin2_run_2.atlas */,
+				A516BD0A1B254CD400F90505 /* goblin2_run_3.atlas */,
+				A516BD0B1B254CD400F90505 /* goblin2_run_4.atlas */,
+			);
+			path = Goblin2;
+			sourceTree = "<group>";
+		};
+		A516BD181B25A9EB00F90505 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A516BD201B25A9EB00F90505 /* pad_a.png */,
+				A516BD221B25A9EB00F90505 /* pad_b.png */,
+				A516BD241B25A9EB00F90505 /* pad_Control.png */,
+				A516BD261B25A9EB00F90505 /* pad_left.png */,
+				A516BD271B25A9EB00F90505 /* pad_right.png */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A516BD5B1B25AAE000F90505 /* GamePad */ = {
+			isa = PBXGroup;
+			children = (
+				A516BD5C1B25AAE000F90505 /* WBGamePad.h */,
+				A516BD631B25B04B00F90505 /* WBGamePad.m */,
+				A516BD5D1B25AAE000F90505 /* WBGamepadButton.h */,
+				A516BD5E1B25AAE000F90505 /* WBGamepadButton.m */,
+				A516BD5F1B25AAE000F90505 /* WBGamepadDPad.h */,
+				A516BD601B25AAE000F90505 /* WBGamepadDPad.m */,
+			);
+			path = GamePad;
+			sourceTree = "<group>";
+		};
 		A56AC6F21B09E04900D1EBAE = {
 			isa = PBXGroup;
 			children = (
@@ -275,7 +384,11 @@
 		A56AC7521B09E2FD00D1EBAE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A516BD5B1B25AAE000F90505 /* GamePad */,
 				A56AC7531B09E2FD00D1EBAE /* prefix.pch */,
+				A516BCFD1B24746A00F90505 /* WBGameUtilities.h */,
+				A516BCFE1B24746A00F90505 /* WBGameUtilities.m */,
+				A516BCF81B24728800F90505 /* Sprite */,
 				A56AC7541B09E2FD00D1EBAE /* Scene */,
 			);
 			path = Classes;
@@ -293,6 +406,8 @@
 		A56AC7591B09E33300D1EBAE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A516BD181B25A9EB00F90505 /* UI */,
+				A516BCE41B24706D00F90505 /* Texture Atlases */,
 				A56AC76B1B09EC5400D1EBAE /* TiledMap */,
 				A56AC75A1B09E33300D1EBAE /* Images.xcassets */,
 			);
@@ -318,12 +433,14 @@
 				A56AC7601B09E3AE00D1EBAE /* SKZipUtils.m */,
 				A5BED15B1B0C925500DC851E /* SKColor+TMXColorWithHex.h */,
 				A5BED15C1B0C925500DC851E /* SKColor+TMXColorWithHex.m */,
-				A5BED1641B0D301700DC851E /* WBImage+Utils.h */,
-				A5BED1651B0D301700DC851E /* WBImage+Utils.m */,
+				A5BED1641B0D301700DC851E /* WBImage+WBUtils.h */,
+				A5BED1651B0D301700DC851E /* WBImage+WBUtils.m */,
 				A5BED1681B0E1DE700DC851E /* WBMatrix.h */,
 				A5BED1691B0E1DE700DC851E /* WBMatrix.m */,
-				A5BED16C1B0F249700DC851E /* SKTexture+Utils.h */,
-				A5BED16D1B0F249700DC851E /* SKTexture+Utils.m */,
+				A5BED16C1B0F249700DC851E /* SKTexture+WBUtils.h */,
+				A5BED16D1B0F249700DC851E /* SKTexture+WBUtils.m */,
+				A516BCDE1B22897800F90505 /* SKNode+WBUtils.h */,
+				A516BCDF1B22897800F90505 /* SKNode+WBUtils.m */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -490,10 +607,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A516BD121B254CD400F90505 /* goblin2_run_2.atlas in Resources */,
+				A516BD0C1B254CD400F90505 /* goblin2_idle.atlas in Resources */,
+				A516BD141B254CD400F90505 /* goblin2_run_3.atlas in Resources */,
+				A516BD3D1B25A9EB00F90505 /* pad_a.png in Resources */,
 				A56AC76C1B09EC5400D1EBAE /* TiledMap in Resources */,
+				A516BD0E1B254CD400F90505 /* goblin2_run_0.atlas in Resources */,
 				A56AC75B1B09E33300D1EBAE /* Images.xcassets in Resources */,
+				A516BD161B254CD400F90505 /* goblin2_run_4.atlas in Resources */,
+				A516BD451B25A9EB00F90505 /* pad_Control.png in Resources */,
+				A516BD4B1B25A9EB00F90505 /* pad_right.png in Resources */,
 				A56AC7141B09E04900D1EBAE /* LaunchScreen.xib in Resources */,
 				A56AC70F1B09E04900D1EBAE /* Main.storyboard in Resources */,
+				A516BD411B25A9EB00F90505 /* pad_b.png in Resources */,
+				A516BD491B25A9EB00F90505 /* pad_left.png in Resources */,
+				A516BD101B254CD400F90505 /* goblin2_run_1.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,9 +629,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A516BD131B254CD400F90505 /* goblin2_run_2.atlas in Resources */,
+				A516BD151B254CD400F90505 /* goblin2_run_3.atlas in Resources */,
+				A516BD4C1B25A9EB00F90505 /* pad_right.png in Resources */,
+				A516BD0F1B254CD400F90505 /* goblin2_run_0.atlas in Resources */,
 				A56AC73F1B09E17100D1EBAE /* MainMenu.xib in Resources */,
 				A56AC76D1B09EC5400D1EBAE /* TiledMap in Resources */,
+				A516BD4A1B25A9EB00F90505 /* pad_left.png in Resources */,
+				A516BD171B254CD400F90505 /* goblin2_run_4.atlas in Resources */,
+				A516BD461B25A9EB00F90505 /* pad_Control.png in Resources */,
+				A516BD111B254CD400F90505 /* goblin2_run_1.atlas in Resources */,
+				A516BD3E1B25A9EB00F90505 /* pad_a.png in Resources */,
+				A516BD421B25A9EB00F90505 /* pad_b.png in Resources */,
 				A56AC75C1B09E33300D1EBAE /* Images.xcassets in Resources */,
+				A516BD0D1B254CD400F90505 /* goblin2_idle.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,16 +716,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A516BD641B25B04B00F90505 /* WBGamePad.m in Sources */,
 				A50B8E301B1CE4960023BCC5 /* StaggeredRenderer.m in Sources */,
 				A56AC7721B0A5A8200D1EBAE /* TMXObject.m in Sources */,
 				A5BED15D1B0C925500DC851E /* SKColor+TMXColorWithHex.m in Sources */,
 				A5BED1C01B16383100DC851E /* SKTMObjectGroupLayer.m in Sources */,
+				A516BCFF1B24746A00F90505 /* WBGameUtilities.m in Sources */,
 				A56AC70C1B09E04900D1EBAE /* GameViewController.m in Sources */,
 				A5BED1AC1B1610B600DC851E /* SKTMNode.m in Sources */,
 				A5BED1591B0BB2EF00DC851E /* TMXMap.m in Sources */,
 				A56AC77B1B0A8E6800D1EBAE /* TMXTileset.m in Sources */,
+				A516BCE01B22897800F90505 /* SKNode+WBUtils.m in Sources */,
 				A56AC7041B09E04900D1EBAE /* AppDelegate.m in Sources */,
-				A5BED16E1B0F249700DC851E /* SKTexture+Utils.m in Sources */,
+				A5BED16E1B0F249700DC851E /* SKTexture+WBUtils.m in Sources */,
 				A5BED1721B0FB1DE00DC851E /* TMXTerrain.m in Sources */,
 				A5BED1C41B16384B00DC851E /* SKTMImageLayer.m in Sources */,
 				A5BED1EE1B179CB800DC851E /* SKTMObjectGroupShape.m in Sources */,
@@ -595,10 +737,13 @@
 				A5BED19E1B13AA7800DC851E /* TMXTileLayer.m in Sources */,
 				A5BED1821B1218E100DC851E /* TMXObjectGroupNode.m in Sources */,
 				A5BED1EA1B177ADA00DC851E /* SKTMObjectGroupTile.m in Sources */,
+				A516BD621B25AAE000F90505 /* WBGamepadDPad.m in Sources */,
 				A56AC7571B09E2FD00D1EBAE /* GameScene.m in Sources */,
 				A5BED1D11B163D5400DC851E /* SKTMTileLayer.m in Sources */,
 				A56AC7631B09E3AE00D1EBAE /* SKZipUtils.m in Sources */,
-				A5BED1661B0D301700DC851E /* WBImage+Utils.m in Sources */,
+				A516BCFB1B24739200F90505 /* Goblin.m in Sources */,
+				A516BD611B25AAE000F90505 /* WBGamepadButton.m in Sources */,
+				A5BED1661B0D301700DC851E /* WBImage+WBUtils.m in Sources */,
 				A5BED1A21B14A37000DC851E /* OrthogonalRenderer.m in Sources */,
 				A56AC7011B09E04900D1EBAE /* main.m in Sources */,
 				A56AC7771B0A7F3C00D1EBAE /* TMXTile.m in Sources */,
@@ -616,10 +761,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5BED1671B0D301700DC851E /* WBImage+Utils.m in Sources */,
+				A5BED1671B0D301700DC851E /* WBImage+WBUtils.m in Sources */,
 				A50B8E311B1CE4960023BCC5 /* StaggeredRenderer.m in Sources */,
 				A56AC7351B09E17100D1EBAE /* main.m in Sources */,
 				A5BED1F31B17B5D300DC851E /* IsometricRenderer.m in Sources */,
+				A516BCE11B22897800F90505 /* SKNode+WBUtils.m in Sources */,
+				A516BD001B24746A00F90505 /* WBGameUtilities.m in Sources */,
 				A5BED1EB1B177ADA00DC851E /* SKTMObjectGroupTile.m in Sources */,
 				A5BED1831B1218E100DC851E /* TMXObjectGroupNode.m in Sources */,
 				A5BED16B1B0E1DE700DC851E /* WBMatrix.m in Sources */,
@@ -630,9 +777,10 @@
 				A5BED1B91B16165500DC851E /* SKTMLayer.m in Sources */,
 				A56AC7731B0A5A8200D1EBAE /* TMXObject.m in Sources */,
 				A5BED1AD1B1610B600DC851E /* SKTMNode.m in Sources */,
-				A5BED16F1B0F249700DC851E /* SKTexture+Utils.m in Sources */,
+				A5BED16F1B0F249700DC851E /* SKTexture+WBUtils.m in Sources */,
 				A50B8E351B1FD64F0023BCC5 /* HexagonalRenderer.m in Sources */,
 				A5BED1A31B14A37000DC851E /* OrthogonalRenderer.m in Sources */,
+				A516BCFC1B24739200F90505 /* Goblin.m in Sources */,
 				A56AC7641B09E3AE00D1EBAE /* SKZipUtils.m in Sources */,
 				A5BED1C11B16383100DC851E /* SKTMObjectGroupLayer.m in Sources */,
 				A5BED17F1B111E8E00DC851E /* TMXObjectGroup.m in Sources */,

@@ -70,6 +70,7 @@
             tile.flippedAntiDiagonally = flipDiag;
             
             SKTMTileNode *tileNode = [SKTMTileNode nodeWithModel:tile position:CGPointMake(x*self.tileWidth, (y+1)*self.tileHeight) origin:BottomLeft];
+            tileNode.name = [NSString stringWithFormat:@"%d,%d", x, y];
             tileNode.position = [self pixelToScreenCoords:tileNode.pixelPos];
             tileNode.zPosition = tileZIndex++;
             [layer addChild:tileNode];

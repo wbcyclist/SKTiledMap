@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
-<map version="1.0" orientation="staggered" renderorder="right-down" width="15" height="35" tilewidth="64" tileheight="33" staggeraxis="y" staggerindex="odd" backgroundcolor="#000000" nextobjectid="1">
+<map version="1.0" orientation="staggered" renderorder="right-down" width="15" height="35" tilewidth="64" tileheight="33" staggeraxis="y" staggerindex="odd" backgroundcolor="#000000" nextobjectid="2">
  <tileset firstgid="1" name="03_64x33_64x192" tilewidth="64" tileheight="192">
   <image source="03_64x33_64x192.png" trans="5e81a2" width="1152" height="768"/>
   <tile id="54">
@@ -50,4 +49,5 @@
    eJxjYBgFo2AUDGYgP4B2K9DBDmk62DGU7BQbADtJBTJIbHT30sNOcgGpYUsNO0kF+MKWHnYSAgCzqQGr
   </data>
  </layer>
+ <objectgroup name="对象层 1"/>
 </map>

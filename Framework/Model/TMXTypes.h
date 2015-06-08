@@ -36,7 +36,6 @@
 #define M_PI_180			0.01745329251994	/* pi/180           */
 #define M_180_PI			57.29577951308233	/* 180/pi           */
 #define TMX_ROTATION(rotation) ((rotation) * M_PI_180 * -1)
-#define TMX_RAD2DEG(__ANGLE__) ((__ANGLE__) * M_180_PI)
 
 /** gid (globally unique tile index) is an unsigned int (32 bit) value */
 //typedef uint32_t TMXGID;

@@ -8,9 +8,12 @@
 
 #import "SKTMLayer.h"
 
+@class SKTMTileNode;
+
 @interface SKTMTileLayer : SKTMLayer
 
 @property (nonatomic, strong) TMXTileLayer *model;
 
+- (SKTMTileNode*)tileNodeWithTileCoords:(CGPoint)pos;
 
 @end

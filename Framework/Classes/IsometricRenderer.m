@@ -67,6 +67,7 @@
                 CGPoint sPoint = [self tileToScreenCoords:CGPointMake(c+1, r+1)];
                 SKTMTileNode *tileNode = [SKTMTileNode nodeWithModel:tile position:sPoint origin:BottomCenter];
                 tileNode.zPosition = tileZIndex++;
+                tileNode.name = [NSString stringWithFormat:@"%d,%d", c, r];
                 [layer addChild:tileNode];
             }
         }
