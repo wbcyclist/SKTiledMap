@@ -19,7 +19,6 @@
 
 // base data
 @property (nonatomic, assign) int objectId;
-@property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *typeStr;
 @property (nonatomic, assign) BOOL visible;
 @property (nonatomic, assign) CGPoint position;
@@ -39,7 +38,7 @@
 
 
 // customize
-- (BOOL)isShowShape;
+- (BOOL)isShowObject;
 
 
 - (NSComparisonResult)compareObjectGroupNode:(TMXObjectGroupNode *)aNode;

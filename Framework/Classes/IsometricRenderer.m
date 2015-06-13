@@ -34,6 +34,22 @@
     self.mapPixelSize = CGSizeMake(maxW, maxH);
 }
 
+- (void)setupTileZPosition {
+    int columnLength = self.mapWidth;
+    int rowLenght = self.mapHeight;
+    
+    int tileZIndex = 0;
+    for(int p=0; p < rowLenght + columnLength - 1; p++) {
+        for(int r=0; r <= p; r++) {
+            int c = p-r;
+            if(r < rowLenght && c < columnLength) {
+                int tileIndex = c + r*columnLength;
+                self.tileZPositions[tileIndex] = tileZIndex++;
+            }
+        }
+    }
+}
+
 
 - (SKTMTileLayer *)drawTileLayer:(TMXTileLayer *)layerData {
     SKTMTileLayer *layer = [SKTMTileLayer nodeWithModel:layerData];
@@ -49,6 +65,7 @@
 //                NSLog(@"x, y = %d, %d", c, r);
                 int tileIndex = c + r*columnLength;
                 uint32_t gid = layerData.tiles[tileIndex];
+                tileZIndex++;
                 
                 BOOL flipX = (gid & kTileHorizontalFlag) != 0;
                 BOOL flipY = (gid & kTileVerticalFlag) != 0;
@@ -66,7 +83,7 @@
                 tile.position = [self tileToScreenCoords:CGPointMake(c, r)];
                 CGPoint sPoint = [self tileToScreenCoords:CGPointMake(c+1, r+1)];
                 SKTMTileNode *tileNode = [SKTMTileNode nodeWithModel:tile position:sPoint origin:BottomCenter];
-                tileNode.zPosition = tileZIndex++;
+                tileNode.zPosition = tileZIndex - 1;
                 tileNode.name = [NSString stringWithFormat:@"%d,%d", c, r];
                 [layer addChild:tileNode];
             }

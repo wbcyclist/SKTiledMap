@@ -41,6 +41,11 @@
         _model = model;
         self.name = model.name;
         self.hidden = !model.visible;
+        
+        if (!self.hidden) {
+            self.hidden = ![self.model isShowObject];
+        }
+        
         [self setupModel];
     }
 }

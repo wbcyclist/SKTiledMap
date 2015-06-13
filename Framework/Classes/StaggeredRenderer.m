@@ -71,12 +71,80 @@
 //    SKTMLog(@"m_sideOffsetY=%@", @(m_sideOffsetY));
 }
 
+- (void)setupTileZPosition {
+    CGPoint startTile = CGPointMake(0, 0);
+    CGPoint startPos = [self tileToScreenCoords:startTile];
+    
+    int tileZIndex = 0;
+    
+    if (m_staggerX) {
+        BOOL staggeredRow = [self doStaggerX:startTile.x];
+        
+        if (staggeredRow) {
+            startTile.x += 1;
+            startPos.x += m_columnWidth;
+            startPos.y += m_rowHeight;
+        }
+        
+        for (; startPos.y > 0 && startTile.y < self.mapHeight;) {
+            CGPoint rowTile = startTile;
+            CGPoint rowPos = startPos;
+            
+            for (; rowPos.x < self.mapPixelSize.width && rowTile.x < self.mapWidth; rowTile.x += 2) {
+                if (rowTile.x>=0 && rowTile.y>=0 && rowTile.x < self.mapWidth && rowTile.y < self.mapHeight) {
+                    int tileId = rowTile.x + rowTile.y*self.mapWidth;
+                    self.tileZPositions[tileId] = tileZIndex++;
+                }
+                rowPos.x += self.tileWidth + m_sideLengthX;
+            }
+            
+            if ([self doStaggerX:startTile.x]) {
+                startTile.y += 1;
+            }
+            
+            if (staggeredRow) {
+                startTile.x -= 1;
+                startPos.x -= m_columnWidth;
+                staggeredRow = NO;
+            } else {
+                startTile.x += 1;
+                startPos.x += m_columnWidth;
+                staggeredRow = YES;
+            }
+            
+            startPos.y -= m_rowHeight;
+        }
+        
+    } else {
+        startPos.x = 0;
+        for (; startPos.y > 0 && startTile.y < self.mapHeight; startTile.y++) {
+            CGPoint rowTile = startTile;
+            CGPoint rowPos = startPos;
+            
+            if ([self doStaggerY:startTile.y])
+                rowPos.x += m_columnWidth;
+            
+            for (int i=0; i<self.mapWidth; i++) {
+                int tileId = rowTile.x + rowTile.y*self.mapWidth;
+                self.tileZPositions[tileId] = tileZIndex++;
+                
+                rowTile.x++;
+                rowPos.x += self.tileWidth + m_sideLengthX;
+            }
+            
+            startPos.y -= m_rowHeight;
+        }
+    }
+}
+
+
+
 - (SKTMTileLayer *)drawTileLayer:(TMXTileLayer *)layerData {
     SKTMTileLayer *layer = [SKTMTileLayer nodeWithModel:layerData];
     
     CGPoint startTile = CGPointMake(0, 0);
     CGPoint startPos = [self tileToScreenCoords:startTile];
-//    NSLog(@"self.mapPixelSize=%@", NSStringFromCGSize(self.mapPixelSize));
+    
     int tileZIndex = 0;
     
     if (m_staggerX) {
@@ -96,9 +164,10 @@
                 if (rowTile.x>=0 && rowTile.y>=0 && rowTile.x < self.mapWidth && rowTile.y < self.mapHeight) {
 //                    NSLog(@"rowTile=%@", NSStringFromCGPoint(rowTile));
 //                    NSLog(@"rowPos=%@", NSStringFromCGPoint(rowPos));
+                    tileZIndex++;
                     SKTMTileNode *tileNode = [self createTileNodeWithRowTile:rowTile andRowPos:rowPos atLayer:layerData];
                     if (tileNode) {
-                        tileNode.zPosition = tileZIndex++;
+                        tileNode.zPosition = tileZIndex - 1;
                         [layer addChild:tileNode];
                     }
                     
@@ -133,10 +202,10 @@
                 rowPos.x += m_columnWidth;
             
             for (int i=0; i<self.mapWidth; i++) {
-                
+                tileZIndex++;
                 SKTMTileNode *tileNode = [self createTileNodeWithRowTile:rowTile andRowPos:rowPos atLayer:layerData];
                 if (tileNode) {
-                    tileNode.zPosition = tileZIndex++;
+                    tileNode.zPosition = tileZIndex - 1;
                     [layer addChild:tileNode];
                 }
                 

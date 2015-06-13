@@ -14,7 +14,6 @@
 
 @property (nonatomic, weak) TMXMap *map;
 
-@property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) int width;
 @property (nonatomic, assign) int height;
 @property (nonatomic, assign) float opacity;

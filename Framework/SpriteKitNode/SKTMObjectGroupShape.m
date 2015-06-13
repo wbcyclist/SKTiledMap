@@ -40,6 +40,11 @@
         _model = model;
         self.name = model.name;
         self.hidden = !model.visible;
+        
+        if (!self.hidden) {
+            self.hidden = ![self.model isShowObject];
+        }
+        
         [self setupModel];
     }
 }
@@ -47,9 +52,7 @@
 - (void)setupModel {
     [self removeAllChildren];
     self.shape = nil;
-    
     if (!self.model) return;
-    
     [self createShape];
 }
 
@@ -59,16 +62,14 @@
         return;
     }
     self.shape = [SKShapeNode shapeNodeWithPath:pathRef];
+    self.shape.name = self.model.name;
     if (self.model.objGroupType != ObjectGroupType_Polyline) {
         self.shape.fillColor = self.model.objectGroup.color;
     }
     self.shape.strokeColor = self.model.objectGroup.color;
 //    self.shape.lineWidth = 0;
     CGPathRelease(pathRef);
-    
-    if ([self.model isShowShape]) {
-        [self addChild:self.shape];
-    }
+    [self addChild:self.shape];
 }
 
 - (CGPathRef)path {

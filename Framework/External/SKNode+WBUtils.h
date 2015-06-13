@@ -11,8 +11,8 @@
 @interface SKNode (WBUtils)
 
 
-- (CGFloat)getGlobalZPosition;
-- (void)setGlobalZPosition:(CGFloat)gZPos;
+- (CGFloat)globalZPosition;
+- (void)setupGlobalZPosition:(CGFloat)gZPos;
 
 
 

@@ -11,7 +11,7 @@
 @implementation SKNode (WBUtils)
 
 
-- (CGFloat)getGlobalZPosition {
+- (CGFloat)globalZPosition {
     CGFloat zPos = self.zPosition;
     SKNode *parent = self.parent;
     while (parent) {
@@ -21,8 +21,8 @@
     return zPos;
 }
 
-- (void)setGlobalZPosition:(CGFloat)gZPos {
-    CGFloat parentZPos = [self.parent getGlobalZPosition];
+- (void)setupGlobalZPosition:(CGFloat)gZPos {
+    CGFloat parentZPos = [self.parent globalZPosition];
     self.zPosition = gZPos - parentZPos;
 }
 

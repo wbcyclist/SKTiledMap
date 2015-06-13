@@ -21,11 +21,6 @@
    eJyt0rdOAzEcx/H/RdQJGCgRJRswAGJipCZEQmKkJaEMjHReIM9CkYA3oEggZYAHoEiUnbZQZsTXub+FOQXISVj66O8455/vbIv8TzvT2os+9GMAgxhCHIkQedWowRjGMYFJTCGFNDIh8trQjgUsYgnLWMEq1rAeIs+0mCdSSq1Aufj9Mu2bscqQeT3k1Xtfv+uc/oyX39JQbZT5XU5Gp/fzs8W0eeYnnIy40x8uIrtEJFtFzYl/vhFkmDeLOaRxqs9O/5HXRFYjWjXPnO8IGtCNqPZNTIvWiP8O+WbXtO+VpD7rfzmtWwXWvdd1NrCJpGY36zoxHbvEVSDvMJC1g13t7+OgwHq1zj7Yu2HzHgLjxzjBOS7whGvc4g438v3MOgJ5e1rdO2O/0+zFNl7whne8in9+tqUCeR9a7Z15dL7T7MWR+GfiMmcW/aV+Aj5FOmA=
   </data>
  </layer>
- <layer name="Tile Layer 3" width="20" height="15">
-  <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIKhAQAEsAAB
-  </data>
- </layer>
  <objectgroup name="Object Layer 1">
   <object id="1" x="132" y="144">
    <polyline points="12,16 28,16 32,4 56,4 56,16 76,16 120,-32 140,-32 124,-8 124,32 -4,32"/>

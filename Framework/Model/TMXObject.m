@@ -26,6 +26,7 @@
 
 - (id)copyWithZone:(NSZone *)zone {
     TMXObject *copy = [[self class] new];
+    copy.name = self.name;
     copy.objType = self.objType;
     copy.properties = self.properties;// 统一属性内容，不用copy
     return copy;

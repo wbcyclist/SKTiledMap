@@ -15,7 +15,7 @@
  </layer>
  <objectgroup color="#800080" name="对象层 1" opacity="0.6">
   <properties>
-   <property name="showShape" value="1"/>
+   <property name="showObject" value="1"/>
   </properties>
   <object id="1" x="384" y="94" width="64" height="64"/>
  </objectgroup>

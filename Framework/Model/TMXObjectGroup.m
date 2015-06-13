@@ -38,8 +38,8 @@
 }
 
 #pragma mark - customize
-- (BOOL)isShowShape {
-    return [[self propertyForName:@"showShape"] intValue] == 1;
+- (BOOL)isShowObject {
+    return [[self propertyForName:@"showObject"] intValue] == 1;
 }
 
 

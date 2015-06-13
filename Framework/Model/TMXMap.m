@@ -57,6 +57,31 @@
     
 }
 
+- (TMXTileLayer *)tileLayerWithName:(NSString *)name {
+    for (TMXObject *tmxObj in self.layers) {
+        if (tmxObj.objType==ObjectType_TileLayer && [name isEqualToString:tmxObj.name]) {
+            return (TMXTileLayer *)tmxObj;
+        }
+    }
+    return nil;
+}
+- (TMXObjectGroup *)objectLayerWithName:(NSString *)name {
+    for (TMXObject *tmxObj in self.layers) {
+        if (tmxObj.objType==ObjectType_ObjectGroup && [name isEqualToString:tmxObj.name]) {
+            return (TMXObjectGroup *)tmxObj;
+        }
+    }
+    return nil;
+}
+- (TMXImageLayer *)imageLayerWithName:(NSString *)name {
+    for (TMXObject *tmxObj in self.layers) {
+        if (tmxObj.objType==ObjectType_ImageLayer && [name isEqualToString:tmxObj.name]) {
+            return (TMXImageLayer *)tmxObj;
+        }
+    }
+    return nil;
+}
+
 
 #pragma mark - Parse XML
 - (BOOL)loadTMXFile:(NSString*)tmxFile {

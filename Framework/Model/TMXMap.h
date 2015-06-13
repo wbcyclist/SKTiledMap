@@ -34,7 +34,7 @@
 
 
 @property (nonatomic, strong) NSMutableArray *tilesets;
-@property (nonatomic, strong) NSMutableArray *layers;   // tileLayer, objectgroupLayer, imageLayer
+@property (nonatomic, strong) NSMutableArray *layers;   // tileLayer, objectgroupLayer, imageLayer by order
 
 
 - (instancetype)initWithContentsOfFile:(NSString*)tmxFile;
@@ -44,6 +44,9 @@
 
 - (BOOL)loadTMXFile:(NSString*)tmxFile;
 
+- (TMXTileLayer *)tileLayerWithName:(NSString *)name;
+- (TMXObjectGroup *)objectLayerWithName:(NSString *)name;
+- (TMXImageLayer *)imageLayerWithName:(NSString *)name;
 
 
 

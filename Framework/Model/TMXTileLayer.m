@@ -20,14 +20,14 @@
 - (void)dealloc {
     if (_tiles) {
         free(_tiles);
-        _tiles = nil;
+        _tiles = NULL;
     }
 }
 
 - (void)setTiles:(uint32_t *)tiles {
     if (_tiles && _tiles != tiles) {
         free(_tiles);
-        _tiles = nil;
+        _tiles = NULL;
     }
     _tiles = tiles;
 }

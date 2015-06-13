@@ -20,19 +20,28 @@ typedef struct{
 } kMinPlayerToEdgeDistance;
 
 
-@interface GameScene ()
+@interface GameScene () <SKPhysicsContactDelegate>
 
 @property (nonatomic, strong)SKNode *worldNode;
 @property (nonatomic, strong) SKTMMapLayer *mapLayer;
 @property (nonatomic, strong) Goblin *player;
 @property (nonatomic, assign)kMinPlayerToEdgeDistance worldMovedDistance;
 
+@property (nonatomic, weak) SKTMObjectGroupLayer *overlapLayer;
+@property (nonatomic, strong) NSMutableArray *overlapRects;
+@property (nonatomic, assign) int overlapZPosition;
+
 @end
 
 
 @implementation GameScene {
+    BOOL m_leftKey;
+    BOOL m_rightKey;
+    BOOL m_upKey;
+    BOOL m_downKey;
     BOOL m_contentCreated;
     NSTimeInterval lastUpdateTimeInterval;
+    CGPoint lastMovedPoint;
 }
 
 
@@ -41,26 +50,23 @@ typedef struct{
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor grayColor];
         
+        // camera range
         _worldMovedDistance.left = 200.0/1120 * size.width;
         _worldMovedDistance.right = 200.0/1120 * size.width;
         _worldMovedDistance.top = 200.0/640 * size.height;
         _worldMovedDistance.bottom = 200.0/640 * size.height;
         
-    }
-    
-    return self;
-}
-
--(void)didMoveToView:(SKView *)view {
-    if (!m_contentCreated) {
-        m_contentCreated = YES;
+        //physics
+        self.physicsWorld.gravity = CGVectorMake(0, 0);
+        self.physicsWorld.contactDelegate = self;
         
         //world node
         self.worldNode = [SKNode node];
         self.worldNode.name = @"world";
         [self addChild:self.worldNode];
         
-//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/01.tmx"];
+        
+        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/01.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/02.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/03.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/04.tmx"];
@@ -74,10 +80,10 @@ typedef struct{
 //
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Staggered/01.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Staggered/02.tmx"];
-        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Staggered/03.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Staggered/03.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Staggered/04.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Staggered/05.tmx"];
-        
+
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Hexagonal/01.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Hexagonal/02.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Hexagonal/03.tmx"];
@@ -88,25 +94,71 @@ typedef struct{
         [self.worldNode addChild:self.mapLayer];
         
         
-//        Goblin *player = [Goblin spriteNodeWithTexture:animateFrames[0]];
-//        [player runAction:[SKAction repeatActionForever:[SKAction animateWithTextures:animateFrames timePerFrame:0.05]]];
-        self.player = [[Goblin alloc] initWithDirection:CharacterDirection_NoDirection];
-        self.player.zPosition = self.mapLayer.maxZPosition;
-        self.player.anchorPoint = CGPointMake(0.5, 0.2);
-        self.player.position = CGPointMake(self.mapLayer.mapRenderer.mapPixelSize.width/2, self.mapLayer.mapRenderer.mapPixelSize.height/2);
-        [self.worldNode addChild:self.player];
+        // overlap
+        self.overlapLayer = [self.mapLayer objectLayerWithName:@"overlap"];
+        [self syncOverlapRects:self.overlapLayer];
+        int zpos = [self.overlapLayer globalZPosition];
         
+        // player
+        SKTMObjectGroupLayer *characLayer = [self.mapLayer objectLayerWithName:@"Character"];
+        SKNode *objNode = [characLayer childNodeWithName:@"player"];
+        self.player = [[Goblin alloc] initWithDirection:CharacterDirection_NoDirection];
+        self.player.position = objNode.position;
+        [characLayer addChild:self.player];
+        
+        // overlapZPosition
+        [self.player setupGlobalZPosition:zpos];
+        self.overlapZPosition = self.player.zPosition;
+        self.player.zPosition = 0;
+    }
+    
+    return self;
+}
+
+- (NSMutableArray *)overlapRects {
+    if (!_overlapRects) {
+        _overlapRects = [NSMutableArray array];
+    }
+    return _overlapRects;
+}
+
+- (void)syncOverlapRects:(SKTMObjectGroupLayer *)overlapLayer {
+    [self.overlapRects removeAllObjects];
+    for (SKNode *node in overlapLayer.children) {
+        CGRect rect = node.calculateAccumulatedFrame;
+        [self.overlapRects addObject:WB_CGRectToNSValue(rect)];
+    }
+}
+
+-(void)didMoveToView:(SKView *)view {
+    if (!m_contentCreated) {
+        m_contentCreated = YES;
+        
+        [self setupPhysicsBody];
+    }
+}
+
+- (void)setupPhysicsBody {
+    SKTMObjectGroupLayer *blockLayer = [self.mapLayer objectLayerWithName:@"block"];
+    for (SKNode *node in blockLayer.children) {
+        if ([node isKindOfClass:[SKTMObjectGroupShape class]]) {
+            SKTMObjectGroupShape *shapeNode = (SKTMObjectGroupShape *)node;
+            shapeNode.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromPath:shapeNode.path];
+            shapeNode.physicsBody.dynamic = NO;
+            shapeNode.physicsBody.restitution = 0;
+        }
     }
 }
 
 
+
 - (CGFloat)tileGlobalZPositionAtTileCoords:(CGPoint)pos withLayerName:(NSString*)name {
     SKTMTileNode *tileNode = [[self.mapLayer tileLayerWithName:name] tileNodeWithTileCoords:pos];
-    return [tileNode getGlobalZPosition];
+    return [tileNode globalZPosition];
 }
 - (CGFloat)tileGlobalZPositionAtTileCoords:(CGPoint)pos withLayerIndex:(NSUInteger)index {
     SKTMTileNode *tileNode = [[self.mapLayer tileLayerAtIndex:index] tileNodeWithTileCoords:pos];
-    return [tileNode getGlobalZPosition];
+    return [tileNode globalZPosition];
 }
 
 - (CGPoint)screenToTileCoords:(CGPoint)pos {
@@ -180,21 +232,67 @@ typedef struct{
     CGPoint location = [theEvent locationInNode:self.worldNode];
     [self touchEnd:location];
 }
+
+- (void)keyDown:(NSEvent *)event {
+    [self handleKeyEvent:event keyDown:YES];
+}
+
+- (void)keyUp:(NSEvent *)event {
+    [self handleKeyEvent:event keyDown:NO];
+}
+
+- (void)handleKeyEvent:(NSEvent *)event keyDown:(BOOL)downOrUp {
+    // w:13 a:0 s:1 d:2 space:49  ←:123 →:124 ↓:125 ↑:126
+    unsigned short keyCode = [event keyCode];
+    
+    if (keyCode==13 || keyCode==126) {
+        m_upKey = downOrUp;
+    } else if (keyCode==1 || keyCode==125) {
+        m_downKey = downOrUp;
+    } else if (keyCode==0 || keyCode==123) {
+        m_leftKey = downOrUp;
+    } else if (keyCode==2 || keyCode==124) {
+        m_rightKey = downOrUp;
+    }
+    [self checkPlayerDirection:self.player];
+}
+
+- (void)checkPlayerDirection:(Goblin *)player {
+    if (m_upKey) {
+        if (m_leftKey) {
+            player.direction = CharacterDirection_LeftUp;
+        } else if (m_rightKey) {
+            player.direction = CharacterDirection_RightUp;
+        } else {
+            player.direction = CharacterDirection_Up;
+        }
+    } else if (m_downKey) {
+        if (m_leftKey) {
+            player.direction = CharacterDirection_LeftDown;
+        } else if (m_rightKey) {
+            player.direction = CharacterDirection_RightDown;
+        } else {
+            player.direction = CharacterDirection_Down;
+        }
+    } else if (m_leftKey) {
+        player.direction = CharacterDirection_Left;
+    } else if (m_rightKey) {
+        player.direction = CharacterDirection_Right;
+    }
+    self.player.dPadActive = m_upKey || m_downKey || m_leftKey || m_rightKey;
+}
+
 #endif
 
-CGPoint lastMovedPoint;
 - (void)touchIn:(CGPoint)point {
     lastMovedPoint = point;
     self.player.targetPos = point;
-    
-    CGPoint testPoint = [self.mapLayer convertPoint:point fromNode:self.worldNode];
-    NSLog(@"%@", NSStringFromCGPoint([self.mapLayer.mapRenderer screenToTileCoords:testPoint]));
 }
 
 - (void)touchMoved:(CGPoint)point {
     lastMovedPoint = point;
     
-//    self.player.targetPos = point;
+    self.player.targetPos = point;
 //    CGFloat dx = (lastMovedPoint.x - point.x) * 1.;
 //    CGFloat dy = (lastMovedPoint.y - point.y) * 1.;
 //    self.mapLayer.position = CGPointMake(self.mapLayer.position.x - dx, self.mapLayer.position.y - dy);
@@ -221,7 +319,21 @@ CGPoint lastMovedPoint;
     
     
     // check player zposition
+    [self checkCharacterZPosition:self.player];
+}
+
+
+- (void)checkCharacterZPosition:(SKNode *)charac {
+    CGPoint overlapPoint = [charac.parent convertPoint:charac.position toNode:self.overlapLayer];
     
+    for (NSValue *value in self.overlapRects) {
+        if (CGRectContainsPoint(WB_NSValueToCGRect(value), overlapPoint)) {
+            charac.zPosition = self.overlapZPosition;
+            return;
+        }
+    }
+    
+    charac.zPosition = 0;
 }
 
 - (void)didSimulatePhysics {
@@ -259,7 +371,14 @@ CGPoint lastMovedPoint;
 
 
 
+#pragma mark - SKPhysicsContactDelegate
+- (void)didContactWall:(SKPhysicsBody *)body andContact:(SKPhysicsContact *)contact {
+    
+}
 
+- (void)didBeginContact:(SKPhysicsContact *)contact {
+    
+}
 
 
 

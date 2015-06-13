@@ -1,21 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="12" tilewidth="32" tileheight="32" backgroundcolor="#9d9794" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="20" height="12" tilewidth="32" tileheight="32" backgroundcolor="#9d9794" nextobjectid="26">
  <tileset firstgid="1" name="Ortho1_32x32_32x32" tilewidth="32" tileheight="32">
   <image source="01_32x32_32x32.png" width="256" height="1450"/>
  </tileset>
+ <tileset firstgid="361" name="player" tilewidth="67" tileheight="67">
+  <tile id="0">
+   <image width="67" height="67" source="../goblin.png"/>
+  </tile>
+ </tileset>
  <layer name="Ground" width="20" height="12">
   <data encoding="base64" compression="zlib">
-   eJyNkb8OgjAQh1s22fQNFCFRxETd8A38s5i4+LbopK6OjI6KPIK/C9fkKAUdvlxpe1/vjlApFTrIwFlwAXcwBCMw40gkIOCcROzLe1dwE5ArAhMwdRCzz3VGjMFc1BtxDdpiAZZgxb5NC6YvQ8B5NimzZt+pBZcv7cD47P+gONpziv/0BbpJqJtzeoA9FltdRZ+/c5ot3yffAYsdOFrOl6rzUZXLQL5CvEc1kM92mVzvB+Qs2dUjv6732+XxO7zUbx/5A+GzPfS2XBs87vEJ3nxeinlkHH0r1+Uy+7mYmfQW7PsCYfRFyQ==
+   eJyNkTsOwjAMhpNudIMbQCnv8hQL3IDHgsTCbYEJWBk7MkLpEfgtHMlN08LwyWkSf7HdUCkVOjiCk+AMbqAOGmDAkYhAwDmR2Jf3LuAqIFcLdEHPQZ99rjOiCdpgyPW2uAZtMQFTMGPfqgDqayTqDjjPZsEs2XcooK6yc+iIXBfG5/oXoTWnORj/6Qt0nlDn53QHWyzW+ht9/o5ptnyffDssNmBvOZ8qy1t9XQbyJeI9qoF8tsvkej8gZ8quCvl1tt8yj1/ipX6ryK8Jn+2ht+Xa4HGPD/Di81TM48jRt3JdLrMfi5lJb8K+DwYPRhI=
   </data>
  </layer>
  <layer name="Decoration" width="20" height="12">
   <data encoding="base64" compression="zlib">
-   eJytjL0OQUEQhWcLFMQVfwXiMW4toVCq0PEadPRKpRINKiSo8GLOxshdYxMj7km+nPk9RE9twY7i0wEcFXd5UOB64cxDcSd7n+xNBVRBBiwVP1Yr9o3wteK3aYhaJnKrl+/p3TUKHbc0uC9zPwJjUPyS0zdR3QEp7ts8q4MEmIApqPE8aW9FVg+/Q0MfyolZWu5BFgRcz5zdwJOnVZd97tkFf+T+qhM4M5cYfq/gxtxBSZHzAOpLGtk=
+   eJxjYICAtUC8joFyoMvIwKAHxFuB7G1EqBcCYmEoey6SuBmUNgWaZcaI4OMDIDVSQCwNxDxAvJRIN8PAGjR6OYn60cEWNJoYYIZEg7ADlC8G5VcCcRUQixAwJ4IRwQ4AYnYo3wMqJgfErEDcCMRNQCyDx6xwoN4ERkxxATQxbnR5IOYDYn4ou5eAm4kFYVB6KhY5fizuHKpAlAg1AB8GEGE=
   </data>
  </layer>
+ <objectgroup color="#0000ff" name="overlap" opacity="0.5">
+  <properties>
+   <property name="showObject" value="0"/>
+  </properties>
+  <object id="20" name="1" x="0" y="96" width="192" height="64"/>
+  <object id="21" name="4" x="384" y="192" width="64" height="32"/>
+  <object id="22" name="5" x="480" y="128" width="128" height="106"/>
+  <object id="24" name="2" x="32" y="352" width="160" height="32"/>
+  <object id="25" name="3" x="192" y="320" width="192" height="64"/>
+ </objectgroup>
  <layer name="Deco2" width="20" height="12">
   <data encoding="base64" compression="zlib">
-   eJzV0LcNgEAQRNGlIMiALugEk2ASTIJJMAmmXH5ABTAJIz3poq/VmWnnOmaeo+v5tAJh78tiJEiRCXo5CpSoBL0aDVp0LxsRfx0+7x4DRkyfrzObsWDFJujtOHDiEvT+uBt8Dw2N
+   eJxjYBgFyyjQ68zIwODCiKBBAEYTAqVAXAbE5UBcQYEbYKAWiOuAuB6IG8g0gw2I2aHsViBuA+J2IO6g1HFA0AvEfUDcD8QTqGDeVCCeBsTTgXgGFcwjFewE4l1QvJsKeg8C8SEoPkykOQCBrxVl
   </data>
  </layer>
+ <layer name="Deco3" width="20" height="12">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFxIJcIM4D4nwgLhhgt9AK+DEyMJgPtCNGAdEAAE5mAkE=
+  </data>
+ </layer>
+ <objectgroup color="#ff8000" name="Character">
+  <properties>
+   <property name="showObject" value="0"/>
+  </properties>
+  <object id="5" name="player" gid="361" x="128" y="288" width="67" height="67"/>
+ </objectgroup>
+ <objectgroup color="#800080" name="block" opacity="0.5">
+  <properties>
+   <property name="showObject" value="0"/>
+  </properties>
+  <object id="9" x="0" y="0">
+   <polygon points="0,0 0,96 192,96 192,224 352,224 352,192 608,192 608,0"/>
+  </object>
+  <object id="10" x="608" y="0" width="32" height="384"/>
+  <object id="11" x="0" y="152" width="128" height="38"/>
+  <object id="12" x="160" y="152" width="32" height="38"/>
+  <object id="13" x="386" y="218" width="62" height="36"/>
+  <object id="14" x="224" y="342" width="128" height="42"/>
+  <object id="15" x="64" y="372" width="128" height="12"/>
+  <object id="17" x="352" y="364" width="32" height="20"/>
+  <object id="18" x="512" y="234" width="62" height="46">
+   <ellipse/>
+  </object>
+ </objectgroup>
 </map>

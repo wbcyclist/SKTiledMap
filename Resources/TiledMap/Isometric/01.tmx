@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="isometric" renderorder="right-down" width="10" height="10" tilewidth="130" tileheight="66" backgroundcolor="#634930" nextobjectid="19">
+<map version="1.0" orientation="isometric" renderorder="right-down" width="10" height="10" tilewidth="130" tileheight="66" backgroundcolor="#634930" nextobjectid="20">
  <tileset firstgid="1" name="01_130x66_130x230" tilewidth="130" tileheight="230">
   <image source="01_130x66_130x230.png" width="1560" height="1380"/>
  </tileset>
@@ -13,4 +13,10 @@
    eJxjYBh44D7QDiATOFPBDHS/AwBmUADS
   </data>
  </layer>
+ <objectgroup color="#ff0000" name="对象层 1" opacity="0.5">
+  <properties>
+   <property name="showObject" value="0"/>
+  </properties>
+  <object id="19" x="0" y="0" width="66" height="66"/>
+ </objectgroup>
 </map>

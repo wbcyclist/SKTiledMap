@@ -8,6 +8,8 @@
 
 #import "GameViewController.h"
 #import "GameScene.h"
+#import "ZoomExampleScene.h"
+
 #import "WBGamePad.h"
 
 @interface GameViewController ()
@@ -29,24 +31,38 @@
     skView.showsDrawCount = YES;
     /* Sprite Kit applies additional optimizations to improve rendering performance */
     skView.ignoresSiblingOrder = YES;
+//    skView.showsPhysics = YES;
     
     // Create and configure the scene.
     CGSize viewSize = self.view.bounds.size;
     viewSize.width *= 2;
     viewSize.height *= 2;
-    GameScene *scene = [[GameScene alloc] initWithSize:viewSize];
+    
+//    GameScene *scene = [[GameScene alloc] initWithSize:viewSize];
+//    ZoomExampleScene *scene = [[ZoomExampleScene alloc] initWithSize:viewSize mapFile:@"TiledMap/Orthogonal/02.tmx"];
+    ZoomExampleScene *scene = [[ZoomExampleScene alloc] initWithSize:viewSize mapFile:@"TiledMap/Isometric/02.tmx"];
+    
     scene.scaleMode = SKSceneScaleModeFill;
     
     
     // game pad
     int tmp = self.view.bounds.size.height;
-    self.gamePad = [[WBGamePad alloc] initWithFrame:CGRectMake(0, tmp-120, 120, 120)
-                                       withDPadSize:CGSizeMake(100, 100)
+    CGSize dSize = CGSizeMake(150, 150);
+    self.gamePad = [[WBGamePad alloc] initWithFrame:CGRectMake(0, tmp-20-dSize.width, 20+dSize.width, 20+dSize.height)
+                                       withDPadSize:dSize
                                      withButtonSize:CGSizeMake(50, 50)];
     self.gamePad.buttonAView.hidden = YES;
 //    self.gamePad.hidden = YES;
     [skView addSubview:self.gamePad];
-    scene.gamePad = self.gamePad;
+    
+    if ([scene respondsToSelector:@selector(setGamePad:)]) {
+        self.gamePad.hidden = NO;
+        [scene performSelectorOnMainThread:@selector(setGamePad:) withObject:self.gamePad waitUntilDone:YES];
+    } else {
+        self.gamePad.hidden = YES;
+    }
+    
+    
     
     
     // Present the scene.

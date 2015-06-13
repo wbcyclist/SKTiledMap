@@ -22,10 +22,17 @@
 @property (nonatomic, assign) int mapHeight;
 @property (nonatomic, assign) CGSize mapPixelSize;
 
+@property (nonatomic, assign) int *tileZPositions;
+
+- (void)setupTileZPosition;
+
 - (SKTMTileLayer *)drawTileLayer:(TMXTileLayer*)layerData;
 - (SKTMObjectGroupLayer *)drawObjectGroupLayer:(TMXObjectGroup *)layerData;
 - (SKTMImageLayer *)drawImageLayer:(TMXImageLayer*)layerData;
 
+
+/// 返回tile格子的Z值
+- (int)zPositionInTileCoords:(CGPoint)pos;
 
 #pragma mark - Coordinates System Convert 
 // 注意 int单位的tileCoord 与 其他Coords的float转换

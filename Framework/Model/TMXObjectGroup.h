@@ -16,7 +16,6 @@
 
 @property (nonatomic, weak) TMXMap *map;
 
-@property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) SKColor *color;
 @property (nonatomic, assign) DrawOrderType drawOrder;
 @property (nonatomic, assign) float opacity;
@@ -27,7 +26,7 @@
 
 
 // customize
-- (BOOL)isShowShape;
+- (BOOL)isShowObject;
 
 
 - (NSArray *)sortedObjectsWithDrawOrder:(DrawOrderType)drawOrder;

@@ -16,7 +16,6 @@
 
 @property (nonatomic, weak) TMXMap *map;
 
-@property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) uint32_t firstGid;
 @property (nonatomic, assign) uint32_t tileWidth;
 @property (nonatomic, assign) uint32_t tileHeight;

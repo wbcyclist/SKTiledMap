@@ -15,7 +15,6 @@
 
 @property (nonatomic, weak) TMXMap *map;
 
-@property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) CGPoint position;
 @property (nonatomic, assign) float opacity;
 @property (nonatomic, assign) BOOL visible;

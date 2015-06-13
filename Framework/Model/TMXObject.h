@@ -16,7 +16,7 @@
  */
 
 @interface TMXObject : NSObject <NSCopying>
-
+@property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) ObjectType objType;
 @property (nonatomic, strong) NSMutableDictionary *properties;
 

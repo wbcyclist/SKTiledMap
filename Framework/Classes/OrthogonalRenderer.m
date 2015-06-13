@@ -16,6 +16,45 @@
 
 @implementation OrthogonalRenderer
 
+- (void)setupTileZPosition {
+    int startX = 0;
+    int startY = 0;
+    int endX = self.mapWidth - 1;
+    int endY = self.mapHeight - 1;
+    
+    int incX = 1, incY = 1;
+    RenderOrder renderOrder = self.map.renderOrder;
+    switch (renderOrder) {
+        case RenderOrder_RightUp:
+            SWAP(startY, endY);
+            incY = -1;
+            break;
+        case RenderOrder_LeftDown:
+            SWAP(startX, endX);
+            incX = -1;
+            break;
+        case RenderOrder_LeftUp:
+            SWAP(startX, endX);
+            SWAP(startY, endY);
+            incX = -1;
+            incY = -1;
+            break;
+        case RenderOrder_RightDown:
+        default:
+            break;
+    }
+    endX += incX;
+    endY += incY;
+    
+    int tileZIndex = 0;
+    for (int y = startY; y != endY; y += incY) {
+        for (int x = startX; x != endX; x += incX) {
+            int tid = x + y*self.mapWidth;
+            self.tileZPositions[tid] = tileZIndex++;
+        }
+    }
+}
+
 
 - (SKTMTileLayer *)drawTileLayer:(TMXTileLayer *)layerData {
     SKTMTileLayer *layer = [SKTMTileLayer nodeWithModel:layerData];
@@ -55,6 +94,7 @@
 //            NSLog(@"x=%d, y=%d", x, y);
 //            NSLog(@"%@", array[x + y*self.mapWidth]);
             uint32_t gid = layerData.tiles[x + y*self.mapWidth];
+            tileZIndex++;
             
             BOOL flipX = (gid & kTileHorizontalFlag) != 0;
             BOOL flipY = (gid & kTileVerticalFlag) != 0;
@@ -72,7 +112,7 @@
             SKTMTileNode *tileNode = [SKTMTileNode nodeWithModel:tile position:CGPointMake(x*self.tileWidth, (y+1)*self.tileHeight) origin:BottomLeft];
             tileNode.name = [NSString stringWithFormat:@"%d,%d", x, y];
             tileNode.position = [self pixelToScreenCoords:tileNode.pixelPos];
-            tileNode.zPosition = tileZIndex++;
+            tileNode.zPosition = tileZIndex - 1;
             [layer addChild:tileNode];
         }
     }

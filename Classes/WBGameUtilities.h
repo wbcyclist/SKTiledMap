@@ -9,6 +9,19 @@
 
 #import <SpriteKit/SpriteKit.h>
 
+#if TARGET_OS_IPHONE
+    #define WB_CGPointToNSValue(p) [NSValue valueWithCGPoint:p]
+    #define WB_NSValueToCGPoint(v) v.CGPointValue
+    #define WB_CGRectToNSValue(r) [NSValue valueWithCGRect:r]
+    #define WB_NSValueToCGRect(v) v.CGRectValue
+#else
+    #define WB_CGPointToNSValue(p) [NSValue valueWithPoint:p]
+    #define WB_NSValueToCGPoint(v) v.pointValue
+    #define WB_CGRectToNSValue(r) [NSValue valueWithRect:r]
+    #define WB_NSValueToCGRect(v) v.rectValue
+#endif
+
+
 /* The assets are all facing Y down, so offset by pi half to get into X right facing. */
 #define WB_POLAR_ADJUST(x) x+(M_PI*0.5f)
 #define SK_DEGREES_TO_RADIANS(__ANGLE__) ((__ANGLE__) * 0.01745329252f) // PI/180
@@ -20,7 +33,7 @@ CGPoint WB_PointByAddingCGPoints(CGPoint first, CGPoint second);
 /// 两点间的距离
 CGFloat WB_DistanceBetweenPoints(CGPoint first, CGPoint second);
 
-/// 两点直线相对的弧度
+/// 两点直线相对的弧度 (pi)
 CGFloat WB_RadiansBetweenPoints(CGPoint first, CGPoint second);
 
 /// 两点直线相对的角度 (0~360)

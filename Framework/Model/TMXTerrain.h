@@ -16,7 +16,6 @@
 
 @property (nonatomic, weak) TMXTileset *tileset;    // the tileset this terrain type belongs to.
 
-@property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) uint32_t terrainId;   // ID of this terrain type.
 // if imageTileId == -1  then no image display
 @property (nonatomic, assign) int imageTileId; // the index of the tile that visually represents this terrain type.

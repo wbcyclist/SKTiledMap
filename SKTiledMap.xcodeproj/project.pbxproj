@@ -111,6 +111,11 @@
 		A5BED1EF1B179CB800DC851E /* SKTMObjectGroupShape.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1ED1B179CB800DC851E /* SKTMObjectGroupShape.m */; };
 		A5BED1F21B17B5D300DC851E /* IsometricRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1F11B17B5D300DC851E /* IsometricRenderer.m */; };
 		A5BED1F31B17B5D300DC851E /* IsometricRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1F11B17B5D300DC851E /* IsometricRenderer.m */; };
+		A5FDBF521B296D6100AC0F9B /* ZoomExampleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDBF511B296D6100AC0F9B /* ZoomExampleScene.m */; };
+		A5FDBF531B296D6100AC0F9B /* ZoomExampleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDBF511B296D6100AC0F9B /* ZoomExampleScene.m */; };
+		A5FDBF561B29A0D900AC0F9B /* SKView+ScrollTouchForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDBF551B29A0D900AC0F9B /* SKView+ScrollTouchForwarding.m */; };
+		A5FDBF591B29B1FA00AC0F9B /* SelectTileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDBF581B29B1FA00AC0F9B /* SelectTileNode.m */; };
+		A5FDBF5A1B29B1FA00AC0F9B /* SelectTileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDBF581B29B1FA00AC0F9B /* SelectTileNode.m */; };
 		A81F8EC029873656FDBC70F4 /* libPods-SKTiledMap-Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A417FC5FC14AD8810AA9BA16 /* libPods-SKTiledMap-Mac.a */; };
 /* End PBXBuildFile section */
 
@@ -221,6 +226,12 @@
 		A5BED1ED1B179CB800DC851E /* SKTMObjectGroupShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMObjectGroupShape.m; sourceTree = "<group>"; };
 		A5BED1F01B17B5D300DC851E /* IsometricRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsometricRenderer.h; sourceTree = "<group>"; };
 		A5BED1F11B17B5D300DC851E /* IsometricRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsometricRenderer.m; sourceTree = "<group>"; };
+		A5FDBF501B296D6100AC0F9B /* ZoomExampleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomExampleScene.h; sourceTree = "<group>"; };
+		A5FDBF511B296D6100AC0F9B /* ZoomExampleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomExampleScene.m; sourceTree = "<group>"; };
+		A5FDBF541B29A0D900AC0F9B /* SKView+ScrollTouchForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKView+ScrollTouchForwarding.h"; sourceTree = "<group>"; };
+		A5FDBF551B29A0D900AC0F9B /* SKView+ScrollTouchForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKView+ScrollTouchForwarding.m"; sourceTree = "<group>"; };
+		A5FDBF571B29B1FA00AC0F9B /* SelectTileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTileNode.h; sourceTree = "<group>"; };
+		A5FDBF581B29B1FA00AC0F9B /* SelectTileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectTileNode.m; sourceTree = "<group>"; };
 		AA08324E977D5DBC4C1503B4 /* Pods-SKTiledMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKTiledMap/Pods-SKTiledMap.debug.xcconfig"; sourceTree = "<group>"; };
 		BC2477E50821196DE24346F1 /* Pods-SKTiledMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKTiledMap/Pods-SKTiledMap.release.xcconfig"; sourceTree = "<group>"; };
 		C608C0E67B28B842F1E3D70E /* Pods-SKTiledMap-Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap-Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKTiledMap-Mac/Pods-SKTiledMap-Mac.release.xcconfig"; sourceTree = "<group>"; };
@@ -273,6 +284,8 @@
 			children = (
 				A516BCF91B24739200F90505 /* Goblin.h */,
 				A516BCFA1B24739200F90505 /* Goblin.m */,
+				A5FDBF571B29B1FA00AC0F9B /* SelectTileNode.h */,
+				A5FDBF581B29B1FA00AC0F9B /* SelectTileNode.m */,
 			);
 			name = Sprite;
 			sourceTree = "<group>";
@@ -368,6 +381,8 @@
 				A56AC7321B09E17100D1EBAE /* AppDelegate.m */,
 				A56AC73D1B09E17100D1EBAE /* MainMenu.xib */,
 				A56AC72F1B09E17100D1EBAE /* Supporting Files */,
+				A5FDBF541B29A0D900AC0F9B /* SKView+ScrollTouchForwarding.h */,
+				A5FDBF551B29A0D900AC0F9B /* SKView+ScrollTouchForwarding.m */,
 			);
 			path = "SKTiledMap-Mac";
 			sourceTree = "<group>";
@@ -399,6 +414,8 @@
 			children = (
 				A56AC7551B09E2FD00D1EBAE /* GameScene.h */,
 				A56AC7561B09E2FD00D1EBAE /* GameScene.m */,
+				A5FDBF501B296D6100AC0F9B /* ZoomExampleScene.h */,
+				A5FDBF511B296D6100AC0F9B /* ZoomExampleScene.m */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -450,10 +467,10 @@
 			children = (
 				A5BED1A41B14ECDE00DC851E /* TMXBase.h */,
 				A56AC76F1B09F56900D1EBAE /* TMXTypes.h */,
-				A56AC7701B0A5A8200D1EBAE /* TMXObject.h */,
-				A56AC7711B0A5A8200D1EBAE /* TMXObject.m */,
 				A5BED1571B0BB2EF00DC851E /* TMXMap.h */,
 				A5BED1581B0BB2EF00DC851E /* TMXMap.m */,
+				A56AC7701B0A5A8200D1EBAE /* TMXObject.h */,
+				A56AC7711B0A5A8200D1EBAE /* TMXObject.m */,
 				A56AC7751B0A7F3C00D1EBAE /* TMXTile.h */,
 				A56AC7761B0A7F3C00D1EBAE /* TMXTile.m */,
 				A56AC7791B0A8E6800D1EBAE /* TMXTileset.h */,
@@ -746,6 +763,7 @@
 				A5BED1661B0D301700DC851E /* WBImage+WBUtils.m in Sources */,
 				A5BED1A21B14A37000DC851E /* OrthogonalRenderer.m in Sources */,
 				A56AC7011B09E04900D1EBAE /* main.m in Sources */,
+				A5FDBF521B296D6100AC0F9B /* ZoomExampleScene.m in Sources */,
 				A56AC7771B0A7F3C00D1EBAE /* TMXTile.m in Sources */,
 				A5BED1BC1B16290E00DC851E /* SKTMMapLayer.m in Sources */,
 				A5BED1C81B1639FE00DC851E /* SKTMTileNode.m in Sources */,
@@ -754,6 +772,7 @@
 				A5BED1F21B17B5D300DC851E /* IsometricRenderer.m in Sources */,
 				A5BED1B81B16165500DC851E /* SKTMLayer.m in Sources */,
 				A5BED19A1B13A36000DC851E /* SKMapRenderer.m in Sources */,
+				A5FDBF591B29B1FA00AC0F9B /* SelectTileNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,6 +786,7 @@
 				A5BED1F31B17B5D300DC851E /* IsometricRenderer.m in Sources */,
 				A516BCE11B22897800F90505 /* SKNode+WBUtils.m in Sources */,
 				A516BD001B24746A00F90505 /* WBGameUtilities.m in Sources */,
+				A5FDBF561B29A0D900AC0F9B /* SKView+ScrollTouchForwarding.m in Sources */,
 				A5BED1EB1B177ADA00DC851E /* SKTMObjectGroupTile.m in Sources */,
 				A5BED1831B1218E100DC851E /* TMXObjectGroupNode.m in Sources */,
 				A5BED16B1B0E1DE700DC851E /* WBMatrix.m in Sources */,
@@ -775,8 +795,10 @@
 				A5BED15A1B0BB2EF00DC851E /* TMXMap.m in Sources */,
 				A5BED1C91B1639FE00DC851E /* SKTMTileNode.m in Sources */,
 				A5BED1B91B16165500DC851E /* SKTMLayer.m in Sources */,
+				A5FDBF5A1B29B1FA00AC0F9B /* SelectTileNode.m in Sources */,
 				A56AC7731B0A5A8200D1EBAE /* TMXObject.m in Sources */,
 				A5BED1AD1B1610B600DC851E /* SKTMNode.m in Sources */,
+				A5FDBF531B296D6100AC0F9B /* ZoomExampleScene.m in Sources */,
 				A5BED16F1B0F249700DC851E /* SKTexture+WBUtils.m in Sources */,
 				A50B8E351B1FD64F0023BCC5 /* HexagonalRenderer.m in Sources */,
 				A5BED1A31B14A37000DC851E /* OrthogonalRenderer.m in Sources */,

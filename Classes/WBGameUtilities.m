@@ -27,13 +27,12 @@ CGPoint WB_PointByAddingCGPoints(CGPoint first, CGPoint second) {
 /// 两点直线相对的角度 (0~360)
 CGFloat WB_DegreesBetweenPoints(CGPoint first, CGPoint second) {
     CGFloat d = WB_RadiansBetweenPoints(first, second);
-    // 180/PI = 57.29577951f
     d = WB_POLAR_ADJUST(d);
     return WB_AngleToDegrees(d);
 }
 
 CGFloat WB_AngleToDegrees(CGFloat r) {
-    r = r * 57.29577951f;
+    r = r * 57.29577951f;// 180/PI
     r = (r > 0.0 ? r : (360.0 + r));
     return r;
 }

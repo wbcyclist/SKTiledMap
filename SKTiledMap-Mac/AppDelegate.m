@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "GameScene.h"
+#import "ZoomExampleScene.h"
 
 @implementation AppDelegate
 
@@ -17,7 +18,14 @@
     //    CGSize size = self.skView.bounds.size;
     //    size.width = size.width*2;
     //    size.height = size.height*2;
-    GameScene *scene = [[GameScene alloc] initWithSize:CGSizeMake(1500, 900)];
+    CGSize size = CGSizeMake(1500, 900);
+    
+    GameScene *scene = [[GameScene alloc] initWithSize:size];
+//    ZoomExampleScene *scene = [[ZoomExampleScene alloc] initWithSize:size mapFile:@"TiledMap/Orthogonal/02.tmx"];
+//    ZoomExampleScene *scene = [[ZoomExampleScene alloc] initWithSize:size mapFile:@"TiledMap/Isometric/03.tmx"];
+//    ZoomExampleScene *scene = [[ZoomExampleScene alloc] initWithSize:size mapFile:@"TiledMap/Staggered/05.tmx"];
+//    ZoomExampleScene *scene = [[ZoomExampleScene alloc] initWithSize:size mapFile:@"TiledMap/Hexagonal/01.tmx"];
+    
     scene.scaleMode = SKSceneScaleModeAspectFit;
     [self.skView presentScene:scene];
     
@@ -26,6 +34,7 @@
     self.skView.showsDrawCount = YES;
     self.skView.showsFPS = YES;
     self.skView.showsNodeCount = YES;
+//    self.skView.showsPhysics = YES;
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
