@@ -1,5 +1,5 @@
 //
-//  ZoomExampleScene.h
+//  ZoomTestScene.h
 //  SKTiledMap
 //
 //  Created by JasioWoo on 15/6/11.
@@ -8,7 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface ZoomExampleScene : SKScene
+@interface ZoomTestScene : SKScene
 
 
 - (instancetype)initWithSize:(CGSize)size mapFile:(NSString *)filePath;

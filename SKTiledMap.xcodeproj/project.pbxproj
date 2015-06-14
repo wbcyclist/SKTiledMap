@@ -67,6 +67,15 @@
 		A56AC7781B0A7F3C00D1EBAE /* TMXTile.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC7761B0A7F3C00D1EBAE /* TMXTile.m */; };
 		A56AC77B1B0A8E6800D1EBAE /* TMXTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC77A1B0A8E6800D1EBAE /* TMXTileset.m */; };
 		A56AC77C1B0A8E6800D1EBAE /* TMXTileset.m in Sources */ = {isa = PBXBuildFile; fileRef = A56AC77A1B0A8E6800D1EBAE /* TMXTileset.m */; };
+		A5A26F2C1B2C814600EE4BA7 /* SplitWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A26F2B1B2C814600EE4BA7 /* SplitWindow.m */; };
+		A5A26F601B2DDE1300EE4BA7 /* ScreenShot in Resources */ = {isa = PBXBuildFile; fileRef = A5A26F5F1B2DDE1300EE4BA7 /* ScreenShot */; };
+		A5A26F611B2DDE1300EE4BA7 /* ScreenShot in Resources */ = {isa = PBXBuildFile; fileRef = A5A26F5F1B2DDE1300EE4BA7 /* ScreenShot */; };
+		A5A26F631B2DE85C00EE4BA7 /* ExampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = A5A26F621B2DE85C00EE4BA7 /* ExampleData.json */; };
+		A5A26F641B2DE85C00EE4BA7 /* ExampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = A5A26F621B2DE85C00EE4BA7 /* ExampleData.json */; };
+		A5A26F681B2DF04A00EE4BA7 /* TestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A26F671B2DF04A00EE4BA7 /* TestEntity.m */; };
+		A5A26F691B2DF04A00EE4BA7 /* TestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A26F671B2DF04A00EE4BA7 /* TestEntity.m */; };
+		A5A26F6C1B2DF73300EE4BA7 /* ZPositionTestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A26F6B1B2DF73300EE4BA7 /* ZPositionTestScene.m */; };
+		A5A26F6D1B2DF73300EE4BA7 /* ZPositionTestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A26F6B1B2DF73300EE4BA7 /* ZPositionTestScene.m */; };
 		A5BED1591B0BB2EF00DC851E /* TMXMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1581B0BB2EF00DC851E /* TMXMap.m */; };
 		A5BED15A1B0BB2EF00DC851E /* TMXMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1581B0BB2EF00DC851E /* TMXMap.m */; };
 		A5BED15D1B0C925500DC851E /* SKColor+TMXColorWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED15C1B0C925500DC851E /* SKColor+TMXColorWithHex.m */; };
@@ -111,8 +120,8 @@
 		A5BED1EF1B179CB800DC851E /* SKTMObjectGroupShape.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1ED1B179CB800DC851E /* SKTMObjectGroupShape.m */; };
 		A5BED1F21B17B5D300DC851E /* IsometricRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1F11B17B5D300DC851E /* IsometricRenderer.m */; };
 		A5BED1F31B17B5D300DC851E /* IsometricRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1F11B17B5D300DC851E /* IsometricRenderer.m */; };
-		A5FDBF521B296D6100AC0F9B /* ZoomExampleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDBF511B296D6100AC0F9B /* ZoomExampleScene.m */; };
-		A5FDBF531B296D6100AC0F9B /* ZoomExampleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDBF511B296D6100AC0F9B /* ZoomExampleScene.m */; };
+		A5FDBF521B296D6100AC0F9B /* ZoomTestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDBF511B296D6100AC0F9B /* ZoomTestScene.m */; };
+		A5FDBF531B296D6100AC0F9B /* ZoomTestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDBF511B296D6100AC0F9B /* ZoomTestScene.m */; };
 		A5FDBF561B29A0D900AC0F9B /* SKView+ScrollTouchForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDBF551B29A0D900AC0F9B /* SKView+ScrollTouchForwarding.m */; };
 		A5FDBF591B29B1FA00AC0F9B /* SelectTileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDBF581B29B1FA00AC0F9B /* SelectTileNode.m */; };
 		A5FDBF5A1B29B1FA00AC0F9B /* SelectTileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FDBF581B29B1FA00AC0F9B /* SelectTileNode.m */; };
@@ -180,6 +189,14 @@
 		A56AC7761B0A7F3C00D1EBAE /* TMXTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXTile.m; sourceTree = "<group>"; };
 		A56AC7791B0A8E6800D1EBAE /* TMXTileset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXTileset.h; sourceTree = "<group>"; };
 		A56AC77A1B0A8E6800D1EBAE /* TMXTileset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXTileset.m; sourceTree = "<group>"; };
+		A5A26F2A1B2C814600EE4BA7 /* SplitWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitWindow.h; sourceTree = "<group>"; };
+		A5A26F2B1B2C814600EE4BA7 /* SplitWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitWindow.m; sourceTree = "<group>"; };
+		A5A26F5F1B2DDE1300EE4BA7 /* ScreenShot */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ScreenShot; sourceTree = "<group>"; };
+		A5A26F621B2DE85C00EE4BA7 /* ExampleData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ExampleData.json; sourceTree = "<group>"; };
+		A5A26F661B2DF04A00EE4BA7 /* TestEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestEntity.h; sourceTree = "<group>"; };
+		A5A26F671B2DF04A00EE4BA7 /* TestEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestEntity.m; sourceTree = "<group>"; };
+		A5A26F6A1B2DF73300EE4BA7 /* ZPositionTestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPositionTestScene.h; sourceTree = "<group>"; };
+		A5A26F6B1B2DF73300EE4BA7 /* ZPositionTestScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPositionTestScene.m; sourceTree = "<group>"; };
 		A5BED1571B0BB2EF00DC851E /* TMXMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXMap.h; sourceTree = "<group>"; };
 		A5BED1581B0BB2EF00DC851E /* TMXMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXMap.m; sourceTree = "<group>"; };
 		A5BED15B1B0C925500DC851E /* SKColor+TMXColorWithHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKColor+TMXColorWithHex.h"; sourceTree = "<group>"; };
@@ -226,8 +243,8 @@
 		A5BED1ED1B179CB800DC851E /* SKTMObjectGroupShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTMObjectGroupShape.m; sourceTree = "<group>"; };
 		A5BED1F01B17B5D300DC851E /* IsometricRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsometricRenderer.h; sourceTree = "<group>"; };
 		A5BED1F11B17B5D300DC851E /* IsometricRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsometricRenderer.m; sourceTree = "<group>"; };
-		A5FDBF501B296D6100AC0F9B /* ZoomExampleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomExampleScene.h; sourceTree = "<group>"; };
-		A5FDBF511B296D6100AC0F9B /* ZoomExampleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomExampleScene.m; sourceTree = "<group>"; };
+		A5FDBF501B296D6100AC0F9B /* ZoomTestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomTestScene.h; sourceTree = "<group>"; };
+		A5FDBF511B296D6100AC0F9B /* ZoomTestScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomTestScene.m; sourceTree = "<group>"; };
 		A5FDBF541B29A0D900AC0F9B /* SKView+ScrollTouchForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKView+ScrollTouchForwarding.h"; sourceTree = "<group>"; };
 		A5FDBF551B29A0D900AC0F9B /* SKView+ScrollTouchForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKView+ScrollTouchForwarding.m"; sourceTree = "<group>"; };
 		A5FDBF571B29B1FA00AC0F9B /* SelectTileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectTileNode.h; sourceTree = "<group>"; };
@@ -377,6 +394,8 @@
 		A56AC72E1B09E17100D1EBAE /* SKTiledMap-Mac */ = {
 			isa = PBXGroup;
 			children = (
+				A5A26F2A1B2C814600EE4BA7 /* SplitWindow.h */,
+				A5A26F2B1B2C814600EE4BA7 /* SplitWindow.m */,
 				A56AC7311B09E17100D1EBAE /* AppDelegate.h */,
 				A56AC7321B09E17100D1EBAE /* AppDelegate.m */,
 				A56AC73D1B09E17100D1EBAE /* MainMenu.xib */,
@@ -399,6 +418,7 @@
 		A56AC7521B09E2FD00D1EBAE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A5A26F651B2DF02700EE4BA7 /* Model */,
 				A516BD5B1B25AAE000F90505 /* GamePad */,
 				A56AC7531B09E2FD00D1EBAE /* prefix.pch */,
 				A516BCFD1B24746A00F90505 /* WBGameUtilities.h */,
@@ -414,8 +434,10 @@
 			children = (
 				A56AC7551B09E2FD00D1EBAE /* GameScene.h */,
 				A56AC7561B09E2FD00D1EBAE /* GameScene.m */,
-				A5FDBF501B296D6100AC0F9B /* ZoomExampleScene.h */,
-				A5FDBF511B296D6100AC0F9B /* ZoomExampleScene.m */,
+				A5FDBF501B296D6100AC0F9B /* ZoomTestScene.h */,
+				A5FDBF511B296D6100AC0F9B /* ZoomTestScene.m */,
+				A5A26F6A1B2DF73300EE4BA7 /* ZPositionTestScene.h */,
+				A5A26F6B1B2DF73300EE4BA7 /* ZPositionTestScene.m */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -423,6 +445,8 @@
 		A56AC7591B09E33300D1EBAE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5A26F621B2DE85C00EE4BA7 /* ExampleData.json */,
+				A5A26F5F1B2DDE1300EE4BA7 /* ScreenShot */,
 				A516BD181B25A9EB00F90505 /* UI */,
 				A516BCE41B24706D00F90505 /* Texture Atlases */,
 				A56AC76B1B09EC5400D1EBAE /* TiledMap */,
@@ -514,6 +538,15 @@
 				A50B8E331B1FD64F0023BCC5 /* HexagonalRenderer.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		A5A26F651B2DF02700EE4BA7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5A26F661B2DF04A00EE4BA7 /* TestEntity.h */,
+				A5A26F671B2DF04A00EE4BA7 /* TestEntity.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A5BED1A91B16108200DC851E /* SpriteKitNode */ = {
@@ -627,11 +660,13 @@
 				A516BD121B254CD400F90505 /* goblin2_run_2.atlas in Resources */,
 				A516BD0C1B254CD400F90505 /* goblin2_idle.atlas in Resources */,
 				A516BD141B254CD400F90505 /* goblin2_run_3.atlas in Resources */,
+				A5A26F631B2DE85C00EE4BA7 /* ExampleData.json in Resources */,
 				A516BD3D1B25A9EB00F90505 /* pad_a.png in Resources */,
 				A56AC76C1B09EC5400D1EBAE /* TiledMap in Resources */,
 				A516BD0E1B254CD400F90505 /* goblin2_run_0.atlas in Resources */,
 				A56AC75B1B09E33300D1EBAE /* Images.xcassets in Resources */,
 				A516BD161B254CD400F90505 /* goblin2_run_4.atlas in Resources */,
+				A5A26F601B2DDE1300EE4BA7 /* ScreenShot in Resources */,
 				A516BD451B25A9EB00F90505 /* pad_Control.png in Resources */,
 				A516BD4B1B25A9EB00F90505 /* pad_right.png in Resources */,
 				A56AC7141B09E04900D1EBAE /* LaunchScreen.xib in Resources */,
@@ -651,6 +686,7 @@
 				A516BD4C1B25A9EB00F90505 /* pad_right.png in Resources */,
 				A516BD0F1B254CD400F90505 /* goblin2_run_0.atlas in Resources */,
 				A56AC73F1B09E17100D1EBAE /* MainMenu.xib in Resources */,
+				A5A26F611B2DDE1300EE4BA7 /* ScreenShot in Resources */,
 				A56AC76D1B09EC5400D1EBAE /* TiledMap in Resources */,
 				A516BD4A1B25A9EB00F90505 /* pad_left.png in Resources */,
 				A516BD171B254CD400F90505 /* goblin2_run_4.atlas in Resources */,
@@ -659,6 +695,7 @@
 				A516BD3E1B25A9EB00F90505 /* pad_a.png in Resources */,
 				A516BD421B25A9EB00F90505 /* pad_b.png in Resources */,
 				A56AC75C1B09E33300D1EBAE /* Images.xcassets in Resources */,
+				A5A26F641B2DE85C00EE4BA7 /* ExampleData.json in Resources */,
 				A516BD0D1B254CD400F90505 /* goblin2_idle.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -743,6 +780,7 @@
 				A5BED1AC1B1610B600DC851E /* SKTMNode.m in Sources */,
 				A5BED1591B0BB2EF00DC851E /* TMXMap.m in Sources */,
 				A56AC77B1B0A8E6800D1EBAE /* TMXTileset.m in Sources */,
+				A5A26F6C1B2DF73300EE4BA7 /* ZPositionTestScene.m in Sources */,
 				A516BCE01B22897800F90505 /* SKNode+WBUtils.m in Sources */,
 				A56AC7041B09E04900D1EBAE /* AppDelegate.m in Sources */,
 				A5BED16E1B0F249700DC851E /* SKTexture+WBUtils.m in Sources */,
@@ -753,6 +791,7 @@
 				A5BED1861B126F4000DC851E /* TMXImageLayer.m in Sources */,
 				A5BED19E1B13AA7800DC851E /* TMXTileLayer.m in Sources */,
 				A5BED1821B1218E100DC851E /* TMXObjectGroupNode.m in Sources */,
+				A5A26F681B2DF04A00EE4BA7 /* TestEntity.m in Sources */,
 				A5BED1EA1B177ADA00DC851E /* SKTMObjectGroupTile.m in Sources */,
 				A516BD621B25AAE000F90505 /* WBGamepadDPad.m in Sources */,
 				A56AC7571B09E2FD00D1EBAE /* GameScene.m in Sources */,
@@ -763,7 +802,7 @@
 				A5BED1661B0D301700DC851E /* WBImage+WBUtils.m in Sources */,
 				A5BED1A21B14A37000DC851E /* OrthogonalRenderer.m in Sources */,
 				A56AC7011B09E04900D1EBAE /* main.m in Sources */,
-				A5FDBF521B296D6100AC0F9B /* ZoomExampleScene.m in Sources */,
+				A5FDBF521B296D6100AC0F9B /* ZoomTestScene.m in Sources */,
 				A56AC7771B0A7F3C00D1EBAE /* TMXTile.m in Sources */,
 				A5BED1BC1B16290E00DC851E /* SKTMMapLayer.m in Sources */,
 				A5BED1C81B1639FE00DC851E /* SKTMTileNode.m in Sources */,
@@ -792,13 +831,14 @@
 				A5BED16B1B0E1DE700DC851E /* WBMatrix.m in Sources */,
 				A56AC7781B0A7F3C00D1EBAE /* TMXTile.m in Sources */,
 				A5BED15E1B0C925500DC851E /* SKColor+TMXColorWithHex.m in Sources */,
+				A5A26F6D1B2DF73300EE4BA7 /* ZPositionTestScene.m in Sources */,
 				A5BED15A1B0BB2EF00DC851E /* TMXMap.m in Sources */,
 				A5BED1C91B1639FE00DC851E /* SKTMTileNode.m in Sources */,
 				A5BED1B91B16165500DC851E /* SKTMLayer.m in Sources */,
 				A5FDBF5A1B29B1FA00AC0F9B /* SelectTileNode.m in Sources */,
 				A56AC7731B0A5A8200D1EBAE /* TMXObject.m in Sources */,
 				A5BED1AD1B1610B600DC851E /* SKTMNode.m in Sources */,
-				A5FDBF531B296D6100AC0F9B /* ZoomExampleScene.m in Sources */,
+				A5FDBF531B296D6100AC0F9B /* ZoomTestScene.m in Sources */,
 				A5BED16F1B0F249700DC851E /* SKTexture+WBUtils.m in Sources */,
 				A50B8E351B1FD64F0023BCC5 /* HexagonalRenderer.m in Sources */,
 				A5BED1A31B14A37000DC851E /* OrthogonalRenderer.m in Sources */,
@@ -807,9 +847,11 @@
 				A5BED1C11B16383100DC851E /* SKTMObjectGroupLayer.m in Sources */,
 				A5BED17F1B111E8E00DC851E /* TMXObjectGroup.m in Sources */,
 				A5BED1C51B16384B00DC851E /* SKTMImageLayer.m in Sources */,
+				A5A26F691B2DF04A00EE4BA7 /* TestEntity.m in Sources */,
 				A5BED1D21B163D5400DC851E /* SKTMTileLayer.m in Sources */,
 				A5BED1EF1B179CB800DC851E /* SKTMObjectGroupShape.m in Sources */,
 				A56AC77C1B0A8E6800D1EBAE /* TMXTileset.m in Sources */,
+				A5A26F2C1B2C814600EE4BA7 /* SplitWindow.m in Sources */,
 				A56AC7581B09E2FD00D1EBAE /* GameScene.m in Sources */,
 				A5BED19F1B13AA7800DC851E /* TMXTileLayer.m in Sources */,
 				A5BED1731B0FB1DE00DC851E /* TMXTerrain.m in Sources */,

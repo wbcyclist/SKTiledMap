@@ -8,10 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 #import <SpriteKit/SpriteKit.h>
+#import "SplitWindow.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet SKView *skView;
+@property (nonatomic, weak) IBOutlet SplitWindow *window;
+@property (nonatomic, weak) IBOutlet SKView *skView;
 
 @end

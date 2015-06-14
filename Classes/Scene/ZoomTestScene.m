@@ -1,12 +1,12 @@
 //
-//  ZoomExampleScene.m
+//  ZoomTestScene.m
 //  SKTiledMap
 //
 //  Created by JasioWoo on 15/6/11.
 //  Copyright (c) 2015年 JasioWoo. All rights reserved.
 //
 
-#import "ZoomExampleScene.h"
+#import "ZoomTestScene.h"
 #import "SKTiledMap.h"
 #import "WBGameUtilities.h"
 #import "SelectTileNode.h"
@@ -19,7 +19,7 @@ CGPoint CGPointSubtract(CGPoint point1, CGPoint point2) {
     return CGPointMake(point1.x - point2.x, point1.y - point2.y);
 }
 
-@interface ZoomExampleScene ()
+@interface ZoomTestScene ()
 
 #if TARGET_OS_IPHONE
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
@@ -30,7 +30,7 @@ CGPoint CGPointSubtract(CGPoint point1, CGPoint point2) {
 
 @end
 
-@implementation ZoomExampleScene {
+@implementation ZoomTestScene {
     CGPoint lastMovedPoint;
     CGPoint lastInPoint;
     BOOL m_contentCreated;

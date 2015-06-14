@@ -1,0 +1,40 @@
+[
+{
+	"TestClass": "ZPositionTestScene",
+ 	"Tile": "ZPosition Test",
+ 	"Cases": [
+ 	{ "TMXFile": "TiledMap/Orthogonal/01.tmx", "Name": "Orthogonal_01", "Thumbnail":"ScreenShot/Orthogonal/01.png" }
+ 	]
+ },
+ {
+	"TestClass": "ZoomTestScene",
+ 	"Tile": "Zoom In/Out Test",
+ 	"Cases": [
+ 	{ "TMXFile": "TiledMap/Orthogonal/01.tmx", "Name": "Orthogonal_01", "Thumbnail":"ScreenShot/Orthogonal/01.png" },
+ 	{ "TMXFile": "TiledMap/Orthogonal/02.tmx", "Name": "Orthogonal_02", "Thumbnail":"ScreenShot/Orthogonal/02.png" },
+ 	{ "TMXFile": "TiledMap/Orthogonal/03.tmx", "Name": "Orthogonal_03", "Thumbnail":"ScreenShot/Orthogonal/03.png" },
+ 	{ "TMXFile": "TiledMap/Orthogonal/04.tmx", "Name": "Orthogonal_04", "Thumbnail":"ScreenShot/Orthogonal/04.png" },
+ 	{ "TMXFile": "TiledMap/Orthogonal/05.tmx", "Name": "Orthogonal_05", "Thumbnail":"ScreenShot/Orthogonal/05.png" },
+ 	{ "TMXFile": "TiledMap/Orthogonal/06.tmx", "Name": "Orthogonal_06", "Thumbnail":"ScreenShot/Orthogonal/06.png" },
+ 	{ "TMXFile": "TiledMap/Orthogonal/07.tmx", "Name": "Orthogonal_07", "Thumbnail":"ScreenShot/Orthogonal/07.png" },
+
+ 	{ "TMXFile": "TiledMap/Isometric/01.tmx", "Name": "Isometric_01", "Thumbnail":"ScreenShot/Isometric/01.png" },
+ 	{ "TMXFile": "TiledMap/Isometric/02.tmx", "Name": "Isometric_02", "Thumbnail":"ScreenShot/Isometric/02.png" },
+ 	{ "TMXFile": "TiledMap/Isometric/03.tmx", "Name": "Isometric_03", "Thumbnail":"ScreenShot/Isometric/03.png" },
+
+ 	{ "TMXFile": "TiledMap/Staggered/01.tmx", "Name": "Staggered_01", "Thumbnail":"ScreenShot/Staggered/01.png" },
+ 	{ "TMXFile": "TiledMap/Staggered/02.tmx", "Name": "Staggered_02", "Thumbnail":"ScreenShot/Staggered/02.png" },
+ 	{ "TMXFile": "TiledMap/Staggered/03.tmx", "Name": "Staggered_03", "Thumbnail":"ScreenShot/Staggered/03.png" },
+ 	{ "TMXFile": "TiledMap/Staggered/04.tmx", "Name": "Staggered_04", "Thumbnail":"ScreenShot/Staggered/04.png" },
+ 	{ "TMXFile": "TiledMap/Staggered/05.tmx", "Name": "Staggered_05", "Thumbnail":"ScreenShot/Staggered/05.png" },
+
+ 	{ "TMXFile": "TiledMap/Hexagonal/01.tmx", "Name": "Hexagonal_01", "Thumbnail":"ScreenShot/Hexagonal/01.png" },
+ 	{ "TMXFile": "TiledMap/Hexagonal/02.tmx", "Name": "Hexagonal_02", "Thumbnail":"ScreenShot/Hexagonal/02.png" },
+ 	{ "TMXFile": "TiledMap/Hexagonal/03.tmx", "Name": "Hexagonal_03", "Thumbnail":"ScreenShot/Hexagonal/03.png" },
+ 	{ "TMXFile": "TiledMap/Hexagonal/04.tmx", "Name": "Hexagonal_04", "Thumbnail":"ScreenShot/Hexagonal/04.png" },
+ 	{ "TMXFile": "TiledMap/Hexagonal/05.tmx", "Name": "Hexagonal_05", "Thumbnail":"ScreenShot/Hexagonal/05.png" }
+
+
+ 	]
+ }
+]

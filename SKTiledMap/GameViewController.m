@@ -8,7 +8,7 @@
 
 #import "GameViewController.h"
 #import "GameScene.h"
-#import "ZoomExampleScene.h"
+#import "ZoomTestScene.h"
 
 #import "WBGamePad.h"
 
@@ -39,8 +39,8 @@
     viewSize.height *= 2;
     
 //    GameScene *scene = [[GameScene alloc] initWithSize:viewSize];
-//    ZoomExampleScene *scene = [[ZoomExampleScene alloc] initWithSize:viewSize mapFile:@"TiledMap/Orthogonal/02.tmx"];
-    ZoomExampleScene *scene = [[ZoomExampleScene alloc] initWithSize:viewSize mapFile:@"TiledMap/Isometric/02.tmx"];
+//    ZoomTestScene *scene = [[ZoomTestScene alloc] initWithSize:viewSize mapFile:@"TiledMap/Orthogonal/02.tmx"];
+    ZoomTestScene *scene = [[ZoomTestScene alloc] initWithSize:viewSize mapFile:@"TiledMap/Isometric/02.tmx"];
     
     scene.scaleMode = SKSceneScaleModeFill;
     
