@@ -76,6 +76,8 @@
 		A5A26F691B2DF04A00EE4BA7 /* TestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A26F671B2DF04A00EE4BA7 /* TestEntity.m */; };
 		A5A26F6C1B2DF73300EE4BA7 /* ZPositionTestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A26F6B1B2DF73300EE4BA7 /* ZPositionTestScene.m */; };
 		A5A26F6D1B2DF73300EE4BA7 /* ZPositionTestScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A26F6B1B2DF73300EE4BA7 /* ZPositionTestScene.m */; };
+		A5A26F701B2EE40400EE4BA7 /* SlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A26F6F1B2EE40400EE4BA7 /* SlidingViewController.m */; };
+		A5A26F731B2EE46100EE4BA7 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A26F721B2EE46100EE4BA7 /* ContentViewController.m */; };
 		A5BED1591B0BB2EF00DC851E /* TMXMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1581B0BB2EF00DC851E /* TMXMap.m */; };
 		A5BED15A1B0BB2EF00DC851E /* TMXMap.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED1581B0BB2EF00DC851E /* TMXMap.m */; };
 		A5BED15D1B0C925500DC851E /* SKColor+TMXColorWithHex.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BED15C1B0C925500DC851E /* SKColor+TMXColorWithHex.m */; };
@@ -197,6 +199,10 @@
 		A5A26F671B2DF04A00EE4BA7 /* TestEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestEntity.m; sourceTree = "<group>"; };
 		A5A26F6A1B2DF73300EE4BA7 /* ZPositionTestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZPositionTestScene.h; sourceTree = "<group>"; };
 		A5A26F6B1B2DF73300EE4BA7 /* ZPositionTestScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZPositionTestScene.m; sourceTree = "<group>"; };
+		A5A26F6E1B2EE40400EE4BA7 /* SlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingViewController.h; sourceTree = "<group>"; };
+		A5A26F6F1B2EE40400EE4BA7 /* SlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidingViewController.m; sourceTree = "<group>"; };
+		A5A26F711B2EE46100EE4BA7 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		A5A26F721B2EE46100EE4BA7 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
 		A5BED1571B0BB2EF00DC851E /* TMXMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMXMap.h; sourceTree = "<group>"; };
 		A5BED1581B0BB2EF00DC851E /* TMXMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMXMap.m; sourceTree = "<group>"; };
 		A5BED15B1B0C925500DC851E /* SKColor+TMXColorWithHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKColor+TMXColorWithHex.h"; sourceTree = "<group>"; };
@@ -375,6 +381,10 @@
 				A56AC7031B09E04900D1EBAE /* AppDelegate.m */,
 				A56AC70A1B09E04900D1EBAE /* GameViewController.h */,
 				A56AC70B1B09E04900D1EBAE /* GameViewController.m */,
+				A5A26F6E1B2EE40400EE4BA7 /* SlidingViewController.h */,
+				A5A26F6F1B2EE40400EE4BA7 /* SlidingViewController.m */,
+				A5A26F711B2EE46100EE4BA7 /* ContentViewController.h */,
+				A5A26F721B2EE46100EE4BA7 /* ContentViewController.m */,
 				A56AC70D1B09E04900D1EBAE /* Main.storyboard */,
 				A56AC7121B09E04900D1EBAE /* LaunchScreen.xib */,
 				A56AC6FE1B09E04900D1EBAE /* Supporting Files */,
@@ -782,6 +792,7 @@
 				A56AC77B1B0A8E6800D1EBAE /* TMXTileset.m in Sources */,
 				A5A26F6C1B2DF73300EE4BA7 /* ZPositionTestScene.m in Sources */,
 				A516BCE01B22897800F90505 /* SKNode+WBUtils.m in Sources */,
+				A5A26F731B2EE46100EE4BA7 /* ContentViewController.m in Sources */,
 				A56AC7041B09E04900D1EBAE /* AppDelegate.m in Sources */,
 				A5BED16E1B0F249700DC851E /* SKTexture+WBUtils.m in Sources */,
 				A5BED1721B0FB1DE00DC851E /* TMXTerrain.m in Sources */,
@@ -805,6 +816,7 @@
 				A5FDBF521B296D6100AC0F9B /* ZoomTestScene.m in Sources */,
 				A56AC7771B0A7F3C00D1EBAE /* TMXTile.m in Sources */,
 				A5BED1BC1B16290E00DC851E /* SKTMMapLayer.m in Sources */,
+				A5A26F701B2EE40400EE4BA7 /* SlidingViewController.m in Sources */,
 				A5BED1C81B1639FE00DC851E /* SKTMTileNode.m in Sources */,
 				A5BED16A1B0E1DE700DC851E /* WBMatrix.m in Sources */,
 				A50B8E341B1FD64F0023BCC5 /* HexagonalRenderer.m in Sources */,

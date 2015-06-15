@@ -11,8 +11,6 @@
 #import "SplitWindow.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
-
 @property (nonatomic, weak) IBOutlet SplitWindow *window;
-@property (nonatomic, weak) IBOutlet SKView *skView;
 
 @end

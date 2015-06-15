@@ -20,8 +20,9 @@ CGPoint CGPointSubtract(CGPoint point1, CGPoint point2) {
 }
 
 @interface ZoomTestScene ()
-
 #if TARGET_OS_IPHONE
+<UIGestureRecognizerDelegate>
+
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic, strong) UIPinchGestureRecognizer *pinchGestureRecognizer;
 #endif
@@ -45,6 +46,10 @@ CGPoint CGPointSubtract(CGPoint point1, CGPoint point2) {
         self.backgroundColor = self.mapLayer.model.backgroundColor;
         [self addChild:self.mapLayer];
         
+        // moved center position
+        CGRect mapFrame = self.mapLayer.calculateAccumulatedFrame;
+        self.mapLayer.position = CGPointMake(size.width/2 - mapFrame.size.width/2, size.height/2 - mapFrame.size.height/2);
+        
         self.selectTileNode = [[SelectTileNode alloc] initWithMapRenderer:self.mapLayer.mapRenderer];
         self.selectTileNode.zPosition = self.mapLayer.maxZPosition;
         [self.mapLayer addChild:self.selectTileNode];
@@ -59,6 +64,8 @@ CGPoint CGPointSubtract(CGPoint point1, CGPoint point2) {
 #if TARGET_OS_IPHONE
         self.panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanFrom:)];
         [view addGestureRecognizer:self.panGestureRecognizer];
+        self.panGestureRecognizer.delegate = self;
+        
         self.pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handleZoomFrom:)];
         [view addGestureRecognizer:self.pinchGestureRecognizer];
 #endif
@@ -66,21 +73,31 @@ CGPoint CGPointSubtract(CGPoint point1, CGPoint point2) {
 }
 
 
+
 #if TARGET_OS_IPHONE
 #pragma mark - Event Handling - iOS
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (touches.count>1) {
+        return;
+    }
     UITouch *touch = [touches anyObject];
     CGPoint touchPoint = [touch locationInNode:self];
     [self touchIn:touchPoint];
 }
-//
+
 //- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+//    if (touches.count>1) {
+//        return;
+//    }
 //    UITouch *touch = [touches anyObject];
 //    CGPoint touchPoint = [touch locationInNode:self];
 //    [self touchMoved:touchPoint];
 //}
-//
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (touches.count>1) {
+        return;
+    }
     UITouch *touch = [touches anyObject];
     CGPoint touchPoint = [touch locationInNode:self];
     [self touchEnd:touchPoint];
@@ -92,6 +109,15 @@ CGPoint CGPointSubtract(CGPoint point1, CGPoint point2) {
 //    CGPoint touchPoint = [touch locationInNode:self];
 //    [self touchEnd:touchPoint];
 //}
+
+#pragma mark - UIGestureRecognizerDelegate
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    // 左侧50像素的距离不做响应，抛出给上层处理(左侧滑出侧边菜单)
+    if ([gestureRecognizer locationInView:gestureRecognizer.view].x < 50.0) {
+        return NO;
+    }
+    return YES;
+}
 
 - (void)handlePanFrom:(UIPanGestureRecognizer *)recognizer
 {

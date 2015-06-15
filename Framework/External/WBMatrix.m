@@ -45,7 +45,7 @@
 }
 
 - (void)dealloc {
-    NSLog(@"%s", __func__);
+//    NSLog(@"%s", __func__);
     [self.matrixDic.allValues makeObjectsPerformSelector:@selector(removeAllObjects)];
     [self.matrixDic removeAllObjects];
     self.matrixDic = nil;

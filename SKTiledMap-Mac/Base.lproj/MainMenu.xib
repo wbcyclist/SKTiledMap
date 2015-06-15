@@ -103,7 +103,6 @@
         </menu>
         <customObject id="494" customClass="AppDelegate">
             <connections>
-                <outlet property="skView" destination="pdG-2M-SUw" id="Jyj-8k-FSm"/>
                 <outlet property="window" destination="fFX-Q0-fEs" id="OAo-b0-Orc"/>
             </connections>
         </customObject>
@@ -257,6 +256,7 @@
                 </constraints>
             </view>
             <connections>
+                <outlet property="gameView" destination="pdG-2M-SUw" id="QTL-0i-i5O"/>
                 <outlet property="leftView" destination="bke-Rh-Rdi" id="cWm-cc-dwC"/>
                 <outlet property="rightView" destination="P98-qL-BDf" id="US7-U4-d2X"/>
                 <outlet property="splitView" destination="Go7-zA-DPK" id="7qR-pC-9Xh"/>

@@ -38,9 +38,9 @@
     viewSize.width *= 2;
     viewSize.height *= 2;
     
-//    GameScene *scene = [[GameScene alloc] initWithSize:viewSize];
+    GameScene *scene = [[GameScene alloc] initWithSize:viewSize];
 //    ZoomTestScene *scene = [[ZoomTestScene alloc] initWithSize:viewSize mapFile:@"TiledMap/Orthogonal/02.tmx"];
-    ZoomTestScene *scene = [[ZoomTestScene alloc] initWithSize:viewSize mapFile:@"TiledMap/Isometric/02.tmx"];
+//    ZoomTestScene *scene = [[ZoomTestScene alloc] initWithSize:viewSize mapFile:@"TiledMap/Orthogonal/07.tmx"];
     
     scene.scaleMode = SKSceneScaleModeFill;
     

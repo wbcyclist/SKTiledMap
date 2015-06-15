@@ -19,6 +19,10 @@
     #define WB_NSValueToCGPoint(v) v.pointValue
     #define WB_CGRectToNSValue(r) [NSValue valueWithRect:r]
     #define WB_NSValueToCGRect(v) v.rectValue
+
+    #define NSStringFromCGPoint(p) NSStringFromPoint(p)
+    #define NSStringFromCGSize(s) NSStringFromSize(s)
+    #define NSStringFromCGRect(r) NSStringFromRect(r)
 #endif
 
 

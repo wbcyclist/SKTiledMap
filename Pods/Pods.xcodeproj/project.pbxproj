@@ -7,296 +7,393 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E693E9679D78F300470B4A2 /* Pods-SKTiledMap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0A5BFA4ED28A75DDF02CF6 /* Pods-SKTiledMap-dummy.m */; };
-		1D0A30BDA0D02626E786DAB2 /* Pods-SKTiledMap-Mac-Ono-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F12A9AECE47BE44097DE2F18 /* Pods-SKTiledMap-Mac-Ono-dummy.m */; };
-		47F3F76624D908D29A0BC761 /* Ono.h in Headers */ = {isa = PBXBuildFile; fileRef = 48191D848E93400FEFF17AE4 /* Ono.h */; };
-		4989EB62B3791BC57800C568 /* Ono.h in Headers */ = {isa = PBXBuildFile; fileRef = 48191D848E93400FEFF17AE4 /* Ono.h */; };
-		56A16B385812F738B58948B3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF67071B94D155CBF363256 /* Cocoa.framework */; };
-		5EA1F0AD910C768ECC5CC263 /* Pods-SKTiledMap-Mac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6791A9F9FA159D0558946FCC /* Pods-SKTiledMap-Mac-dummy.m */; };
-		69E16F3A78B81E3E1B132F36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBE6BDF9300CD0A78F59070 /* Foundation.framework */; };
-		818C7FB4807C1CFBA8412490 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBE6BDF9300CD0A78F59070 /* Foundation.framework */; };
-		9A6A2BBAB131E41373C40B16 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF67071B94D155CBF363256 /* Cocoa.framework */; };
-		AC2AD5DAF7ACE05667505E6F /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBE05CC7A853F0AE1C609B8 /* ONOXMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
-		C421DB9AA077E1D3F38B26C7 /* ONOXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BF07B61582C5E193C79F2DE /* ONOXMLDocument.h */; };
-		C8A5BFFD8598505207E76144 /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = BDBE05CC7A853F0AE1C609B8 /* ONOXMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
-		CD682559DA42CABF85F3597E /* Pods-SKTiledMap-Ono-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9FECA6728A817010EAEF4A /* Pods-SKTiledMap-Ono-dummy.m */; };
-		DE93B6482ABAD6956F3EAD9F /* ONOXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BF07B61582C5E193C79F2DE /* ONOXMLDocument.h */; };
+		0190345E6B4F861C4A289022 /* Pods-SKTiledMap-Mac-Ono-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 123EEAD4FB4FEFEDEF7362D8 /* Pods-SKTiledMap-Mac-Ono-dummy.m */; };
+		0E03AF5363C41603BD2B999A /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE4B89AC8B5B713E67EF9 /* ONOXMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		168C7BC369FC6C14B1100478 /* Ono.h in Headers */ = {isa = PBXBuildFile; fileRef = 744A25E87BB7AE804EC7B0EE /* Ono.h */; };
+		232D1B48EE698EBD8843543B /* ECSlidingInteractiveTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F7014D00DE778C88A94531C /* ECSlidingInteractiveTransition.h */; };
+		2CC0E6A268414B2147AF0469 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5A0AD2F8BCCF4999795DA8 /* Foundation.framework */; };
+		36F5498BC9ECD1F0EB18AF5F /* ONOXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 4099268505211B3365842CE2 /* ONOXMLDocument.h */; };
+		386930C3B1DD7FD6705545D6 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA995076029A1BDB2A90731E /* ECSlidingAnimationController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		3CD73D3F1FFE605BF10E4747 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975F3EB3E4BFA5006DFBBBAD /* Cocoa.framework */; };
+		4C4DD41ED3B74BC97FBE8DDA /* ECSlidingSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB5BBFC7435AEDBA9135C93 /* ECSlidingSegue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		4D82E3CEF4E4FAEE434A928F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5A0AD2F8BCCF4999795DA8 /* Foundation.framework */; };
+		573BF00A04A5BA88F2C6C38D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5A0AD2F8BCCF4999795DA8 /* Foundation.framework */; };
+		588283B38E45F1D692621759 /* ECPercentDrivenInteractiveTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 5213ED3FD1D3520970BFBE3B /* ECPercentDrivenInteractiveTransition.h */; };
+		5889228F416F37ABE510DBE4 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E5118EF74471942F5224C6D1 /* ECSlidingInteractiveTransition.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		5FE47F77222F8510EAE0E871 /* Pods-SKTiledMap-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69E6F485FFDBF65AAC08684C /* Pods-SKTiledMap-dummy.m */; };
+		6F5A11EA6D9F38F3CEC29153 /* ECSlidingSegue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3415908DE6F50148E61D49FC /* ECSlidingSegue.h */; };
+		75A479852D65F6FBD193351C /* ONOXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 4099268505211B3365842CE2 /* ONOXMLDocument.h */; };
+		9479C16009DD4F264538FAF9 /* Pods-SKTiledMap-Mac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6F981BD6BDE086AE64D2A6 /* Pods-SKTiledMap-Mac-dummy.m */; };
+		9D8D1457CBD943FB27E7E146 /* Ono.h in Headers */ = {isa = PBXBuildFile; fileRef = 744A25E87BB7AE804EC7B0EE /* Ono.h */; };
+		ACBD1C4F38E73F854EDD2112 /* Pods-SKTiledMap-Ono-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39D8A5A6B132F54FEB314B1E /* Pods-SKTiledMap-Ono-dummy.m */; };
+		B17BAA74A5312266244DB6EC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 975F3EB3E4BFA5006DFBBBAD /* Cocoa.framework */; };
+		BC7C15580FEC406B548637FE /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3021F2721E255A4BA7760D /* ECPercentDrivenInteractiveTransition.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		C11CB4A5C9FA967A08FCBE26 /* UIViewController+ECSlidingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 278AA210B1296CD38B1E2E25 /* UIViewController+ECSlidingViewController.h */; };
+		D4B064164341C6526A8D8AB6 /* ECSlidingConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 492D95F1BCA683F4C2286063 /* ECSlidingConstants.h */; };
+		D9DDBF45FEF89A37142F2B0B /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6CD8B543FAFD0E13930213 /* ECSlidingViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		DB74B99725EE8B451B873289 /* ECSlidingViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A8294C891DC6A6F5AC51DF3C /* ECSlidingViewController.h */; };
+		E9324FE4F78E38F5237AA582 /* UIViewController+ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C643FCA384C2A046C27B776 /* UIViewController+ECSlidingViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
+		F12DA77C62B88A5A03394E1E /* ECSlidingAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 37578ACAF78D28A90E134C12 /* ECSlidingAnimationController.h */; };
+		F2DD05CEF7C59284453C2845 /* Pods-SKTiledMap-ECSlidingViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 78276B809AB9BDA8DD1EC248 /* Pods-SKTiledMap-ECSlidingViewController-dummy.m */; };
+		FC0FF10A944720ED087A0A6C /* ONOXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE4B89AC8B5B713E67EF9 /* ONOXMLDocument.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-checker -Xanalyzer deadcode"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1CCB6CDB0CDA024A660A45E8 /* PBXContainerItemProxy */ = {
+		0A88B683CE79A9A70A921F6C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F52C83AD369034D6123948D5 /* Project object */;
+			containerPortal = 9B046DADC4B20C856EE42AF7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8B7E174EEE39881178BA01BE;
-			remoteInfo = "Pods-SKTiledMap-Ono";
-		};
-		AE7220961D3EF300F2179E24 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F52C83AD369034D6123948D5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 63921A0DDCA909024FA35F9B;
+			remoteGlobalIDString = B99A2A842F1705D72018476D;
 			remoteInfo = "Pods-SKTiledMap-Mac-Ono";
+		};
+		C8EABBE7F9B4E0AB890F0E92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B046DADC4B20C856EE42AF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F9FEEBBC7F594D7D511F6F1;
+			remoteInfo = "Pods-SKTiledMap-ECSlidingViewController";
+		};
+		E9594A46757851760EE2CD9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B046DADC4B20C856EE42AF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A478BA3C313C1CA033932C76;
+			remoteInfo = "Pods-SKTiledMap-Ono";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04C7AEEE698EB92405D46121 /* Pods-SKTiledMap-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKTiledMap-acknowledgements.plist"; sourceTree = "<group>"; };
-		1B5A3673F12AE95E14808778 /* Pods-SKTiledMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap.debug.xcconfig"; sourceTree = "<group>"; };
-		1CBE6BDF9300CD0A78F59070 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		2B12391229589AEEDD2FC255 /* Pods-SKTiledMap-Mac-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKTiledMap-Mac-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2F873B0B4C5AC7E27DF3088E /* Pods-SKTiledMap-Ono.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap-Ono.xcconfig"; path = "../Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono.xcconfig"; sourceTree = "<group>"; };
-		48191D848E93400FEFF17AE4 /* Ono.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Ono.h; path = Source/Ono.h; sourceTree = "<group>"; };
-		668C556C6F3DC1B8A1B66067 /* libPods-SKTiledMap-Ono.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-Ono.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6791A9F9FA159D0558946FCC /* Pods-SKTiledMap-Mac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKTiledMap-Mac-dummy.m"; sourceTree = "<group>"; };
-		68FDA6FE16F169DAA623A7EC /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6B39DA22C64E04C8B9D31452 /* Pods-SKTiledMap-Mac-Ono-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-Mac-Ono-Private.xcconfig"; sourceTree = "<group>"; };
-		74B7BA3BDBA616FDAD02FFBF /* Pods-SKTiledMap-Mac-Ono-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKTiledMap-Mac-Ono-prefix.pch"; sourceTree = "<group>"; };
-		7E5CFC1EDC295731A16B2955 /* Pods-SKTiledMap-Ono-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-SKTiledMap-Ono-prefix.pch"; path = "../Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-prefix.pch"; sourceTree = "<group>"; };
-		87288AFF6AE2FD322962EFF8 /* Pods-SKTiledMap-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKTiledMap-environment.h"; sourceTree = "<group>"; };
-		8BF07B61582C5E193C79F2DE /* ONOXMLDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ONOXMLDocument.h; path = Source/ONOXMLDocument.h; sourceTree = "<group>"; };
-		9E23471968C80325F6ED5700 /* Pods-SKTiledMap-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SKTiledMap-resources.sh"; sourceTree = "<group>"; };
-		A12D256165F371067B654ED6 /* libPods-SKTiledMap-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A90EAB3C9B223CB605648F4C /* Pods-SKTiledMap-Mac-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKTiledMap-Mac-environment.h"; sourceTree = "<group>"; };
-		A9D787CC7753B38E8D629D24 /* Pods-SKTiledMap-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKTiledMap-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B9898B839B51C97BADF2922B /* Pods-SKTiledMap-Ono-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap-Ono-Private.xcconfig"; path = "../Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-Private.xcconfig"; sourceTree = "<group>"; };
-		BD9FECA6728A817010EAEF4A /* Pods-SKTiledMap-Ono-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-SKTiledMap-Ono-dummy.m"; path = "../Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-dummy.m"; sourceTree = "<group>"; };
-		BDBE05CC7A853F0AE1C609B8 /* ONOXMLDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ONOXMLDocument.m; path = Source/ONOXMLDocument.m; sourceTree = "<group>"; };
-		BDF67071B94D155CBF363256 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		C00C6BA5BDADBC918190A6D3 /* Pods-SKTiledMap-Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-Mac.debug.xcconfig"; sourceTree = "<group>"; };
-		C82A7F53A22A2CB1651C698A /* Pods-SKTiledMap-Mac-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SKTiledMap-Mac-resources.sh"; sourceTree = "<group>"; };
-		DD0A5BFA4ED28A75DDF02CF6 /* Pods-SKTiledMap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKTiledMap-dummy.m"; sourceTree = "<group>"; };
-		E55A7967F2EC258C7F603E4C /* Pods-SKTiledMap-Mac-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKTiledMap-Mac-acknowledgements.plist"; sourceTree = "<group>"; };
-		EB0C4AEC638250A4F90E50E0 /* libPods-SKTiledMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB5B5C8FD281A8B1B5FCD051 /* Pods-SKTiledMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap.release.xcconfig"; sourceTree = "<group>"; };
-		EF9D51D599EC71F5EFDB893E /* Pods-SKTiledMap-Mac-Ono.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-Mac-Ono.xcconfig"; sourceTree = "<group>"; };
-		F12A9AECE47BE44097DE2F18 /* Pods-SKTiledMap-Mac-Ono-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKTiledMap-Mac-Ono-dummy.m"; sourceTree = "<group>"; };
-		F23FB1318160E0C8EFA70492 /* libPods-SKTiledMap-Mac-Ono.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-Mac-Ono.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F944E0D5EA51FDCE219831FF /* Pods-SKTiledMap-Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-Mac.release.xcconfig"; sourceTree = "<group>"; };
+		04CAE4B89AC8B5B713E67EF9 /* ONOXMLDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ONOXMLDocument.m; path = Source/ONOXMLDocument.m; sourceTree = "<group>"; };
+		06CD1304D0305EFBE73FCD99 /* Pods-SKTiledMap-Mac-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKTiledMap-Mac-environment.h"; sourceTree = "<group>"; };
+		08C1109AD5B25EDAC45BC6A4 /* Pods-SKTiledMap-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKTiledMap-acknowledgements.markdown"; sourceTree = "<group>"; };
+		09D73E9FCCB38AB9435FE8DD /* libPods-SKTiledMap-ECSlidingViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-ECSlidingViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C6CD8B543FAFD0E13930213 /* ECSlidingViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ECSlidingViewController.m; path = ECSlidingViewController/ECSlidingViewController.m; sourceTree = "<group>"; };
+		0D29A1D000BD9449F49E8AA5 /* Pods-SKTiledMap-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SKTiledMap-resources.sh"; sourceTree = "<group>"; };
+		0E79E92047869C56E4DC02C8 /* Pods-SKTiledMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap.debug.xcconfig"; sourceTree = "<group>"; };
+		123EEAD4FB4FEFEDEF7362D8 /* Pods-SKTiledMap-Mac-Ono-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKTiledMap-Mac-Ono-dummy.m"; sourceTree = "<group>"; };
+		176100E41E1E893275583187 /* Pods-SKTiledMap-Ono-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-SKTiledMap-Ono-prefix.pch"; path = "../Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-prefix.pch"; sourceTree = "<group>"; };
+		18F5DB5417DC8F574A662660 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1F7014D00DE778C88A94531C /* ECSlidingInteractiveTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ECSlidingInteractiveTransition.h; path = ECSlidingViewController/ECSlidingInteractiveTransition.h; sourceTree = "<group>"; };
+		262074B1EA71AA404882DB2B /* Pods-SKTiledMap-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKTiledMap-environment.h"; sourceTree = "<group>"; };
+		278AA210B1296CD38B1E2E25 /* UIViewController+ECSlidingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ECSlidingViewController.h"; path = "ECSlidingViewController/UIViewController+ECSlidingViewController.h"; sourceTree = "<group>"; };
+		2DD19ECBC9E24410A48118C7 /* libPods-SKTiledMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3004454A40844FCF36042FFD /* Pods-SKTiledMap-Ono-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap-Ono-Private.xcconfig"; path = "../Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-Private.xcconfig"; sourceTree = "<group>"; };
+		3415908DE6F50148E61D49FC /* ECSlidingSegue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ECSlidingSegue.h; path = ECSlidingViewController/ECSlidingSegue.h; sourceTree = "<group>"; };
+		37578ACAF78D28A90E134C12 /* ECSlidingAnimationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ECSlidingAnimationController.h; path = ECSlidingViewController/ECSlidingAnimationController.h; sourceTree = "<group>"; };
+		39D8A5A6B132F54FEB314B1E /* Pods-SKTiledMap-Ono-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-SKTiledMap-Ono-dummy.m"; path = "../Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-dummy.m"; sourceTree = "<group>"; };
+		4099268505211B3365842CE2 /* ONOXMLDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ONOXMLDocument.h; path = Source/ONOXMLDocument.h; sourceTree = "<group>"; };
+		46B027B49B43E083AD5C8A2E /* Pods-SKTiledMap-Mac-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SKTiledMap-Mac-acknowledgements.markdown"; sourceTree = "<group>"; };
+		492D95F1BCA683F4C2286063 /* ECSlidingConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ECSlidingConstants.h; path = ECSlidingViewController/ECSlidingConstants.h; sourceTree = "<group>"; };
+		4BCB28A62329DB3DED5E67E0 /* Pods-SKTiledMap-Mac-Ono.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-Mac-Ono.xcconfig"; sourceTree = "<group>"; };
+		5213ED3FD1D3520970BFBE3B /* ECPercentDrivenInteractiveTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ECPercentDrivenInteractiveTransition.h; path = ECSlidingViewController/ECPercentDrivenInteractiveTransition.h; sourceTree = "<group>"; };
+		5CFD858CE8A403B9070836C5 /* libPods-SKTiledMap-Mac-Ono.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-Mac-Ono.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6752ACB650C4B946629AC6C2 /* Pods-SKTiledMap-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKTiledMap-acknowledgements.plist"; sourceTree = "<group>"; };
+		69E6F485FFDBF65AAC08684C /* Pods-SKTiledMap-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKTiledMap-dummy.m"; sourceTree = "<group>"; };
+		6A5A0AD2F8BCCF4999795DA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6FEF02CE86EB915BB5A11184 /* Pods-SKTiledMap-ECSlidingViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-ECSlidingViewController-Private.xcconfig"; sourceTree = "<group>"; };
+		70F13DADCE53C7170DB8F138 /* Pods-SKTiledMap-Mac-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SKTiledMap-Mac-resources.sh"; sourceTree = "<group>"; };
+		744A25E87BB7AE804EC7B0EE /* Ono.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Ono.h; path = Source/Ono.h; sourceTree = "<group>"; };
+		7653C5FA7A94762FE519D58B /* Pods-SKTiledMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap.release.xcconfig"; sourceTree = "<group>"; };
+		78276B809AB9BDA8DD1EC248 /* Pods-SKTiledMap-ECSlidingViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKTiledMap-ECSlidingViewController-dummy.m"; sourceTree = "<group>"; };
+		7D6F981BD6BDE086AE64D2A6 /* Pods-SKTiledMap-Mac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SKTiledMap-Mac-dummy.m"; sourceTree = "<group>"; };
+		7FEA60FF82B29166ADB336C8 /* Pods-SKTiledMap-ECSlidingViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-ECSlidingViewController.xcconfig"; sourceTree = "<group>"; };
+		8C643FCA384C2A046C27B776 /* UIViewController+ECSlidingViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ECSlidingViewController.m"; path = "ECSlidingViewController/UIViewController+ECSlidingViewController.m"; sourceTree = "<group>"; };
+		8C6D2D65186B410AB5F94091 /* Pods-SKTiledMap-ECSlidingViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKTiledMap-ECSlidingViewController-prefix.pch"; sourceTree = "<group>"; };
+		975F3EB3E4BFA5006DFBBBAD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		9E0374917898056CC6A2F59A /* Pods-SKTiledMap-Mac-Ono-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SKTiledMap-Mac-Ono-prefix.pch"; sourceTree = "<group>"; };
+		9ED9B886FF1B34FAFD177EA8 /* Pods-SKTiledMap-Mac-Ono-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-Mac-Ono-Private.xcconfig"; sourceTree = "<group>"; };
+		A8294C891DC6A6F5AC51DF3C /* ECSlidingViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ECSlidingViewController.h; path = ECSlidingViewController/ECSlidingViewController.h; sourceTree = "<group>"; };
+		ADB5BBFC7435AEDBA9135C93 /* ECSlidingSegue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ECSlidingSegue.m; path = ECSlidingViewController/ECSlidingSegue.m; sourceTree = "<group>"; };
+		B64922562412686F8D7A02F3 /* libPods-SKTiledMap-Ono.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-Ono.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D2B6791AFCAB94B8F6C8E3 /* libPods-SKTiledMap-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKTiledMap-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF3021F2721E255A4BA7760D /* ECPercentDrivenInteractiveTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ECPercentDrivenInteractiveTransition.m; path = ECSlidingViewController/ECPercentDrivenInteractiveTransition.m; sourceTree = "<group>"; };
+		CA995076029A1BDB2A90731E /* ECSlidingAnimationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ECSlidingAnimationController.m; path = ECSlidingViewController/ECSlidingAnimationController.m; sourceTree = "<group>"; };
+		E5118EF74471942F5224C6D1 /* ECSlidingInteractiveTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ECSlidingInteractiveTransition.m; path = ECSlidingViewController/ECSlidingInteractiveTransition.m; sourceTree = "<group>"; };
+		EE8A19442AF954799068F5AC /* Pods-SKTiledMap-Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-Mac.release.xcconfig"; sourceTree = "<group>"; };
+		F289EE1F7E1E99C2E5BC02B6 /* Pods-SKTiledMap-Ono.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKTiledMap-Ono.xcconfig"; path = "../Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono.xcconfig"; sourceTree = "<group>"; };
+		FAEC706D955CA3B156B7F19F /* Pods-SKTiledMap-Mac-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SKTiledMap-Mac-acknowledgements.plist"; sourceTree = "<group>"; };
+		FBC6D19EC1DD1BDC964EC7C8 /* Pods-SKTiledMap-Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SKTiledMap-Mac.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2467B3A4BB8F66F5B1553955 /* Frameworks */ = {
+		08770EAF5EDE451F232375DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69E16F3A78B81E3E1B132F36 /* Foundation.framework in Frameworks */,
+				4D82E3CEF4E4FAEE434A928F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33781F11710F8831A9C71C2D /* Frameworks */ = {
+		4734C50480AB928EA56FB7B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A6A2BBAB131E41373C40B16 /* Cocoa.framework in Frameworks */,
+				B17BAA74A5312266244DB6EC /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5C8924D80DD4390100EE316 /* Frameworks */ = {
+		7E7DBD1703EA4480B4EE5201 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				818C7FB4807C1CFBA8412490 /* Foundation.framework in Frameworks */,
+				3CD73D3F1FFE605BF10E4747 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C93F36484797C4E01A8D4EA9 /* Frameworks */ = {
+		877726A64673E49FFE5D3B26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56A16B385812F738B58948B3 /* Cocoa.framework in Frameworks */,
+				573BF00A04A5BA88F2C6C38D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9ACC7B9BB5E3F76FE6979A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CC0E6A268414B2147AF0469 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00DEC6C42F91F3034985A62B /* Targets Support Files */ = {
+		101A906AC11CDDA7B3BB547E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8DECA813DD7263EC942FA0CC /* Pods-SKTiledMap */,
-				B348D3B6B99BE51670E4659F /* Pods-SKTiledMap-Mac */,
+				BA2D8F66660CC4B8DBFA34C2 /* Pods-SKTiledMap */,
+				86F61989F609EFDAA9FD3150 /* Pods-SKTiledMap-Mac */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		060F26CA662FD9E618A0DBDD /* Frameworks */ = {
+		23280625939FD91D5D6BEF85 /* Ono */ = {
 			isa = PBXGroup;
 			children = (
-				8B2E2EE0D434E97E752180C9 /* OS X */,
-				5D233EFBF5FE8A6F9C2E39B7 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2B7214EF86CA9E96E5B75DF0 = {
-			isa = PBXGroup;
-			children = (
-				68FDA6FE16F169DAA623A7EC /* Podfile */,
-				060F26CA662FD9E618A0DBDD /* Frameworks */,
-				E45DF90C9FA06758E39C1DFF /* Pods */,
-				4D061D6A51AF87EE22EA9FD1 /* Products */,
-				00DEC6C42F91F3034985A62B /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		49EEA99D1680CA8C97C9F0F1 /* Ono */ = {
-			isa = PBXGroup;
-			children = (
-				8BF07B61582C5E193C79F2DE /* ONOXMLDocument.h */,
-				BDBE05CC7A853F0AE1C609B8 /* ONOXMLDocument.m */,
-				48191D848E93400FEFF17AE4 /* Ono.h */,
-				D22944BD2995EEE12BB817F0 /* Support Files */,
+				4099268505211B3365842CE2 /* ONOXMLDocument.h */,
+				04CAE4B89AC8B5B713E67EF9 /* ONOXMLDocument.m */,
+				744A25E87BB7AE804EC7B0EE /* Ono.h */,
+				233F1697D669ADDEB7B36571 /* Support Files */,
 			);
 			path = Ono;
 			sourceTree = "<group>";
 		};
-		4D061D6A51AF87EE22EA9FD1 /* Products */ = {
+		233F1697D669ADDEB7B36571 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				EB0C4AEC638250A4F90E50E0 /* libPods-SKTiledMap.a */,
-				A12D256165F371067B654ED6 /* libPods-SKTiledMap-Mac.a */,
-				F23FB1318160E0C8EFA70492 /* libPods-SKTiledMap-Mac-Ono.a */,
-				668C556C6F3DC1B8A1B66067 /* libPods-SKTiledMap-Ono.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5D233EFBF5FE8A6F9C2E39B7 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				1CBE6BDF9300CD0A78F59070 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		8B2E2EE0D434E97E752180C9 /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				BDF67071B94D155CBF363256 /* Cocoa.framework */,
-			);
-			name = "OS X";
-			sourceTree = "<group>";
-		};
-		8DECA813DD7263EC942FA0CC /* Pods-SKTiledMap */ = {
-			isa = PBXGroup;
-			children = (
-				A9D787CC7753B38E8D629D24 /* Pods-SKTiledMap-acknowledgements.markdown */,
-				04C7AEEE698EB92405D46121 /* Pods-SKTiledMap-acknowledgements.plist */,
-				DD0A5BFA4ED28A75DDF02CF6 /* Pods-SKTiledMap-dummy.m */,
-				87288AFF6AE2FD322962EFF8 /* Pods-SKTiledMap-environment.h */,
-				9E23471968C80325F6ED5700 /* Pods-SKTiledMap-resources.sh */,
-				1B5A3673F12AE95E14808778 /* Pods-SKTiledMap.debug.xcconfig */,
-				EB5B5C8FD281A8B1B5FCD051 /* Pods-SKTiledMap.release.xcconfig */,
-			);
-			name = "Pods-SKTiledMap";
-			path = "Target Support Files/Pods-SKTiledMap";
-			sourceTree = "<group>";
-		};
-		B348D3B6B99BE51670E4659F /* Pods-SKTiledMap-Mac */ = {
-			isa = PBXGroup;
-			children = (
-				2B12391229589AEEDD2FC255 /* Pods-SKTiledMap-Mac-acknowledgements.markdown */,
-				E55A7967F2EC258C7F603E4C /* Pods-SKTiledMap-Mac-acknowledgements.plist */,
-				6791A9F9FA159D0558946FCC /* Pods-SKTiledMap-Mac-dummy.m */,
-				A90EAB3C9B223CB605648F4C /* Pods-SKTiledMap-Mac-environment.h */,
-				C82A7F53A22A2CB1651C698A /* Pods-SKTiledMap-Mac-resources.sh */,
-				C00C6BA5BDADBC918190A6D3 /* Pods-SKTiledMap-Mac.debug.xcconfig */,
-				F944E0D5EA51FDCE219831FF /* Pods-SKTiledMap-Mac.release.xcconfig */,
-			);
-			name = "Pods-SKTiledMap-Mac";
-			path = "Target Support Files/Pods-SKTiledMap-Mac";
-			sourceTree = "<group>";
-		};
-		D22944BD2995EEE12BB817F0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EF9D51D599EC71F5EFDB893E /* Pods-SKTiledMap-Mac-Ono.xcconfig */,
-				6B39DA22C64E04C8B9D31452 /* Pods-SKTiledMap-Mac-Ono-Private.xcconfig */,
-				F12A9AECE47BE44097DE2F18 /* Pods-SKTiledMap-Mac-Ono-dummy.m */,
-				74B7BA3BDBA616FDAD02FFBF /* Pods-SKTiledMap-Mac-Ono-prefix.pch */,
-				2F873B0B4C5AC7E27DF3088E /* Pods-SKTiledMap-Ono.xcconfig */,
-				B9898B839B51C97BADF2922B /* Pods-SKTiledMap-Ono-Private.xcconfig */,
-				BD9FECA6728A817010EAEF4A /* Pods-SKTiledMap-Ono-dummy.m */,
-				7E5CFC1EDC295731A16B2955 /* Pods-SKTiledMap-Ono-prefix.pch */,
+				4BCB28A62329DB3DED5E67E0 /* Pods-SKTiledMap-Mac-Ono.xcconfig */,
+				9ED9B886FF1B34FAFD177EA8 /* Pods-SKTiledMap-Mac-Ono-Private.xcconfig */,
+				123EEAD4FB4FEFEDEF7362D8 /* Pods-SKTiledMap-Mac-Ono-dummy.m */,
+				9E0374917898056CC6A2F59A /* Pods-SKTiledMap-Mac-Ono-prefix.pch */,
+				F289EE1F7E1E99C2E5BC02B6 /* Pods-SKTiledMap-Ono.xcconfig */,
+				3004454A40844FCF36042FFD /* Pods-SKTiledMap-Ono-Private.xcconfig */,
+				39D8A5A6B132F54FEB314B1E /* Pods-SKTiledMap-Ono-dummy.m */,
+				176100E41E1E893275583187 /* Pods-SKTiledMap-Ono-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-SKTiledMap-Mac-Ono";
 			sourceTree = "<group>";
 		};
-		E45DF90C9FA06758E39C1DFF /* Pods */ = {
+		2485445DC2CF9296D7FEF49E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				49EEA99D1680CA8C97C9F0F1 /* Ono */,
+				6A5A0AD2F8BCCF4999795DA8 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		338CB98B0C2C394043369436 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAD1599E03AB76A468FCE3D2 /* OS X */,
+				2485445DC2CF9296D7FEF49E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86F61989F609EFDAA9FD3150 /* Pods-SKTiledMap-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				46B027B49B43E083AD5C8A2E /* Pods-SKTiledMap-Mac-acknowledgements.markdown */,
+				FAEC706D955CA3B156B7F19F /* Pods-SKTiledMap-Mac-acknowledgements.plist */,
+				7D6F981BD6BDE086AE64D2A6 /* Pods-SKTiledMap-Mac-dummy.m */,
+				06CD1304D0305EFBE73FCD99 /* Pods-SKTiledMap-Mac-environment.h */,
+				70F13DADCE53C7170DB8F138 /* Pods-SKTiledMap-Mac-resources.sh */,
+				FBC6D19EC1DD1BDC964EC7C8 /* Pods-SKTiledMap-Mac.debug.xcconfig */,
+				EE8A19442AF954799068F5AC /* Pods-SKTiledMap-Mac.release.xcconfig */,
+			);
+			name = "Pods-SKTiledMap-Mac";
+			path = "Target Support Files/Pods-SKTiledMap-Mac";
+			sourceTree = "<group>";
+		};
+		9877DD547E915B8B3962574F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7FEA60FF82B29166ADB336C8 /* Pods-SKTiledMap-ECSlidingViewController.xcconfig */,
+				6FEF02CE86EB915BB5A11184 /* Pods-SKTiledMap-ECSlidingViewController-Private.xcconfig */,
+				78276B809AB9BDA8DD1EC248 /* Pods-SKTiledMap-ECSlidingViewController-dummy.m */,
+				8C6D2D65186B410AB5F94091 /* Pods-SKTiledMap-ECSlidingViewController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-SKTiledMap-ECSlidingViewController";
+			sourceTree = "<group>";
+		};
+		B85D8A823DCC076021AB8609 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F71B7CFF0DF780BD62B7D6A8 /* ECSlidingViewController */,
+				23280625939FD91D5D6BEF85 /* Ono */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA2D8F66660CC4B8DBFA34C2 /* Pods-SKTiledMap */ = {
+			isa = PBXGroup;
+			children = (
+				08C1109AD5B25EDAC45BC6A4 /* Pods-SKTiledMap-acknowledgements.markdown */,
+				6752ACB650C4B946629AC6C2 /* Pods-SKTiledMap-acknowledgements.plist */,
+				69E6F485FFDBF65AAC08684C /* Pods-SKTiledMap-dummy.m */,
+				262074B1EA71AA404882DB2B /* Pods-SKTiledMap-environment.h */,
+				0D29A1D000BD9449F49E8AA5 /* Pods-SKTiledMap-resources.sh */,
+				0E79E92047869C56E4DC02C8 /* Pods-SKTiledMap.debug.xcconfig */,
+				7653C5FA7A94762FE519D58B /* Pods-SKTiledMap.release.xcconfig */,
+			);
+			name = "Pods-SKTiledMap";
+			path = "Target Support Files/Pods-SKTiledMap";
+			sourceTree = "<group>";
+		};
+		C37881B606007264CA30FB9B = {
+			isa = PBXGroup;
+			children = (
+				18F5DB5417DC8F574A662660 /* Podfile */,
+				338CB98B0C2C394043369436 /* Frameworks */,
+				B85D8A823DCC076021AB8609 /* Pods */,
+				F17156CF6943AFE7DAAAAFE3 /* Products */,
+				101A906AC11CDDA7B3BB547E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		EAD1599E03AB76A468FCE3D2 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				975F3EB3E4BFA5006DFBBBAD /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		F17156CF6943AFE7DAAAAFE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DD19ECBC9E24410A48118C7 /* libPods-SKTiledMap.a */,
+				09D73E9FCCB38AB9435FE8DD /* libPods-SKTiledMap-ECSlidingViewController.a */,
+				B9D2B6791AFCAB94B8F6C8E3 /* libPods-SKTiledMap-Mac.a */,
+				5CFD858CE8A403B9070836C5 /* libPods-SKTiledMap-Mac-Ono.a */,
+				B64922562412686F8D7A02F3 /* libPods-SKTiledMap-Ono.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F71B7CFF0DF780BD62B7D6A8 /* ECSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5213ED3FD1D3520970BFBE3B /* ECPercentDrivenInteractiveTransition.h */,
+				BF3021F2721E255A4BA7760D /* ECPercentDrivenInteractiveTransition.m */,
+				37578ACAF78D28A90E134C12 /* ECSlidingAnimationController.h */,
+				CA995076029A1BDB2A90731E /* ECSlidingAnimationController.m */,
+				492D95F1BCA683F4C2286063 /* ECSlidingConstants.h */,
+				1F7014D00DE778C88A94531C /* ECSlidingInteractiveTransition.h */,
+				E5118EF74471942F5224C6D1 /* ECSlidingInteractiveTransition.m */,
+				3415908DE6F50148E61D49FC /* ECSlidingSegue.h */,
+				ADB5BBFC7435AEDBA9135C93 /* ECSlidingSegue.m */,
+				A8294C891DC6A6F5AC51DF3C /* ECSlidingViewController.h */,
+				0C6CD8B543FAFD0E13930213 /* ECSlidingViewController.m */,
+				278AA210B1296CD38B1E2E25 /* UIViewController+ECSlidingViewController.h */,
+				8C643FCA384C2A046C27B776 /* UIViewController+ECSlidingViewController.m */,
+				9877DD547E915B8B3962574F /* Support Files */,
+			);
+			path = ECSlidingViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		122CFA97DBC254FC0226E62A /* Headers */ = {
+		660F83B6696AEF0A45A1EB3D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE93B6482ABAD6956F3EAD9F /* ONOXMLDocument.h in Headers */,
-				4989EB62B3791BC57800C568 /* Ono.h in Headers */,
+				36F5498BC9ECD1F0EB18AF5F /* ONOXMLDocument.h in Headers */,
+				9D8D1457CBD943FB27E7E146 /* Ono.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E92323DE747D91B51DDEEE25 /* Headers */ = {
+		85E494B18C6E862912029880 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C421DB9AA077E1D3F38B26C7 /* ONOXMLDocument.h in Headers */,
-				47F3F76624D908D29A0BC761 /* Ono.h in Headers */,
+				75A479852D65F6FBD193351C /* ONOXMLDocument.h in Headers */,
+				168C7BC369FC6C14B1100478 /* Ono.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D2B79F9CBE4A29B1FDC4F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				588283B38E45F1D692621759 /* ECPercentDrivenInteractiveTransition.h in Headers */,
+				F12DA77C62B88A5A03394E1E /* ECSlidingAnimationController.h in Headers */,
+				D4B064164341C6526A8D8AB6 /* ECSlidingConstants.h in Headers */,
+				232D1B48EE698EBD8843543B /* ECSlidingInteractiveTransition.h in Headers */,
+				6F5A11EA6D9F38F3CEC29153 /* ECSlidingSegue.h in Headers */,
+				DB74B99725EE8B451B873289 /* ECSlidingViewController.h in Headers */,
+				C11CB4A5C9FA967A08FCBE26 /* UIViewController+ECSlidingViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		355C1C8D898027826C8E529B /* Pods-SKTiledMap */ = {
+		54C4CE0FCC4B1D7F9D9B37BC /* Pods-SKTiledMap-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C0042241164C143349BB471 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap" */;
+			buildConfigurationList = B989F2AC85D0B265ABFAEA5B /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Mac" */;
 			buildPhases = (
-				7EE1BF08DF4F17B0B1EF63AF /* Sources */,
-				B5C8924D80DD4390100EE316 /* Frameworks */,
+				8D7A1EA08351C4310B53F514 /* Sources */,
+				4734C50480AB928EA56FB7B1 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				24ACD5E9FEA1CEC8B3189CB8 /* PBXTargetDependency */,
+				7BF347AF4DD766D9B5E9BBE0 /* PBXTargetDependency */,
 			);
-			name = "Pods-SKTiledMap";
-			productName = "Pods-SKTiledMap";
-			productReference = EB0C4AEC638250A4F90E50E0 /* libPods-SKTiledMap.a */;
+			name = "Pods-SKTiledMap-Mac";
+			productName = "Pods-SKTiledMap-Mac";
+			productReference = B9D2B6791AFCAB94B8F6C8E3 /* libPods-SKTiledMap-Mac.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		63921A0DDCA909024FA35F9B /* Pods-SKTiledMap-Mac-Ono */ = {
+		9F9FEEBBC7F594D7D511F6F1 /* Pods-SKTiledMap-ECSlidingViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4486381140281E874F629049 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Mac-Ono" */;
+			buildConfigurationList = 12C87B31104F65FB6F08E279 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-ECSlidingViewController" */;
 			buildPhases = (
-				58825E6AE91F9548AEBFDF44 /* Sources */,
-				C93F36484797C4E01A8D4EA9 /* Frameworks */,
-				E92323DE747D91B51DDEEE25 /* Headers */,
+				18CE9EF67A937803BF6E8CC7 /* Sources */,
+				08770EAF5EDE451F232375DD /* Frameworks */,
+				86D2B79F9CBE4A29B1FDC4F4 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-SKTiledMap-Mac-Ono";
-			productName = "Pods-SKTiledMap-Mac-Ono";
-			productReference = F23FB1318160E0C8EFA70492 /* libPods-SKTiledMap-Mac-Ono.a */;
+			name = "Pods-SKTiledMap-ECSlidingViewController";
+			productName = "Pods-SKTiledMap-ECSlidingViewController";
+			productReference = 09D73E9FCCB38AB9435FE8DD /* libPods-SKTiledMap-ECSlidingViewController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		8B7E174EEE39881178BA01BE /* Pods-SKTiledMap-Ono */ = {
+		A478BA3C313C1CA033932C76 /* Pods-SKTiledMap-Ono */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 83831F026FB21E1036E2D750 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Ono" */;
+			buildConfigurationList = C9B0198882E626C16454C912 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Ono" */;
 			buildPhases = (
-				C1F02FBC8F0B69E8BA5E3B0A /* Sources */,
-				2467B3A4BB8F66F5B1553955 /* Frameworks */,
-				122CFA97DBC254FC0226E62A /* Headers */,
+				FAFCEFE25697F65697ED9E70 /* Sources */,
+				877726A64673E49FFE5D3B26 /* Frameworks */,
+				85E494B18C6E862912029880 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -304,110 +401,216 @@
 			);
 			name = "Pods-SKTiledMap-Ono";
 			productName = "Pods-SKTiledMap-Ono";
-			productReference = 668C556C6F3DC1B8A1B66067 /* libPods-SKTiledMap-Ono.a */;
+			productReference = B64922562412686F8D7A02F3 /* libPods-SKTiledMap-Ono.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		A0BCF2F860740E55C33A550B /* Pods-SKTiledMap-Mac */ = {
+		B99A2A842F1705D72018476D /* Pods-SKTiledMap-Mac-Ono */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 221B8992469CDEDA26579EAD /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Mac" */;
+			buildConfigurationList = 48C568EE50A62753F3593582 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Mac-Ono" */;
 			buildPhases = (
-				1F90A83EBC81A53837BC3366 /* Sources */,
-				33781F11710F8831A9C71C2D /* Frameworks */,
+				E360AE7D640199F511A1EC1C /* Sources */,
+				7E7DBD1703EA4480B4EE5201 /* Frameworks */,
+				660F83B6696AEF0A45A1EB3D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				54DDD0047E81B7A5014E9EAE /* PBXTargetDependency */,
 			);
-			name = "Pods-SKTiledMap-Mac";
-			productName = "Pods-SKTiledMap-Mac";
-			productReference = A12D256165F371067B654ED6 /* libPods-SKTiledMap-Mac.a */;
+			name = "Pods-SKTiledMap-Mac-Ono";
+			productName = "Pods-SKTiledMap-Mac-Ono";
+			productReference = 5CFD858CE8A403B9070836C5 /* libPods-SKTiledMap-Mac-Ono.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ECDA0CC2595B68268667DD31 /* Pods-SKTiledMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 249FEDBA46379712226F3D9E /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap" */;
+			buildPhases = (
+				CB9563A8F9B72D0A87067F88 /* Sources */,
+				D9ACC7B9BB5E3F76FE6979A6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6EC25FE0750B3F045CB751FE /* PBXTargetDependency */,
+				140452643868A8C6C2EB50D9 /* PBXTargetDependency */,
+			);
+			name = "Pods-SKTiledMap";
+			productName = "Pods-SKTiledMap";
+			productReference = 2DD19ECBC9E24410A48118C7 /* libPods-SKTiledMap.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F52C83AD369034D6123948D5 /* Project object */ = {
+		9B046DADC4B20C856EE42AF7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 23D5D730D9EA9608365A73A5 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 9107E523CBC3CA55C64E8E52 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 2B7214EF86CA9E96E5B75DF0;
-			productRefGroup = 4D061D6A51AF87EE22EA9FD1 /* Products */;
+			mainGroup = C37881B606007264CA30FB9B;
+			productRefGroup = F17156CF6943AFE7DAAAAFE3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				355C1C8D898027826C8E529B /* Pods-SKTiledMap */,
-				A0BCF2F860740E55C33A550B /* Pods-SKTiledMap-Mac */,
-				63921A0DDCA909024FA35F9B /* Pods-SKTiledMap-Mac-Ono */,
-				8B7E174EEE39881178BA01BE /* Pods-SKTiledMap-Ono */,
+				ECDA0CC2595B68268667DD31 /* Pods-SKTiledMap */,
+				9F9FEEBBC7F594D7D511F6F1 /* Pods-SKTiledMap-ECSlidingViewController */,
+				54C4CE0FCC4B1D7F9D9B37BC /* Pods-SKTiledMap-Mac */,
+				B99A2A842F1705D72018476D /* Pods-SKTiledMap-Mac-Ono */,
+				A478BA3C313C1CA033932C76 /* Pods-SKTiledMap-Ono */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1F90A83EBC81A53837BC3366 /* Sources */ = {
+		18CE9EF67A937803BF6E8CC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EA1F0AD910C768ECC5CC263 /* Pods-SKTiledMap-Mac-dummy.m in Sources */,
+				BC7C15580FEC406B548637FE /* ECPercentDrivenInteractiveTransition.m in Sources */,
+				386930C3B1DD7FD6705545D6 /* ECSlidingAnimationController.m in Sources */,
+				5889228F416F37ABE510DBE4 /* ECSlidingInteractiveTransition.m in Sources */,
+				4C4DD41ED3B74BC97FBE8DDA /* ECSlidingSegue.m in Sources */,
+				D9DDBF45FEF89A37142F2B0B /* ECSlidingViewController.m in Sources */,
+				F2DD05CEF7C59284453C2845 /* Pods-SKTiledMap-ECSlidingViewController-dummy.m in Sources */,
+				E9324FE4F78E38F5237AA582 /* UIViewController+ECSlidingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		58825E6AE91F9548AEBFDF44 /* Sources */ = {
+		8D7A1EA08351C4310B53F514 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8A5BFFD8598505207E76144 /* ONOXMLDocument.m in Sources */,
-				1D0A30BDA0D02626E786DAB2 /* Pods-SKTiledMap-Mac-Ono-dummy.m in Sources */,
+				9479C16009DD4F264538FAF9 /* Pods-SKTiledMap-Mac-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EE1BF08DF4F17B0B1EF63AF /* Sources */ = {
+		CB9563A8F9B72D0A87067F88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E693E9679D78F300470B4A2 /* Pods-SKTiledMap-dummy.m in Sources */,
+				5FE47F77222F8510EAE0E871 /* Pods-SKTiledMap-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1F02FBC8F0B69E8BA5E3B0A /* Sources */ = {
+		E360AE7D640199F511A1EC1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC2AD5DAF7ACE05667505E6F /* ONOXMLDocument.m in Sources */,
-				CD682559DA42CABF85F3597E /* Pods-SKTiledMap-Ono-dummy.m in Sources */,
+				0E03AF5363C41603BD2B999A /* ONOXMLDocument.m in Sources */,
+				0190345E6B4F861C4A289022 /* Pods-SKTiledMap-Mac-Ono-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAFCEFE25697F65697ED9E70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC0FF10A944720ED087A0A6C /* ONOXMLDocument.m in Sources */,
+				ACBD1C4F38E73F854EDD2112 /* Pods-SKTiledMap-Ono-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		24ACD5E9FEA1CEC8B3189CB8 /* PBXTargetDependency */ = {
+		140452643868A8C6C2EB50D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-SKTiledMap-Ono";
-			target = 8B7E174EEE39881178BA01BE /* Pods-SKTiledMap-Ono */;
-			targetProxy = 1CCB6CDB0CDA024A660A45E8 /* PBXContainerItemProxy */;
+			target = A478BA3C313C1CA033932C76 /* Pods-SKTiledMap-Ono */;
+			targetProxy = E9594A46757851760EE2CD9B /* PBXContainerItemProxy */;
 		};
-		54DDD0047E81B7A5014E9EAE /* PBXTargetDependency */ = {
+		6EC25FE0750B3F045CB751FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SKTiledMap-ECSlidingViewController";
+			target = 9F9FEEBBC7F594D7D511F6F1 /* Pods-SKTiledMap-ECSlidingViewController */;
+			targetProxy = C8EABBE7F9B4E0AB890F0E92 /* PBXContainerItemProxy */;
+		};
+		7BF347AF4DD766D9B5E9BBE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-SKTiledMap-Mac-Ono";
-			target = 63921A0DDCA909024FA35F9B /* Pods-SKTiledMap-Mac-Ono */;
-			targetProxy = AE7220961D3EF300F2179E24 /* PBXContainerItemProxy */;
+			target = B99A2A842F1705D72018476D /* Pods-SKTiledMap-Mac-Ono */;
+			targetProxy = 0A88B683CE79A9A70A921F6C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		34A6F4A4201B2D9B56A692C3 /* Release */ = {
+		253592B18D8A23D20E460C05 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B39DA22C64E04C8B9D31452 /* Pods-SKTiledMap-Mac-Ono-Private.xcconfig */;
+			baseConfigurationReference = 7653C5FA7A94762FE519D58B /* Pods-SKTiledMap.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4C7516E4D4B52CCA3A162BBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		574A571DDBBCD48EFF2C455A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ED9B886FF1B34FAFD177EA8 /* Pods-SKTiledMap-Mac-Ono-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SKTiledMap-Mac-Ono/Pods-SKTiledMap-Mac-Ono-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6245E6D1C7BBD72FEAC08C75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ED9B886FF1B34FAFD177EA8 /* Pods-SKTiledMap-Mac-Ono-Private.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -422,7 +625,23 @@
 			};
 			name = Release;
 		};
-		4585B18926A395ED98D94745 /* Debug */ = {
+		729CCC244999570FB5D2D1DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3004454A40844FCF36042FFD /* Pods-SKTiledMap-Ono-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		77047CA1491A7DB2C5B09CFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -462,12 +681,12 @@
 			};
 			name = Debug;
 		};
-		4CFDD3187F919368892BC2C7 /* Release */ = {
+		814196B866467151D1D21548 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9898B839B51C97BADF2922B /* Pods-SKTiledMap-Ono-Private.xcconfig */;
+			baseConfigurationReference = 6FEF02CE86EB915BB5A11184 /* Pods-SKTiledMap-ECSlidingViewController-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SKTiledMap-ECSlidingViewController/Pods-SKTiledMap-ECSlidingViewController-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -478,92 +697,42 @@
 			};
 			name = Release;
 		};
-		68241E3E3AA104B49A8172F6 /* Debug */ = {
+		97E27D9774F55EA159ECDCA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B39DA22C64E04C8B9D31452 /* Pods-SKTiledMap-Mac-Ono-Private.xcconfig */;
+			baseConfigurationReference = FBC6D19EC1DD1BDC964EC7C8 /* Pods-SKTiledMap-Mac.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SKTiledMap-Mac-Ono/Pods-SKTiledMap-Mac-Ono-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		74645E8F46A74D4C538C8C43 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9898B839B51C97BADF2922B /* Pods-SKTiledMap-Ono-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		7CAF7AAD082E632CE2ABE55F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B4F3CD68F29B3A6F7F5AC833 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB5B5C8FD281A8B1B5FCD051 /* Pods-SKTiledMap.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BDA9F6C8ED786B9511838C14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FEF02CE86EB915BB5A11184 /* Pods-SKTiledMap-ECSlidingViewController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SKTiledMap-ECSlidingViewController/Pods-SKTiledMap-ECSlidingViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		CB9DD0B45CF18C2201EAC446 /* Release */ = {
+		C55264954D39B5D3FF70FD2F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F944E0D5EA51FDCE219831FF /* Pods-SKTiledMap-Mac.release.xcconfig */;
+			baseConfigurationReference = EE8A19442AF954799068F5AC /* Pods-SKTiledMap-Mac.release.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -579,9 +748,25 @@
 			};
 			name = Release;
 		};
-		CC93703C69F59848B590FB4B /* Debug */ = {
+		CC3D6400B31681B29584BEB8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B5A3673F12AE95E14808778 /* Pods-SKTiledMap.debug.xcconfig */;
+			baseConfigurationReference = 3004454A40844FCF36042FFD /* Pods-SKTiledMap-Ono-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SKTiledMap-Ono/Pods-SKTiledMap-Ono-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D727D79109ED521368990165 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E79E92047869C56E4DC02C8 /* Pods-SKTiledMap.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -595,72 +780,64 @@
 			};
 			name = Debug;
 		};
-		DED81FB0331FFF176A7EFE4C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C00C6BA5BDADBC918190A6D3 /* Pods-SKTiledMap-Mac.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C0042241164C143349BB471 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap" */ = {
+		12C87B31104F65FB6F08E279 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-ECSlidingViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC93703C69F59848B590FB4B /* Debug */,
-				B4F3CD68F29B3A6F7F5AC833 /* Release */,
+				BDA9F6C8ED786B9511838C14 /* Debug */,
+				814196B866467151D1D21548 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		221B8992469CDEDA26579EAD /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Mac" */ = {
+		249FEDBA46379712226F3D9E /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DED81FB0331FFF176A7EFE4C /* Debug */,
-				CB9DD0B45CF18C2201EAC446 /* Release */,
+				D727D79109ED521368990165 /* Debug */,
+				253592B18D8A23D20E460C05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23D5D730D9EA9608365A73A5 /* Build configuration list for PBXProject "Pods" */ = {
+		48C568EE50A62753F3593582 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Mac-Ono" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4585B18926A395ED98D94745 /* Debug */,
-				7CAF7AAD082E632CE2ABE55F /* Release */,
+				574A571DDBBCD48EFF2C455A /* Debug */,
+				6245E6D1C7BBD72FEAC08C75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4486381140281E874F629049 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Mac-Ono" */ = {
+		9107E523CBC3CA55C64E8E52 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				68241E3E3AA104B49A8172F6 /* Debug */,
-				34A6F4A4201B2D9B56A692C3 /* Release */,
+				77047CA1491A7DB2C5B09CFF /* Debug */,
+				4C7516E4D4B52CCA3A162BBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83831F026FB21E1036E2D750 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Ono" */ = {
+		B989F2AC85D0B265ABFAEA5B /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				74645E8F46A74D4C538C8C43 /* Debug */,
-				4CFDD3187F919368892BC2C7 /* Release */,
+				97E27D9774F55EA159ECDCA7 /* Debug */,
+				C55264954D39B5D3FF70FD2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9B0198882E626C16454C912 /* Build configuration list for PBXNativeTarget "Pods-SKTiledMap-Ono" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				729CCC244999570FB5D2D1DB /* Debug */,
+				CC3D6400B31681B29584BEB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F52C83AD369034D6123948D5 /* Project object */;
+	rootObject = 9B046DADC4B20C856EE42AF7 /* Project object */;
 }

@@ -5,7 +5,7 @@ def import_common_pods
 end
 
 def import_ios_pods
-
+    pod 'ECSlidingViewController'
 end
 
 def import_osx_pods

@@ -10,12 +10,21 @@
 
 @implementation TestEntity
 
-
+- (id)copyWithZone:(NSZone *)zone {
+    TestEntity *entity = [[self class] new];
+    entity.tile = self.tile;
+    return entity;
+}
 @end
 
 
 @implementation TestClassEntity
 
+- (id)copyWithZone:(NSZone *)zone {
+    TestClassEntity *entity = [super copyWithZone:zone];
+    entity.testClassName = self.testClassName;
+    return entity;
+}
 
 @end
 

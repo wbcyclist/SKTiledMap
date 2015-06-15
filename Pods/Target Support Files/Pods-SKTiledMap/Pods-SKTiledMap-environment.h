@@ -6,6 +6,12 @@
 // project.
 
 
+// ECSlidingViewController
+#define COCOAPODS_POD_AVAILABLE_ECSlidingViewController
+#define COCOAPODS_VERSION_MAJOR_ECSlidingViewController 2
+#define COCOAPODS_VERSION_MINOR_ECSlidingViewController 0
+#define COCOAPODS_VERSION_PATCH_ECSlidingViewController 3
+
 // Ono
 #define COCOAPODS_POD_AVAILABLE_Ono
 #define COCOAPODS_VERSION_MAJOR_Ono 1

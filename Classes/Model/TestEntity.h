@@ -17,22 +17,23 @@
 #endif
 
 
-@interface TestEntity : NSObject
+@interface TestEntity : NSObject <NSCopying>
 
-@property (nonatomic, copy)NSString *tile;
+@property (nonatomic, copy) NSString *tile;
 
 @end
 
 @interface TestClassEntity : TestEntity
 
-@property (nonatomic, copy)NSString *testClassName;
+@property (nonatomic, copy) NSString *testClassName;
 
 @end
 
 @interface TestCaseEntity : TestEntity
 
-@property (nonatomic, copy)NSString *tmxFile;
-@property (nonatomic, strong)WBImage *thumbnailImage;
+@property (nonatomic, strong) TestClassEntity *classEntity;
+@property (nonatomic, copy) NSString *tmxFile;
+@property (nonatomic, strong) WBImage *thumbnailImage;
 
 
 @end

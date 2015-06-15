@@ -7,13 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import <SpriteKit/SpriteKit.h>
 
 @interface SplitWindow : NSWindow <NSSplitViewDelegate>
 
 @property (nonatomic, weak)IBOutlet NSSplitView *splitView;
 @property (nonatomic, weak)IBOutlet NSView *leftView;
 @property (nonatomic, weak)IBOutlet NSView *rightView;
+
+@property (nonatomic, weak)IBOutlet SKView *gameView;
 
 @property (nonatomic, strong) NSMutableArray *testDatas;
 

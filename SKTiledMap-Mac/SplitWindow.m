@@ -8,16 +8,17 @@
 
 #import "SplitWindow.h"
 #import "TestEntity.h"
+#import "ZoomTestScene.h"
+#import "ZPositionTestScene.h"
 
 
 @interface SplitWindow() <NSTableViewDelegate, NSTableViewDataSource>
 @property (nonatomic, weak) IBOutlet NSTableView *tableView;
-
-//@property (nonatomic, weak)GameScene *gameScene;
-
 @end
 
-@implementation SplitWindow
+@implementation SplitWindow {
+    NSInteger m_currentRow;
+}
 
 - (void)setTableView:(NSTableView *)tableView {
     if (_tableView != tableView) {
@@ -30,6 +31,18 @@
     if (_testDatas != testDatas) {
         _testDatas = testDatas;
         [self.tableView reloadData];
+    }
+}
+
+- (void)setGameView:(SKView *)gameView {
+    if (_gameView != gameView) {
+        _gameView = gameView;
+        gameView.ignoresSiblingOrder = YES;
+        gameView.showsDrawCount = YES;
+        gameView.showsFPS = YES;
+        gameView.showsNodeCount = YES;
+//        gameView.showsPhysics = YES;
+        
     }
 }
 
@@ -81,13 +94,47 @@
 //}
 
 
+- (BOOL)loadTestEntity:(TestEntity *)entity {
+    if ([entity isKindOfClass:[TestCaseEntity class]]) {
+        TestCaseEntity *caseEntity = (TestCaseEntity*)entity;
+        SKScene *gameScene = nil;
+        if ([caseEntity.classEntity.testClassName isEqualToString:@"ZoomTestScene"]) {
+            gameScene = [[ZoomTestScene alloc] initWithSize:self.gameView.frame.size mapFile:caseEntity.tmxFile];
+            
+        } else if ([caseEntity.classEntity.testClassName isEqualToString:@"ZPositionTestScene"]) {
+            gameScene = [[ZPositionTestScene alloc] initWithSize:self.gameView.frame.size mapFile:caseEntity.tmxFile];
+            
+        }
+        
+        if (!gameScene) {
+            return NO;
+        }
+        
+        gameScene.scaleMode = SKSceneScaleModeResizeFill;
+//        [self.gameView presentScene:gameScene];
+        
+        [self.gameView presentScene:gameScene transition:[SKTransition flipHorizontalWithDuration:1]];
+        [self makeFirstResponder:self.gameView];
+        return YES;
+        
+    } else {
+        return NO;
+    }
+}
 
 
 
 #pragma mark - NSTableView Action
 - (IBAction)tableDoubleClick:(id)sender {
     NSInteger row = [self.tableView selectedRow];
-    NSLog(@"row=%@", @(row));
+//    NSLog(@"row=%@", @(row));
+    if (row<0 || row>=self.testDatas.count) {
+        return;
+    }
+    
+    if (m_currentRow != row && [self loadTestEntity:self.testDatas[row]]) {
+        m_currentRow = row;
+    }
 }
 
 
@@ -118,7 +165,6 @@
     }
 }
 
-// We make the "group rows" have the standard height, while all other image rows have a larger height
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
     if ([self.testDatas[row] isKindOfClass:[TestClassEntity class]]) {
         return tableView.rowHeight;

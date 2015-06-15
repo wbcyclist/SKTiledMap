@@ -8,6 +8,23 @@
 
 #import <SpriteKit/SpriteKit.h>
 
+#if TARGET_OS_IPHONE
+    #import "WBGamePad.h"
+#else
+
+#endif
+
 @interface ZPositionTestScene : SKScene
+#if TARGET_OS_IPHONE
+<WBGamePadDelegate>
+#endif
+
+#if TARGET_OS_IPHONE
+@property (nonatomic, weak)WBGamePad *gamePad;
+#endif
+
+
+- (instancetype)initWithSize:(CGSize)size mapFile:(NSString *)filePath;
+
 
 @end

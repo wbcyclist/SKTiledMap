@@ -66,13 +66,13 @@ typedef struct{
         [self addChild:self.worldNode];
         
         
-        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/01.tmx"];
+//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/01.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/02.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/03.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/04.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/05.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/06.tmx"];
-//        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/07.tmx"];
+        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Orthogonal/07.tmx"];
 //
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Isometric/01.tmx"];
 //        self.mapLayer = [[SKTMMapLayer alloc] initWithContentsOfFile:@"TiledMap/Isometric/02.tmx"];

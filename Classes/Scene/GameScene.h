@@ -12,9 +12,7 @@
 #if TARGET_OS_IPHONE
     #import "WBGamePad.h"
 #else
-    #define NSStringFromCGPoint(x) NSStringFromPoint(NSPointFromCGPoint(x))
-    #define NSStringFromCGSize(x) NSStringFromSize(NSSizeFromCGSize(x))
-    #define NSStringFromCGRect(x) NSStringFromRect(NSRectFromCGRect(x))
+
 #endif
 
 

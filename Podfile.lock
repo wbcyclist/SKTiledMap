@@ -1,10 +1,13 @@
 PODS:
+  - ECSlidingViewController (2.0.3)
   - Ono (1.2.2)
 
 DEPENDENCIES:
+  - ECSlidingViewController
   - Ono
 
 SPEC CHECKSUMS:
+  ECSlidingViewController: 6485c14f23b4487e9946535421ca8f111f86cc53
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
 
 COCOAPODS: 0.37.2
