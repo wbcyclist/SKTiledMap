@@ -65,8 +65,8 @@
         TestCaseEntity *caseEntity = (TestCaseEntity*)entity;
         
         CGSize viewSize = self.view.bounds.size;
-        viewSize.width *= 2;
-        viewSize.height *= 2;
+//        viewSize.width *= 2;
+//        viewSize.height *= 2;
         
         SKScene *gameScene = nil;
         if ([caseEntity.classEntity.testClassName isEqualToString:@"ZoomTestScene"]) {

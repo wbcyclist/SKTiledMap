@@ -17,6 +17,16 @@
 #else
     #define SKTM_CGPointToNSValue(p) [NSValue valueWithPoint:p]
     #define SKTM_NSValueToCGPoint(v) v.pointValue
+
+    #ifndef NSStringFromCGPoint
+        #define NSStringFromCGPoint(p) NSStringFromPoint(p)
+    #endif
+    #ifndef NSStringFromCGSize
+        #define NSStringFromCGSize(s) NSStringFromSize(s)
+    #endif
+    #ifndef NSStringFromCGRect
+        #define NSStringFromCGRect(r) NSStringFromRect(r)
+    #endif
 #endif
 
 

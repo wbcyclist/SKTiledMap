@@ -336,12 +336,18 @@
         SKTMLog(@"Image Not Found: %@", self.imageSource);
         return NO;
     }
+    static const int TextureSizeMax = 4096;
+    if (texImage.size.width > TextureSizeMax || texImage.size.height > TextureSizeMax) {
+        SKTMLog(@"Exception: Sprite Kit claims the texture limit is %dx%d, resource(%@) size is %@", TextureSizeMax, TextureSizeMax, self.imageSource, NSStringFromCGSize(texImage.size));
+        return NO;
+    }
     
     if (self.transparentColor) {
         texImage = [texImage replacingOccurrencesOfPixel:self.transparentColor withColor:[SKColor colorWithRed:.0 green:.0 blue:.0 alpha:.0]];
     }
     _atlasTexture = [SKTexture textureWithImage:texImage];
     _atlasTexture.filteringMode = SKTextureFilteringNearest;    // Makes the sprite (atlasTexture) stay pixelated:
+    
     self.imageSize = _atlasTexture.size;
 //    if ([self.imageSource containsString:@"@2x"]) {
 //        _imageSize.width *= 2.0;
