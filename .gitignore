@@ -24,3 +24,9 @@ DerivedData
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
 #
 #Pods/
+
+Resources/TiledMap/Orthogonal/07_32x32_32x32.png
+
+Resources/TiledMap/Orthogonal/07_32x32.psd
+
+Resources/TiledMap/Orthogonal/07副本.tmx
