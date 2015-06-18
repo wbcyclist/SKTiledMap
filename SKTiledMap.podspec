@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.author   = { 'Jasio Woo' => 'wbcyclist@gmail.com' }
   s.summary  = 'A TMX Tilemap Framework For SpriteKit. Supporting iOS and OS X'
   s.source   = { :git => 'https://github.com/wbcyclist/SKTiledMap.git', :tag => s.version }
-  s.screenshots = [ "https://raw.githubusercontent.com/wbcyclist/PathFindingForObjC/master/demo/PathFinding_ScreenShot.png" ]
+  s.screenshots = [ "https://raw.githubusercontent.com/wbcyclist/SKTiledMap/master/Screenshot/Mac.png" ]
   
   s.requires_arc = true
   s.ios.deployment_target = '8.0'
