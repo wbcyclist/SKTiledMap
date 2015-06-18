@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.author   = { 'Jasio Woo' => 'wbcyclist@gmail.com' }
   s.summary  = 'A TMX Tilemap Framework For SpriteKit. Supporting iOS and OS X'
   s.source   = { :git => 'https://github.com/wbcyclist/SKTiledMap.git', :tag => s.version }
-  s.screenshots = [ "https://raw.githubusercontent.com/wbcyclist/SKTiledMap/master/Screenshot/Mac.png" ]
+  s.screenshots = [ "https://raw.githubusercontent.com/wbcyclist/SKTiledMap/master/Screenshot/SKTiledMap-Mac.jpg" ]
   
   s.requires_arc = true
   s.ios.deployment_target = '8.0'
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Model' do |ss|
     ss.dependency 'SKTiledMap/External'
-    ss.dependency 'Ono', '~> 1.2.2'
+    ss.dependency 'Ono'
     ss.source_files = 'Framework/Model/*.{h,m}'
   end
 
