@@ -13,7 +13,7 @@
 
 #import "TMXBase.h"
 #import "SKTMBase.h"
-
+#import "SKMapRenderer.h"
 
 
 

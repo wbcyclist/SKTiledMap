@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'External' do |ss|
     ss.source_files = 'Framework/External/*.{h,m}'
+    ss.public_header_files = 'Framework/External/*.h'
     ss.ios.frameworks = 'UIKit', 'SpriteKit'
     ss.osx.frameworks = 'AppKit', 'SpriteKit'
     ss.library = 'z'
@@ -25,17 +26,15 @@ Pod::Spec.new do |s|
   s.subspec 'Model' do |ss|
     ss.dependency 'SKTiledMap/External'
     ss.dependency 'Ono'
+    ss.public_header_files = 'Framework/Model/*.h', 'Framework/Classes/*.h'
     ss.source_files = 'Framework/Model/*.{h,m}'
   end
 
   s.subspec 'SpriteKitNode' do |ss|
     ss.dependency 'SKTiledMap/Model'
-    ss.source_files = 'Framework/SpriteKitNode/*.{h,m}'
+    ss.public_header_files = 'Framework/SpriteKitNode/*.h'
+    ss.source_files = 'Framework/SpriteKitNode/*.{h,m}', 'Framework/Classes/*.{h,m}'
   end
 
-  s.subspec 'Renderer' do |ss|
-    ss.dependency 'SKTiledMap/SpriteKitNode'
-    ss.source_files = 'Framework/Classes/*.{h,m}'
-  end
 
 end

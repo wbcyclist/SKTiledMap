@@ -7,11 +7,11 @@
 //
 
 #import "SKTMLayer.h"
-#import "SKMapRenderer.h"
-#import "OrthogonalRenderer.h"
-#import "IsometricRenderer.h"
-#import "StaggeredRenderer.h"
-#import "HexagonalRenderer.h"
+#import "SKTMTileLayer.h"
+#import "SKTMObjectGroupLayer.h"
+#import "SKTMImageLayer.h"
+
+@class SKMapRenderer;
 
 @interface SKTMMapLayer : SKTMLayer
 
