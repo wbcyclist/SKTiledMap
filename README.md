@@ -108,7 +108,7 @@ SKTiledMap(root)
 * `libz.dylib`
 * `SpriteKit.framework`
 
-##DEMO
+## DEMO
 * OSX [Download](https://raw.githubusercontent.com/wbcyclist/SKTiledMap/master/Releases/SKTiledMap-Mac.zip)
 
 [![SKTiledMap-Mac](https://raw.githubusercontent.com/wbcyclist/SKTiledMap/master/Screenshot/SKTiledMap-Mac.gif)](https://player.vimeo.com/video/131031307 "SKTiledMap - Click to Watch!")
