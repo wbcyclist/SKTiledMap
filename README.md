@@ -111,11 +111,11 @@ SKTiledMap(root)
 ##DEMO
 * OSX [Download](https://raw.githubusercontent.com/wbcyclist/SKTiledMap/master/Releases/SKTiledMap-Mac.zip)
 
-[![SKTiledMap-Mac](https://i.imgur.com/qmvlGqQ.gif)](https://player.vimeo.com/video/131031307 "SKTiledMap-Mac - Click to Watch!")
+[![SKTiledMap-Mac](https://raw.githubusercontent.com/wbcyclist/SKTiledMap/master/Screenshot/SKTiledMap-Mac.gif)](https://player.vimeo.com/video/131031307 "SKTiledMap - Click to Watch!")
 
 * iOS
 
-[![SKTiledMap](http://i.imgur.com/OXtWq4t.gif)](https://player.vimeo.com/video/131031307 "SKTiledMap - Click to Watch!")
+[![SKTiledMap](https://raw.githubusercontent.com/wbcyclist/SKTiledMap/master/Screenshot/SKTiledMap-iOS.gif)](https://player.vimeo.com/video/131031307 "SKTiledMap - Click to Watch!")
 
 ## License
 SKTiledMap is released under the MIT license. See [LICENSE](https://github.com/wbcyclist/SKTiledMap/blob/master/LICENSE) for details.
